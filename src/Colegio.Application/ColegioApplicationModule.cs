@@ -2,11 +2,13 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Colegio.Authorization;
+using Colegio.EstudianteNs;
+using Colegio.Models.Estudiante;
 
 namespace Colegio
 {
     [DependsOn(
-        typeof(ColegioCoreModule), 
+        typeof(ColegioCoreModule),
         typeof(AbpAutoMapperModule))]
     public class ColegioApplicationModule : AbpModule
     {
@@ -21,10 +23,13 @@ namespace Colegio
 
             IocManager.RegisterAssemblyByConvention(thisAssembly);
 
-            Configuration.Modules.AbpAutoMapper().Configurators.Add(
-                // Scan the assembly for classes which inherit from AutoMapper.Profile
-                cfg => cfg.AddProfiles(thisAssembly)
-            );
+            Configuration.Modules.AbpAutoMapper().Configurators.Add(cfg =>
+            {
+                cfg.AddProfiles(thisAssembly);
+                cfg.CreateMap<CreateEstudianteInput, Estudiante>().ReverseMap();
+                cfg.CreateMap<Estudiante, GetEstudianteOutput>().ReverseMap();
+                cfg.CreateMap<Estudiante, UpdateEstudianteInput>().ReverseMap();
+            });
         }
     }
 }
