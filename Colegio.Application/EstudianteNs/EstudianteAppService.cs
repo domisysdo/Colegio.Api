@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Colegio.EstudianteNs
 {
-    public class EstudianteManager : ApplicationService, IEstudianteAppService
+    public class EstudianteAppService : ApplicationService, IEstudianteAppService
     {
         private readonly IEstudianteManager _estudianteManager;
 
-        public EstudianteManager(IEstudianteManager estudianteManager)
+        public EstudianteAppService(IEstudianteManager estudianteManager)
         {
             _estudianteManager = estudianteManager;
         }
