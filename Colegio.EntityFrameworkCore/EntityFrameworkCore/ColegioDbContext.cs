@@ -1,7 +1,7 @@
 ﻿using Abp.Zero.EntityFrameworkCore;
 using Colegio.Authorization.Roles;
 using Colegio.Authorization.Users;
-using Colegio.Models.Estudiante;
+using Colegio.Models.EstudianteNs;
 using Colegio.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
 

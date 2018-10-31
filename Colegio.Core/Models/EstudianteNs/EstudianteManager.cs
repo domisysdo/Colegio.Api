@@ -4,7 +4,7 @@ using Abp.UI;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Colegio.Models.Estudiante
+namespace Colegio.Models.EstudianteNs
 {
     public class EstudianteManager : DomainService, IEstudianteManager
     {

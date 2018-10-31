@@ -1,7 +1,7 @@
 ﻿using Abp.Domain.Entities.Auditing;
 using Colegio.Enums;
 
-namespace Colegio.Models.Estudiante
+namespace Colegio.Models.EstudianteNs
 {
     public class Estudiante : FullAuditedEntity
     {

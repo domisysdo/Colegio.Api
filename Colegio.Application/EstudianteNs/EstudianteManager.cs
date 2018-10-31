@@ -1,6 +1,6 @@
 ﻿using Abp.Application.Services;
 using AutoMapper;
-using Colegio.Models.Estudiante;
+using Colegio.Models.EstudianteNs;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

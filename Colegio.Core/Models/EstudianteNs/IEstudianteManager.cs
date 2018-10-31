@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Colegio.Models.Estudiante
+namespace Colegio.Models.EstudianteNs
 {
     public interface IEstudianteManager : IDomainService
     {

@@ -3,7 +3,7 @@ using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Colegio.Authorization;
 using Colegio.EstudianteNs;
-using Colegio.Models.Estudiante;
+using Colegio.Models.EstudianteNs;
 
 namespace Colegio
 {
