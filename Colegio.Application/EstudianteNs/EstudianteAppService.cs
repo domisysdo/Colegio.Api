@@ -8,7 +8,6 @@ using Colegio.Authorization.Roles;
 using Colegio.Models.EstudianteNs;
 using Colegio.Roles.Dto;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Colegio.EstudianteNs
@@ -35,25 +34,6 @@ namespace Colegio.EstudianteNs
             return MapToEntityDto(output);
 
         }
-
-        //public void Delete(DeleteEstudianteInput input)
-        //{
-        //    _estudianteManager.Delete(input.Id);
-        //}
-
-        //public PagedResultDto<EstudianteDto> GetAll()
-        //{
-           
-        //    var getAll = _estudianteManager.GetAll().ToList();
-        //    return new PagedResultDto<EstudianteDto>(10, Mapper.Map<List<Estudiante>, List<EstudianteDto>>(getAll));
-        //}
-        
-        //public EstudianteDto GetEstudianteById(GetEstudianteInput input)
-        //{
-        //    var getEstudiante = _estudianteManager.GetEstudianteById(input.Id);
-        //    EstudianteDto output = Mapper.Map<Estudiante, EstudianteDto>(getEstudiante);
-        //    return output;
-        //}
 
         public override async Task<EstudianteDto> Update(EstudianteDto input)
         {
