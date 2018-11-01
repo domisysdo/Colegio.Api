@@ -9,7 +9,7 @@ namespace Colegio.Models.EstudianteNs
         IEnumerable<Estudiante> GetAll();
         Estudiante GetEstudianteById(int estudianteId);
         Task<Estudiante> Create(Estudiante estudiante);
-        void Update(Estudiante estudiante);
+        Task Update(Estudiante estudiante);
         void Delete(int estudianteId);
     }
 }

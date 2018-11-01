@@ -26,9 +26,8 @@ namespace Colegio
             Configuration.Modules.AbpAutoMapper().Configurators.Add(cfg =>
             {
                 cfg.AddProfiles(thisAssembly);
-                cfg.CreateMap<CreateEstudianteInput, Estudiante>().ReverseMap();
-                cfg.CreateMap<Estudiante, GetEstudianteOutput>().ReverseMap();
-                cfg.CreateMap<Estudiante, UpdateEstudianteInput>().ReverseMap();
+                cfg.CreateMap<EstudianteDto, Estudiante>().ReverseMap();
+                cfg.CreateMap<Estudiante, EstudianteDto>().ReverseMap();
             });
         }
     }

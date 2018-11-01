@@ -1,9 +1,11 @@
-﻿using Abp.Domain.Entities.Auditing;
+﻿
+using Abp.Domain.Entities;
+using Abp.Domain.Entities.Auditing;
 using Colegio.Enums;
 
 namespace Colegio.Models.EstudianteNs
 {
-    public class Estudiante : FullAuditedEntity
+    public class Estudiante :  FullAuditedEntity<int>
     {
         public string Nombres { get; set; }
         public string PrimerApellido { get; set; }

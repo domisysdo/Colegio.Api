@@ -1,16 +1,19 @@
 ﻿using Abp.Application.Services;
+using Abp.Application.Services.Dto;
+using Colegio.Models.EstudianteNs;
+using Colegio.Roles.Dto;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Colegio.EstudianteNs
 {
-    public interface IEstudianteAppService: IApplicationService
+    public interface IEstudianteAppService: IAsyncCrudAppService<EstudianteDto, int, PagedResultRequestDto, EstudianteDto, EstudianteDto>
     {
-        IEnumerable<GetEstudianteOutput> GetAll();
-        Task Create(CreateEstudianteInput input);
-        void Update(UpdateEstudianteInput input);
-        void Delete(DeleteEstudianteInput input);
-        GetEstudianteOutput GetEstudianteById(GetEstudianteInput input);
-
+        //PagedResultDto<EstudianteDto> GetAll();
+        //override Task Create(EstudianteDto input);
+        //void Update(EstudianteDto input);
+        //void Delete(DeleteEstudianteInput input);
+        //EstudianteDto GetEstudianteById(GetEstudianteInput input);
+        Task<ListResultDto<RoleDto>> GetRoles();
     }
 }

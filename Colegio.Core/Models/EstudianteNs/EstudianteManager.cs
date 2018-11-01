@@ -45,7 +45,7 @@ namespace Colegio.Models.EstudianteNs
 
         public IEnumerable<Estudiante> GetAll()
         {
-            return _repositoryEstudiante.GetAllList();      
+            return _repositoryEstudiante.GetAllList();
         }
 
         public Estudiante GetEstudianteById(int estudianteId)
@@ -53,9 +53,9 @@ namespace Colegio.Models.EstudianteNs
             return _repositoryEstudiante.Get(estudianteId);
         }
 
-        public void Update(Estudiante entity)
+        public async Task Update(Estudiante entity)
         {
-            _repositoryEstudiante.Update(entity);
+           await _repositoryEstudiante.UpdateAsync(entity);
         }
     }
 }
