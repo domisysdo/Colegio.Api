@@ -102,8 +102,8 @@ namespace Colegio.Roles
             Task<ListResultDto<PermissionDto>> listResultDto;
             var permissions = PermissionManager.GetAllPermissions();
 
-             listResultDto = Task.FromResult(new ListResultDto<PermissionDto>(
-                ObjectMapper.Map<List<PermissionDto>>(permissions)));
+            listResultDto = Task.FromResult(new ListResultDto<PermissionDto>(
+               ObjectMapper.Map<List<PermissionDto>>(permissions)));
 
             //foreach (var item in listResultDto.Result.Items)
             //{
@@ -144,12 +144,17 @@ namespace Colegio.Roles
             var grantedPermissions = (await _roleManager.GetGrantedPermissionsAsync(role)).ToArray();
             var roleEditDto = ObjectMapper.Map<RoleEditDto>(role);
 
-            return new GetRoleForEditOutput
+
+            GetRoleForEditOutput getRoleForEditOutput = new GetRoleForEditOutput
             {
                 Role = roleEditDto,
                 Permissions = ObjectMapper.Map<List<FlatPermissionDto>>(permissions).OrderBy(p => p.DisplayName).ToList(),
                 GrantedPermissionNames = grantedPermissions.Select(p => p.Name).ToList()
             };
+            getRoleForEditOutput.Permissions.ForEach(x => x.DisplayName = x.DisplayName.Replace("[", "").Replace("]", ""));
+
+            return getRoleForEditOutput;
+
         }
     }
 }
