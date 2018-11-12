@@ -99,11 +99,22 @@ namespace Colegio.Roles
 
         public Task<ListResultDto<PermissionDto>> GetAllPermissions()
         {
+            Task<ListResultDto<PermissionDto>> listResultDto;
             var permissions = PermissionManager.GetAllPermissions();
 
-            return Task.FromResult(new ListResultDto<PermissionDto>(
-                ObjectMapper.Map<List<PermissionDto>>(permissions)
-            ));
+             listResultDto = Task.FromResult(new ListResultDto<PermissionDto>(
+                ObjectMapper.Map<List<PermissionDto>>(permissions)));
+
+            //foreach (var item in listResultDto.Result.Items)
+            //{
+            //    item.DisplayName = item.DisplayName.Replace("[", "").Replace("]", "");
+            //}
+            listResultDto.Result.Items.ToList().ForEach(x => x.DisplayName = x.DisplayName.Replace("[", "").Replace("]", ""));
+
+            return listResultDto;
+            //return Task.FromResult(new ListResultDto<PermissionDto>(
+            //    ObjectMapper.Map<List<PermissionDto>>(permissions)
+            //));
         }
 
         protected override IQueryable<Role> CreateFilteredQuery(PagedResultRequestDto input)

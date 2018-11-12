@@ -13,7 +13,7 @@ namespace Colegio.Roles.Dto
         [StringLength(AbpRoleBase.MaxNameLength)]
         public string Name { get; set; }
         
-        [Required]
+        [Required(ErrorMessage = "El campo es requerido")]
         [StringLength(AbpRoleBase.MaxDisplayNameLength)]
         public string DisplayName { get; set; }
 

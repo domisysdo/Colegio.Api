@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Colegio.EstudianteNs
 {
-    [AbpAuthorize(PermissionNames.Pages_Estudiante)]
+    [AbpAuthorize(PermissionNames.Pages_Students)]
     public class EstudianteAppService : AsyncCrudAppService<Estudiante, EstudianteDto, int, PagedResultRequestDto, EstudianteDto, EstudianteDto>, IEstudianteAppService
     {
         private readonly IEstudianteManager _estudianteManager;

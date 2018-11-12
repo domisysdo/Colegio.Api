@@ -8,6 +8,6 @@
 
         public const string Pages_Roles = "Pages.Roles";
 
-        public const string Pages_Estudiante = "Pages.Estudiante";
+        public const string Pages_Students = "Pages.Students";
     }
 }
