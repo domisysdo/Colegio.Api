@@ -1,19 +1,19 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Abp.Application.Services;
+﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.Domain.Repositories;
+using Abp.Extensions;
 using Abp.IdentityFramework;
 using Abp.Linq.Extensions;
-using Abp.Extensions;
 using Colegio.Authorization;
 using Colegio.Authorization.Roles;
 using Colegio.Authorization.Users;
 using Colegio.Roles.Dto;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Colegio.Roles
 {
@@ -155,6 +155,28 @@ namespace Colegio.Roles
 
             return getRoleForEditOutput;
 
+        }
+
+
+        public Task<PagedResultDto<RoleDto>> GetAllFiltered(PagedResultRequestDto input, string filter)
+        {
+            var roleList = new List<Role>();
+            var query = Repository.GetAll();
+
+            if (filter != null && filter != string.Empty)
+            {
+                roleList = query
+                    .Where(x => x.Name.StartsWith(filter) || x.DisplayName.StartsWith(filter))
+                    .Skip(input.SkipCount)
+                    .Take(input.MaxResultCount).ToList();
+
+                var result = new PagedResultDto<RoleDto>(query.Count(), ObjectMapper.Map<List<RoleDto>>(roleList));
+                return Task.FromResult(result);
+            }
+            else
+            {
+                return base.GetAll(input);
+            }
         }
     }
 }
