@@ -16,11 +16,12 @@ using Colegio.Authorization.Roles;
 using Colegio.Authorization.Users;
 using Colegio.Roles.Dto;
 using Colegio.Users.Dto;
+using Abp.Extensions;
 
 namespace Colegio.Users
 {
     [AbpAuthorize(PermissionNames.Pages_Users)]
-    public class UserAppService : AsyncCrudAppService<User, UserDto, long, PagedResultRequestDto, CreateUserDto, UserDto>, IUserAppService
+    public class UserAppService : AsyncCrudAppService<User, UserDto, long, PagedAndSortedResultRequestDto, CreateUserDto, UserDto>, IUserAppService
     {
         private readonly UserManager _userManager;
         private readonly RoleManager _roleManager;
@@ -124,7 +125,7 @@ namespace Colegio.Users
             return userDto;
         }
 
-        protected override IQueryable<User> CreateFilteredQuery(PagedResultRequestDto input)
+        protected override IQueryable<User> CreateFilteredQuery(PagedAndSortedResultRequestDto input)
         {
             return Repository.GetAllIncluding(x => x.Roles);
         }
@@ -141,9 +142,34 @@ namespace Colegio.Users
             return user;
         }
 
-        protected override IQueryable<User> ApplySorting(IQueryable<User> query, PagedResultRequestDto input)
+        public Task<PagedResultDto<UserDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter)
         {
-            return query.OrderBy(r => r.UserName);
+            var roleList = new List<User>();
+            var query = Repository.GetAll();
+
+            if (filter != null && filter != string.Empty)
+            {
+                roleList = query
+                    .Where(x => x.UserName.StartsWith(filter) || x.EmailAddress.StartsWith(filter) || x.FullName.StartsWith(filter))
+                    .Skip(input.SkipCount)
+                    .Take(input.MaxResultCount).ToList();
+
+                var result = new PagedResultDto<UserDto>(query.Count(), ObjectMapper.Map<List<UserDto>>(roleList));
+                return Task.FromResult(result);
+            }
+            else
+            {
+                return base.GetAll(input);
+            }
+        }
+
+        protected override IQueryable<User> ApplySorting(IQueryable<User> query, PagedAndSortedResultRequestDto input)
+        {
+            if (input.Sorting.IsNullOrEmpty())
+            {
+                input.Sorting = "UserName asc";
+            }
+            return base.ApplySorting(query, input);
         }
 
         protected virtual void CheckErrors(IdentityResult identityResult)

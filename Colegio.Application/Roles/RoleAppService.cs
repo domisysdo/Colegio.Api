@@ -2,9 +2,11 @@
 using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.Domain.Repositories;
+using Abp.EntityFrameworkCore.Repositories;
 using Abp.Extensions;
 using Abp.IdentityFramework;
 using Abp.Linq.Extensions;
+using Abp.UI;
 using Colegio.Authorization;
 using Colegio.Authorization.Roles;
 using Colegio.Authorization.Users;
@@ -18,7 +20,7 @@ using System.Threading.Tasks;
 namespace Colegio.Roles
 {
     [AbpAuthorize(PermissionNames.Pages_Roles)]
-    public class RoleAppService : AsyncCrudAppService<Role, RoleDto, int, PagedResultRequestDto, CreateRoleDto, RoleDto>, IRoleAppService
+    public class RoleAppService : AsyncCrudAppService<Role, RoleDto, int, PagedAndSortedResultRequestDto, CreateRoleDto, RoleDto>, IRoleAppService
     {
         private readonly RoleManager _roleManager;
         private readonly UserManager _userManager;
@@ -99,25 +101,11 @@ namespace Colegio.Roles
 
         public Task<ListResultDto<PermissionDto>> GetAllPermissions()
         {
-            Task<ListResultDto<PermissionDto>> listResultDto;
             var permissions = PermissionManager.GetAllPermissions();
-
-            listResultDto = Task.FromResult(new ListResultDto<PermissionDto>(
-               ObjectMapper.Map<List<PermissionDto>>(permissions)));
-
-            //foreach (var item in listResultDto.Result.Items)
-            //{
-            //    item.DisplayName = item.DisplayName.Replace("[", "").Replace("]", "");
-            //}
-            listResultDto.Result.Items.ToList().ForEach(x => x.DisplayName = x.DisplayName.Replace("[", "").Replace("]", ""));
-
-            return listResultDto;
-            //return Task.FromResult(new ListResultDto<PermissionDto>(
-            //    ObjectMapper.Map<List<PermissionDto>>(permissions)
-            //));
+            return Task.FromResult(new ListResultDto<PermissionDto>(ObjectMapper.Map<List<PermissionDto>>(permissions)));
         }
 
-        protected override IQueryable<Role> CreateFilteredQuery(PagedResultRequestDto input)
+        protected override IQueryable<Role> CreateFilteredQuery(PagedAndSortedResultRequestDto input)
         {
             return Repository.GetAllIncluding(x => x.Permissions);
         }
@@ -127,9 +115,13 @@ namespace Colegio.Roles
             return await Repository.GetAllIncluding(x => x.Permissions).FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        protected override IQueryable<Role> ApplySorting(IQueryable<Role> query, PagedResultRequestDto input)
+        protected override IQueryable<Role> ApplySorting(IQueryable<Role> query, PagedAndSortedResultRequestDto input)
         {
-            return query.OrderBy(r => r.DisplayName);
+            if (input.Sorting.IsNullOrEmpty())
+            {
+                input.Sorting = "name asc";
+            }
+            return base.ApplySorting(query, input);
         }
 
         protected virtual void CheckErrors(IdentityResult identityResult)
@@ -144,21 +136,15 @@ namespace Colegio.Roles
             var grantedPermissions = (await _roleManager.GetGrantedPermissionsAsync(role)).ToArray();
             var roleEditDto = ObjectMapper.Map<RoleEditDto>(role);
 
-
-            GetRoleForEditOutput getRoleForEditOutput = new GetRoleForEditOutput
+            return new GetRoleForEditOutput
             {
                 Role = roleEditDto,
                 Permissions = ObjectMapper.Map<List<FlatPermissionDto>>(permissions).OrderBy(p => p.DisplayName).ToList(),
                 GrantedPermissionNames = grantedPermissions.Select(p => p.Name).ToList()
             };
-            getRoleForEditOutput.Permissions.ForEach(x => x.DisplayName = x.DisplayName.Replace("[", "").Replace("]", ""));
-
-            return getRoleForEditOutput;
-
         }
 
-
-        public Task<PagedResultDto<RoleDto>> GetAllFiltered(PagedResultRequestDto input, string filter)
+        public Task<PagedResultDto<RoleDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter)
         {
             var roleList = new List<Role>();
             var query = Repository.GetAll();
@@ -176,6 +162,16 @@ namespace Colegio.Roles
             else
             {
                 return base.GetAll(input);
+            }
+        }
+        public void DeleteMultipleRoles(List<RoleDto> roleList)
+        {
+            foreach (var role in roleList)
+            {
+                if (!role.IsStatic)
+                {
+                    Repository.Delete(role.Id);
+                }
             }
         }
     }
