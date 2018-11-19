@@ -39,7 +39,7 @@ namespace Colegio
                 ColegioConsts.ConnectionStringName
             );
 
-            Configuration.Localization.Languages.Add(new LanguageInfo("es-MX", "Español México", "famfamfam-flags mx", true));
+            Configuration.Localization.Languages.Add(new LanguageInfo("es", "Español México", "famfamfam-flags mx", true));
 
             // Use database for language management
             Configuration.Modules.Zero().LanguageManagement.EnableDbLocalization();

@@ -22,7 +22,7 @@ namespace Colegio.EntityFrameworkCore.Seed.Host
             AddSettingIfNotExists(EmailSettingNames.DefaultFromDisplayName, "mydomain.com mailer");
 
             // Languages
-            AddSettingIfNotExists(LocalizationSettingNames.DefaultLanguage, "es-MX");
+            AddSettingIfNotExists(LocalizationSettingNames.DefaultLanguage, "es");
         }
         
         private void AddSettingIfNotExists(string name, string value, int? tenantId = null)

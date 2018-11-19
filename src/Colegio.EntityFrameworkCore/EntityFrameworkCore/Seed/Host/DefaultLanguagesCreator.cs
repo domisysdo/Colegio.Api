@@ -15,7 +15,7 @@ namespace Colegio.EntityFrameworkCore.Seed.Host
         {
             return new List<ApplicationLanguage>
             {
-                new ApplicationLanguage(null, "es-MX", "Español México", "famfamfam-flags mx")
+                new ApplicationLanguage(null, "es", "Español México", "famfamfam-flags mx")
                 //new ApplicationLanguage(null, "en", "English", "famfamfam-flags gb"),
                 //new ApplicationLanguage(null, "ar", "العربية", "famfamfam-flags sa"),
                 //new ApplicationLanguage(null, "de", "German", "famfamfam-flags de"),

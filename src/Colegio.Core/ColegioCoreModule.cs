@@ -25,9 +25,9 @@ namespace Colegio
             Configuration.Modules.Zero().EntityTypes.Role = typeof(Role);
             Configuration.Modules.Zero().EntityTypes.User = typeof(User);
 
-            //Configuration.Localization.IsEnabled = true;
+            Configuration.Localization.IsEnabled = true;
             Configuration.Localization.WrapGivenTextIfNotFound = false;
-            Configuration.Localization.Languages.Add(new LanguageInfo("es-MX", "Español México", "famfamfam-flags mx", true));
+            Configuration.Localization.Languages.Add(new LanguageInfo("es", "Español México", "famfamfam-flags mx", true));
             ColegioLocalizationConfigurer.Configure(Configuration.Localization);
 
             // Enable this line to create a multi-tenant application.

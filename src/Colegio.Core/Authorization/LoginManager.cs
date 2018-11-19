@@ -10,6 +10,7 @@ using Abp.Zero.Configuration;
 using Colegio.Authorization.Roles;
 using Colegio.Authorization.Users;
 using Colegio.MultiTenancy;
+using Abp.Localization;
 
 namespace Colegio.Authorization
 {
