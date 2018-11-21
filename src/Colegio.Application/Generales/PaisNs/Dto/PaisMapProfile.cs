@@ -10,7 +10,9 @@ namespace Colegio.Generales.PaisNs.Dto
     {
         public PaisMapProfile()
         {
-            CreateMap<PaisDto, Pais>().ReverseMap();
+            CreateMap<PaisDto, Pais>();
+            CreateMap<Pais, PaisDto>()
+                .ForMember(x => x.IdentificadorNombre, o => o.MapFrom(x => x.Identificador + " - " + x.Nombre));
         }
     }
 }

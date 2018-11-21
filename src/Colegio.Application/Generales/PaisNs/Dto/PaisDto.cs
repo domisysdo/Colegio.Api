@@ -9,5 +9,6 @@ namespace Colegio.Generales.PaisNs
     {
         public string Identificador { get; set; }
         public string Nombre { get; set; }
+        public string IdentificadorNombre { get; set; }
     }
 }
