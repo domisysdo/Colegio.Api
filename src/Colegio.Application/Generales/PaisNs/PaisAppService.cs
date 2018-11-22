@@ -1,10 +1,7 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
-using Abp.Authorization;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
-using AutoMapper;
-using Colegio.Authorization;
 using Colegio.Generales.PaisNs;
 using Colegio.Models.Generales.PaisNs;
 using System.Collections.Generic;
@@ -62,7 +59,9 @@ namespace Colegio.PaisNs
             }
             else
             {
-                return base.GetAll(input);
+                paisList = query.ToList();
+                var result = new PagedResultDto<PaisDto>(query.Count(), ObjectMapper.Map<List<PaisDto>>(paisList));
+                return Task.FromResult(result);
             }
         }
 
@@ -73,6 +72,16 @@ namespace Colegio.PaisNs
                 input.Sorting = "Identificador asc";
             }
             return base.ApplySorting(query, input);
+        }
+        public List<PaisDto> GetAllForSelect()
+        {
+            var paisList = new List<Pais>();
+
+            var query = Repository.GetAll();
+            paisList = query.ToList();
+
+            return new List<PaisDto>(ObjectMapper.Map<List<PaisDto>>(paisList));
+
         }
 
     }

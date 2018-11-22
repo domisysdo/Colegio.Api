@@ -2,7 +2,6 @@
 using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
-using Colegio.Generales.PaisNs;
 using Colegio.Generales.ProvinciaNs;
 using Colegio.Models.Generales.PaisNs;
 using Colegio.Models.Generales.ProvinciaNs;
@@ -14,8 +13,8 @@ namespace Colegio.ProvinciaNs
 {
     public class ProvinciaAppService : AsyncCrudAppService<Provincia, ProvinciaDto, int, PagedAndSortedResultRequestDto, ProvinciaDto, ProvinciaDto>, IProvinciaAppService
     {
-        IRepository<Pais> _paisRepository;
-        public ProvinciaAppService(IRepository<Provincia> repository, IRepository<Pais> paisRepository )
+        readonly IRepository<Pais> _paisRepository;
+        public ProvinciaAppService(IRepository<Provincia> repository, IRepository<Pais> paisRepository)
             : base(repository)
         {
             _paisRepository = paisRepository;
@@ -24,12 +23,12 @@ namespace Colegio.ProvinciaNs
         public Task<PagedResultDto<ProvinciaDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter)
         {
             var provinciaList = new List<Provincia>();
-            var query = Repository.GetAll();
+            var query = Repository.GetAllIncluding(x => x.Pais);
 
             if (filter != null && filter != string.Empty)
             {
                 provinciaList = query
-                    .Where(x => x.Identificador.StartsWith(filter) || x.Nombre.StartsWith(filter))
+                    .Where(x => x.Identificador.StartsWith(filter) || x.Nombre.StartsWith(filter) || x.Pais.Nombre.StartsWith(filter))
                     .Skip(input.SkipCount)
                     .Take(input.MaxResultCount).ToList();
 
@@ -38,18 +37,10 @@ namespace Colegio.ProvinciaNs
             }
             else
             {
-                return base.GetAll(input);
+                provinciaList = query.ToList();
+                var result = new PagedResultDto<ProvinciaDto>(query.Count(), ObjectMapper.Map<List<ProvinciaDto>>(provinciaList));
+                return Task.FromResult(result);
             }
-        }
-
-        public List<PaisDto> GetAllPaises()
-        {
-            var paisList = new List<Pais>();
-            var query = _paisRepository.GetAll();
-            paisList = query.ToList();
-
-            return new List<PaisDto>(ObjectMapper.Map<List<PaisDto>>(paisList));
-
         }
 
 
@@ -62,5 +53,15 @@ namespace Colegio.ProvinciaNs
             return base.ApplySorting(query, input);
         }
 
+        public List<ProvinciaDto> GetAllForSelect()
+        {
+            var provinciaList = new List<Provincia>();
+
+            var query = Repository.GetAll();
+            provinciaList = query.ToList();
+
+            return new List<ProvinciaDto>(ObjectMapper.Map<List<ProvinciaDto>>(provinciaList));
+
+        }
     }
 }

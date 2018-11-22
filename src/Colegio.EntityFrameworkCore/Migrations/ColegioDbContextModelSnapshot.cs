@@ -1016,6 +1016,38 @@ namespace Colegio.Migrations
                     b.ToTable("Estudiante");
                 });
 
+            modelBuilder.Entity("Colegio.Models.Generales.MunicipioNs.Municipio", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<string>("Identificador");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Nombre");
+
+                    b.Property<int>("ProvinciaId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProvinciaId");
+
+                    b.ToTable("Municipio");
+                });
+
             modelBuilder.Entity("Colegio.Models.Generales.PaisNs.Pais", b =>
                 {
                     b.Property<int>("Id")
@@ -1274,6 +1306,14 @@ namespace Colegio.Migrations
                     b.HasOne("Colegio.Authorization.Users.User", "LastModifierUser")
                         .WithMany()
                         .HasForeignKey("LastModifierUserId");
+                });
+
+            modelBuilder.Entity("Colegio.Models.Generales.MunicipioNs.Municipio", b =>
+                {
+                    b.HasOne("Colegio.Models.Generales.ProvinciaNs.Provincia", "Provincia")
+                        .WithMany("ListaMunicipios")
+                        .HasForeignKey("ProvinciaId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Colegio.Models.Generales.ProvinciaNs.Provincia", b =>

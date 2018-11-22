@@ -2,6 +2,7 @@
 using Colegio.Authorization.Roles;
 using Colegio.Authorization.Users;
 using Colegio.Models.EstudianteNs;
+using Colegio.Models.Generales.MunicipioNs;
 using Colegio.Models.Generales.PaisNs;
 using Colegio.Models.Generales.ProvinciaNs;
 using Colegio.MultiTenancy;
@@ -14,6 +15,7 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<Estudiante> Estudiante { get; set; }
         public DbSet<Pais> Pais { get; set; }
         public DbSet<Provincia> Provincia { get; set; }
+        public DbSet<Municipio> Municipio { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -21,6 +23,11 @@ namespace Colegio.EntityFrameworkCore
                 .HasOne(x => x.Pais)
                 .WithMany(x => x.ListaProvincias)
                 .HasForeignKey(x => x.PaisId);
+
+            modelBuilder.Entity<Municipio>()
+                .HasOne(x => x.Provincia)
+                .WithMany(x => x.ListaMunicipios)
+                .HasForeignKey(x => x.ProvinciaId);
 
             base.OnModelCreating(modelBuilder);
         }
