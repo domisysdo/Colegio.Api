@@ -37,7 +37,11 @@ namespace Colegio.MunicipioNs
             }
             else
             {
-                provinciaList = query.ToList();
+                provinciaList = query
+                    .Skip(input.SkipCount)
+                    .Take(input.MaxResultCount).ToList()
+                    .ToList();
+
                 var result = new PagedResultDto<MunicipioDto>(query.Count(), ObjectMapper.Map<List<MunicipioDto>>(provinciaList));
                 return Task.FromResult(result);
             }
@@ -53,5 +57,14 @@ namespace Colegio.MunicipioNs
             return base.ApplySorting(query, input);
         }
 
+        public List<MunicipioDto> GetAllForSelect()
+        {
+            var paisList = new List<Municipio>();
+
+            var query = Repository.GetAll();
+            paisList = query.ToList();
+
+            return new List<MunicipioDto>(ObjectMapper.Map<List<MunicipioDto>>(paisList));
+        }
     }
 }

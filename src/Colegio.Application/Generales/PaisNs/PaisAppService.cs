@@ -12,36 +12,11 @@ namespace Colegio.PaisNs
 {
     public class PaisAppService : AsyncCrudAppService<Pais, PaisDto, int, PagedAndSortedResultRequestDto, PaisDto, PaisDto>, IPaisAppService
     {
-        private readonly IPaisManager _paisManager;
-        
-        public PaisAppService(IRepository<Pais> repository, IPaisManager paisManager)
+        public PaisAppService(IRepository<Pais> repository)
             :base(repository)
         {
-            _paisManager = paisManager;
         }
-
-        #region Using Managers
-        //public override async Task<PaisDto> Create(PaisDto input)
-        //{
-
-        //    var output = Mapper.Map<PaisDto, Pais>(input);
-
-        //    await _paisManager.Create(output);
-
-        //    return MapToEntityDto(output);
-
-        //}
-
-        //public override async Task<PaisDto> Update(PaisDto input)
-        //{
-        //    Pais output = Mapper.Map<PaisDto, Pais>(input);
-
-        //    await _paisManager.Update(output);
-
-        //    return MapToEntityDto(output);
-        //}
-        #endregion
-
+        
         public Task<PagedResultDto<PaisDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter)
         {
             var paisList = new List<Pais>();
@@ -59,7 +34,11 @@ namespace Colegio.PaisNs
             }
             else
             {
-                paisList = query.ToList();
+                paisList = query
+                    .Skip(input.SkipCount)
+                    .Take(input.MaxResultCount).ToList()
+                    .ToList();
+
                 var result = new PagedResultDto<PaisDto>(query.Count(), ObjectMapper.Map<List<PaisDto>>(paisList));
                 return Task.FromResult(result);
             }
@@ -81,8 +60,6 @@ namespace Colegio.PaisNs
             paisList = query.ToList();
 
             return new List<PaisDto>(ObjectMapper.Map<List<PaisDto>>(paisList));
-
         }
-
     }
 }

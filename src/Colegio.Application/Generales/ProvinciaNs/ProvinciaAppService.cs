@@ -14,10 +14,9 @@ namespace Colegio.ProvinciaNs
     public class ProvinciaAppService : AsyncCrudAppService<Provincia, ProvinciaDto, int, PagedAndSortedResultRequestDto, ProvinciaDto, ProvinciaDto>, IProvinciaAppService
     {
         readonly IRepository<Pais> _paisRepository;
-        public ProvinciaAppService(IRepository<Provincia> repository, IRepository<Pais> paisRepository)
+        public ProvinciaAppService(IRepository<Provincia> repository)
             : base(repository)
         {
-            _paisRepository = paisRepository;
         }
 
         public Task<PagedResultDto<ProvinciaDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter)
@@ -37,7 +36,11 @@ namespace Colegio.ProvinciaNs
             }
             else
             {
-                provinciaList = query.ToList();
+                provinciaList = query
+                    .Skip(input.SkipCount)
+                    .Take(input.MaxResultCount).ToList()
+                    .ToList();
+
                 var result = new PagedResultDto<ProvinciaDto>(query.Count(), ObjectMapper.Map<List<ProvinciaDto>>(provinciaList));
                 return Task.FromResult(result);
             }

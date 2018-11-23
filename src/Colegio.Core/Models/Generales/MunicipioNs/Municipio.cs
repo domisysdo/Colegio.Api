@@ -1,5 +1,6 @@
 ﻿using Abp.Domain.Entities.Auditing;
 using Colegio.Models.Generales.ProvinciaNs;
+using System.Collections.Generic;
 
 namespace Colegio.Models.Generales.MunicipioNs
 {
@@ -9,5 +10,7 @@ namespace Colegio.Models.Generales.MunicipioNs
         public string Nombre { get; set; }
         public int ProvinciaId { get; set; }
         public virtual Provincia Provincia { get; set; }
+        public virtual IEnumerable<Sector> ListaSectores { get; set; }
+
     }
 }

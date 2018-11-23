@@ -5,6 +5,7 @@ using Colegio.Models.EstudianteNs;
 using Colegio.Models.Generales.MunicipioNs;
 using Colegio.Models.Generales.PaisNs;
 using Colegio.Models.Generales.ProvinciaNs;
+using Colegio.Models.Generales.TipoTelefonoNs;
 using Colegio.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,9 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<Pais> Pais { get; set; }
         public DbSet<Provincia> Provincia { get; set; }
         public DbSet<Municipio> Municipio { get; set; }
+        public DbSet<Sector> Sector { get; set; }
+        public DbSet<TipoTelefono> TipoTelefono { get; set; }
+        public DbSet<TipoDireccion> TipoDireccion { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,6 +32,11 @@ namespace Colegio.EntityFrameworkCore
                 .HasOne(x => x.Provincia)
                 .WithMany(x => x.ListaMunicipios)
                 .HasForeignKey(x => x.ProvinciaId);
+
+            modelBuilder.Entity<Sector>()
+                .HasOne(x => x.Municipio)
+                .WithMany(x => x.ListaSectores)
+                .HasForeignKey(x => x.MunicipioId);
 
             base.OnModelCreating(modelBuilder);
         }
