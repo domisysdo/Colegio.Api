@@ -22,6 +22,9 @@ namespace Colegio.TipoTelefonoNs
             var tipoTelefonoList = new List<TipoTelefono>();
             var query = Repository.GetAll();
 
+            query = ApplySorting(query, input);
+
+
             if (filter != null && filter != string.Empty)
             {
                 tipoTelefonoList = query

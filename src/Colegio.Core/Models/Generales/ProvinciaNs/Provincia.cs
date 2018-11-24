@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Colegio.Models.Generales.ProvinciaNs
 {
-    public class Provincia:  FullAuditedEntity<int>
+    public class Provincia:  AuditedEntity<int>
     {
         public string Identificador { get; set; }
         public string Nombre { get; set; }

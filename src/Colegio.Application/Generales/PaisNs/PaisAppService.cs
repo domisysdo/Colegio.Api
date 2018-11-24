@@ -22,6 +22,9 @@ namespace Colegio.PaisNs
             var paisList = new List<Pais>();
             var query = Repository.GetAll();
 
+            query = ApplySorting(query, input);
+
+
             if (filter != null && filter != string.Empty)
             {
                 paisList = query
@@ -34,6 +37,7 @@ namespace Colegio.PaisNs
             }
             else
             {
+
                 paisList = query
                     .Skip(input.SkipCount)
                     .Take(input.MaxResultCount).ToList()

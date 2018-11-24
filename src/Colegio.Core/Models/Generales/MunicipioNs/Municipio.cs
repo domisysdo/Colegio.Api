@@ -1,10 +1,11 @@
 ﻿using Abp.Domain.Entities.Auditing;
 using Colegio.Models.Generales.ProvinciaNs;
+using Colegio.Models.Generales.SectorNs;
 using System.Collections.Generic;
 
 namespace Colegio.Models.Generales.MunicipioNs
 {
-    public class Municipio:  FullAuditedEntity<int>
+    public class Municipio: AuditedEntity<int>
     {
         public string Identificador { get; set; }
         public string Nombre { get; set; }

@@ -2,7 +2,7 @@
 
 namespace Colegio.Models.Generales.TipoTelefonoNs
 {
-    public class TipoTelefono : FullAuditedEntity<int>
+    public class TipoTelefono : AuditedEntity<int>
     {
         public string Descripcion { get; set; }
     }

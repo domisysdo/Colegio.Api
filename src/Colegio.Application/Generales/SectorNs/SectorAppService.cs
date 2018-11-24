@@ -22,6 +22,9 @@ namespace Colegio.SectorNs
             var provinciaList = new List<Sector>();
             var query = Repository.GetAllIncluding(x => x.Municipio);
 
+            query = ApplySorting(query, input);
+
+
             if (filter != null && filter != string.Empty)
             {
                 provinciaList = query

@@ -7,7 +7,26 @@ namespace Colegio.Enums
         [Description("Activo")]
         A,
         [Description("Inactivo")]
-        I
-        
+        I        
+    }
+    public enum Sexo
+    {
+        [Description("Masculino")]
+        M,
+        [Description("Fenemino")]
+        F
+    }
+    public enum EstadoCivil
+    {
+        [Description("Soltero")]
+        S,
+        [Description("Casado")]
+        C,
+        [Description("Divorciado")]
+        D,
+        [Description("Viudo")]
+        V,
+        [Description("Union Libre")]
+        U
     }
 }

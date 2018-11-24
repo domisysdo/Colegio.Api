@@ -3,7 +3,7 @@ using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
 using Colegio.Generales.TipoDireccionNs;
-using Colegio.Models.Generales.TipoTelefonoNs;
+using Colegio.Models.Generales.TipoDireccionNs;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,6 +21,9 @@ namespace Colegio.TipoDireccionNs
         {
             var tipoDireccionList = new List<TipoDireccion>();
             var query = Repository.GetAll();
+
+            query = ApplySorting(query, input);
+
 
             if (filter != null && filter != string.Empty)
             {
