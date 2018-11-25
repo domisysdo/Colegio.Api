@@ -3,7 +3,7 @@ using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
 using Colegio.Generales.SectorNs;
-using Colegio.Models.Generales.MunicipioNs;
+using Colegio.Models.Generales.SectorNs;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Colegio.Generales.SectorNs;
-using Colegio.Models.Generales.MunicipioNs;
+using Colegio.Models.Generales.SectorNs;
 
 namespace Colegio.Generales.PaisNs.Dto
 {

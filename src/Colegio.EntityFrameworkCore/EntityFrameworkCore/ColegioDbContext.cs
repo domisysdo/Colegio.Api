@@ -5,6 +5,7 @@ using Colegio.Models.Generales.DireccionEstudianteNs;
 using Colegio.Models.Generales.DireccionFamiliarEstudianteNs;
 using Colegio.Models.Generales.EmailEstudianteNs;
 using Colegio.Models.Generales.EmailFamiliarEstudianteNs;
+using Colegio.Models.Generales.IncidenciaEstudianteNs;
 using Colegio.Models.Generales.LugarTrabajoNs;
 using Colegio.Models.Generales.MunicipioNs;
 using Colegio.Models.Generales.PaisNs;
@@ -16,6 +17,7 @@ using Colegio.Models.Generales.TelefonoFamiliarNs;
 using Colegio.Models.Generales.TipoDireccionNs;
 using Colegio.Models.Generales.TipoEmailNs;
 using Colegio.Models.Generales.TipoIdentificacionNs;
+using Colegio.Models.Generales.TipoIncidenciaNs;
 using Colegio.Models.Generales.TipoTelefonoNs;
 using Colegio.Models.Inscripcion.EstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs;
@@ -48,7 +50,8 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<Parentesco> Parentesco { get; set; }
         public DbSet<DireccionEstudiante> DireccionEstudiante { get; set; }
         public DbSet<DireccionFamiliarEstudiante> DireccionFamiliarEstudiante { get; set; }
-
+        public DbSet<IncidenciaEstudiante> IncidenciaEstudiante { get; set; }
+        public DbSet<TipoIncidencia> TipoIncidencia { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

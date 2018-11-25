@@ -2,8 +2,7 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Colegio.Authorization;
-using Colegio.EstudianteNs;
-using Colegio.Models.EstudianteNs;
+using Colegio.Models.Inscripcion.EstudianteNs;
 
 namespace Colegio
 {
@@ -26,8 +25,6 @@ namespace Colegio
             Configuration.Modules.AbpAutoMapper().Configurators.Add(cfg =>
             {
                 cfg.AddProfiles(thisAssembly);
-                cfg.CreateMap<EstudianteDto, Estudiante>().ReverseMap();
-                cfg.CreateMap<Estudiante, EstudianteDto>().ReverseMap();
             });
         }
     }

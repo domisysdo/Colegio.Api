@@ -1,6 +1,6 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
-using Colegio.Models.Generales.MunicipioNs;
+using Colegio.Models.Generales.SectorNs;
 
 namespace Colegio.Generales.SectorNs
 {

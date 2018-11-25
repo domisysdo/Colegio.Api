@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Colegio.Generales.TipoDireccionNs;
-using Colegio.Models.Generales.TipoTelefonoNs;
+using Colegio.Models.Generales.TipoDireccionNs;
 
 namespace Colegio.Generales.PaisNs.Dto
 {

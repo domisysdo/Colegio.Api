@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Colegio.Migrations
 {
-    public partial class Initial : Migration
+    public partial class _1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -375,6 +375,182 @@ namespace Colegio.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Materia",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Identificador = table.Column<string>(nullable: true),
+                    Nombre = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Materia", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Nacionalidad",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Identificador = table.Column<string>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Nacionalidad", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Pais",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    IsDeleted = table.Column<bool>(nullable: false),
+                    DeleterUserId = table.Column<long>(nullable: true),
+                    DeletionTime = table.Column<DateTime>(nullable: true),
+                    Identificador = table.Column<string>(nullable: true),
+                    Nombre = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Pais", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Parentesco",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Parentesco", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Profesion",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Profesion", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TipoDireccion",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TipoDireccion", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TipoEmail",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TipoEmail", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TipoIdentificacion",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TipoIdentificacion", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TipoIncidencia",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TipoIncidencia", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TipoTelefono",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TipoTelefono", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AbpFeatures",
                 columns: table => new
                 {
@@ -636,6 +812,65 @@ namespace Colegio.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Estudiante",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    IsDeleted = table.Column<bool>(nullable: false),
+                    DeleterUserId = table.Column<long>(nullable: true),
+                    DeletionTime = table.Column<DateTime>(nullable: true),
+                    Identificador = table.Column<string>(nullable: true),
+                    Nombres = table.Column<string>(nullable: true),
+                    PrimerApellido = table.Column<string>(nullable: true),
+                    SegundoApellido = table.Column<string>(nullable: true),
+                    FechaNacimiento = table.Column<DateTime>(nullable: false),
+                    Sexo = table.Column<int>(nullable: false),
+                    EstadoCivil = table.Column<int>(nullable: false),
+                    Estado = table.Column<int>(nullable: false),
+                    NacionalidadId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Estudiante", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Estudiante_Nacionalidad_NacionalidadId",
+                        column: x => x.NacionalidadId,
+                        principalTable: "Nacionalidad",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Provincia",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Identificador = table.Column<string>(nullable: true),
+                    Nombre = table.Column<string>(nullable: true),
+                    PaisId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Provincia", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Provincia_Pais_PaisId",
+                        column: x => x.PaisId,
+                        principalTable: "Pais",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AbpEntityPropertyChanges",
                 columns: table => new
                 {
@@ -711,6 +946,432 @@ namespace Colegio.Migrations
                         name: "FK_AbpRoleClaims_AbpRoles_RoleId",
                         column: x => x.RoleId,
                         principalTable: "AbpRoles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EmailEstudiante",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Email = table.Column<string>(nullable: true),
+                    EstudianteId = table.Column<int>(nullable: false),
+                    TipoEmailId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EmailEstudiante", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_EmailEstudiante_Estudiante_EstudianteId",
+                        column: x => x.EstudianteId,
+                        principalTable: "Estudiante",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_EmailEstudiante_TipoEmail_TipoEmailId",
+                        column: x => x.TipoEmailId,
+                        principalTable: "TipoEmail",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "IncidenciaEstudiante",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Justificada = table.Column<bool>(nullable: false),
+                    Descripcion = table.Column<string>(nullable: true),
+                    Fecha = table.Column<DateTime>(nullable: false),
+                    MateriaId = table.Column<int>(nullable: false),
+                    EstudianteId = table.Column<int>(nullable: false),
+                    TipoIncidenciaId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_IncidenciaEstudiante", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_IncidenciaEstudiante_Estudiante_EstudianteId",
+                        column: x => x.EstudianteId,
+                        principalTable: "Estudiante",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_IncidenciaEstudiante_Materia_MateriaId",
+                        column: x => x.MateriaId,
+                        principalTable: "Materia",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_IncidenciaEstudiante_TipoIncidencia_TipoIncidenciaId",
+                        column: x => x.TipoIncidenciaId,
+                        principalTable: "TipoIncidencia",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Padecimiento",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true),
+                    Nota = table.Column<string>(nullable: true),
+                    EstudianteId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Padecimiento", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Padecimiento_Estudiante_EstudianteId",
+                        column: x => x.EstudianteId,
+                        principalTable: "Estudiante",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TelefonoEstudiante",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Numero = table.Column<string>(nullable: true),
+                    EstudianteId = table.Column<int>(nullable: false),
+                    TipoTelefonoId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TelefonoEstudiante", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TelefonoEstudiante_Estudiante_EstudianteId",
+                        column: x => x.EstudianteId,
+                        principalTable: "Estudiante",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TelefonoEstudiante_TipoTelefono_TipoTelefonoId",
+                        column: x => x.TipoTelefonoId,
+                        principalTable: "TipoTelefono",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Municipio",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Identificador = table.Column<string>(nullable: true),
+                    Nombre = table.Column<string>(nullable: true),
+                    ProvinciaId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Municipio", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Municipio_Provincia_ProvinciaId",
+                        column: x => x.ProvinciaId,
+                        principalTable: "Provincia",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Sector",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Identificador = table.Column<string>(nullable: true),
+                    Nombre = table.Column<string>(nullable: true),
+                    MunicipioId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Sector", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Sector_Municipio_MunicipioId",
+                        column: x => x.MunicipioId,
+                        principalTable: "Municipio",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DireccionEstudiante",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true),
+                    EstudianteId = table.Column<int>(nullable: false),
+                    TipoDireccionId = table.Column<int>(nullable: false),
+                    PaisId = table.Column<int>(nullable: false),
+                    ProvinciaId = table.Column<int>(nullable: false),
+                    MunicipioId = table.Column<int>(nullable: false),
+                    SectorId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DireccionEstudiante", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_DireccionEstudiante_Estudiante_EstudianteId",
+                        column: x => x.EstudianteId,
+                        principalTable: "Estudiante",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DireccionEstudiante_Municipio_MunicipioId",
+                        column: x => x.MunicipioId,
+                        principalTable: "Municipio",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DireccionEstudiante_Pais_PaisId",
+                        column: x => x.PaisId,
+                        principalTable: "Pais",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DireccionEstudiante_Provincia_ProvinciaId",
+                        column: x => x.ProvinciaId,
+                        principalTable: "Provincia",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DireccionEstudiante_Sector_SectorId",
+                        column: x => x.SectorId,
+                        principalTable: "Sector",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DireccionEstudiante_TipoDireccion_TipoDireccionId",
+                        column: x => x.TipoDireccionId,
+                        principalTable: "TipoDireccion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "LugarTrabajo",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true),
+                    SectorId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LugarTrabajo", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_LugarTrabajo_Sector_SectorId",
+                        column: x => x.SectorId,
+                        principalTable: "Sector",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "FamiliarEstudiante",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    IsDeleted = table.Column<bool>(nullable: false),
+                    DeleterUserId = table.Column<long>(nullable: true),
+                    DeletionTime = table.Column<DateTime>(nullable: true),
+                    Nombres = table.Column<string>(nullable: true),
+                    PrimerApellido = table.Column<string>(nullable: true),
+                    SegundoApellido = table.Column<string>(nullable: true),
+                    NumeroIdentificacion = table.Column<string>(nullable: true),
+                    FechaNacimiento = table.Column<DateTime>(nullable: false),
+                    LugarTrabajoId = table.Column<int>(nullable: false),
+                    ProfesionId = table.Column<int>(nullable: false),
+                    TipoIdentificacionId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FamiliarEstudiante", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_FamiliarEstudiante_LugarTrabajo_LugarTrabajoId",
+                        column: x => x.LugarTrabajoId,
+                        principalTable: "LugarTrabajo",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_FamiliarEstudiante_Profesion_ProfesionId",
+                        column: x => x.ProfesionId,
+                        principalTable: "Profesion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_FamiliarEstudiante_TipoIdentificacion_TipoIdentificacionId",
+                        column: x => x.TipoIdentificacionId,
+                        principalTable: "TipoIdentificacion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DireccionFamiliarEstudiante",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true),
+                    FamiliarEstudianteId = table.Column<int>(nullable: false),
+                    TipoDireccionId = table.Column<int>(nullable: false),
+                    PaisId = table.Column<int>(nullable: false),
+                    ProvinciaId = table.Column<int>(nullable: false),
+                    MunicipioId = table.Column<int>(nullable: false),
+                    SectorId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DireccionFamiliarEstudiante", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_DireccionFamiliarEstudiante_FamiliarEstudiante_FamiliarEstud~",
+                        column: x => x.FamiliarEstudianteId,
+                        principalTable: "FamiliarEstudiante",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DireccionFamiliarEstudiante_Municipio_MunicipioId",
+                        column: x => x.MunicipioId,
+                        principalTable: "Municipio",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DireccionFamiliarEstudiante_Pais_PaisId",
+                        column: x => x.PaisId,
+                        principalTable: "Pais",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DireccionFamiliarEstudiante_Provincia_ProvinciaId",
+                        column: x => x.ProvinciaId,
+                        principalTable: "Provincia",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DireccionFamiliarEstudiante_Sector_SectorId",
+                        column: x => x.SectorId,
+                        principalTable: "Sector",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DireccionFamiliarEstudiante_TipoDireccion_TipoDireccionId",
+                        column: x => x.TipoDireccionId,
+                        principalTable: "TipoDireccion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EmailFamiliarEstudiantes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Email = table.Column<string>(nullable: true),
+                    FamiliarEstudianteId = table.Column<int>(nullable: false),
+                    TipoEmailId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EmailFamiliarEstudiantes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_EmailFamiliarEstudiantes_FamiliarEstudiante_FamiliarEstudian~",
+                        column: x => x.FamiliarEstudianteId,
+                        principalTable: "FamiliarEstudiante",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_EmailFamiliarEstudiantes_TipoEmail_TipoEmailId",
+                        column: x => x.TipoEmailId,
+                        principalTable: "TipoEmail",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TelefonoFamiliarEstudiante",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Numero = table.Column<string>(nullable: true),
+                    TipoTelefonoId = table.Column<int>(nullable: false),
+                    FamiliarEstudianteId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TelefonoFamiliarEstudiante", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TelefonoFamiliarEstudiante_FamiliarEstudiante_FamiliarEstudi~",
+                        column: x => x.FamiliarEstudianteId,
+                        principalTable: "FamiliarEstudiante",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TelefonoFamiliarEstudiante_TipoTelefono_TipoTelefonoId",
+                        column: x => x.TipoTelefonoId,
+                        principalTable: "TipoTelefono",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -1014,6 +1675,166 @@ namespace Colegio.Migrations
                 name: "IX_AbpUserTokens_TenantId_UserId",
                 table: "AbpUserTokens",
                 columns: new[] { "TenantId", "UserId" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DireccionEstudiante_EstudianteId",
+                table: "DireccionEstudiante",
+                column: "EstudianteId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DireccionEstudiante_MunicipioId",
+                table: "DireccionEstudiante",
+                column: "MunicipioId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DireccionEstudiante_PaisId",
+                table: "DireccionEstudiante",
+                column: "PaisId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DireccionEstudiante_ProvinciaId",
+                table: "DireccionEstudiante",
+                column: "ProvinciaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DireccionEstudiante_SectorId",
+                table: "DireccionEstudiante",
+                column: "SectorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DireccionEstudiante_TipoDireccionId",
+                table: "DireccionEstudiante",
+                column: "TipoDireccionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DireccionFamiliarEstudiante_FamiliarEstudianteId",
+                table: "DireccionFamiliarEstudiante",
+                column: "FamiliarEstudianteId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DireccionFamiliarEstudiante_MunicipioId",
+                table: "DireccionFamiliarEstudiante",
+                column: "MunicipioId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DireccionFamiliarEstudiante_PaisId",
+                table: "DireccionFamiliarEstudiante",
+                column: "PaisId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DireccionFamiliarEstudiante_ProvinciaId",
+                table: "DireccionFamiliarEstudiante",
+                column: "ProvinciaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DireccionFamiliarEstudiante_SectorId",
+                table: "DireccionFamiliarEstudiante",
+                column: "SectorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DireccionFamiliarEstudiante_TipoDireccionId",
+                table: "DireccionFamiliarEstudiante",
+                column: "TipoDireccionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EmailEstudiante_EstudianteId",
+                table: "EmailEstudiante",
+                column: "EstudianteId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EmailEstudiante_TipoEmailId",
+                table: "EmailEstudiante",
+                column: "TipoEmailId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EmailFamiliarEstudiantes_FamiliarEstudianteId",
+                table: "EmailFamiliarEstudiantes",
+                column: "FamiliarEstudianteId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EmailFamiliarEstudiantes_TipoEmailId",
+                table: "EmailFamiliarEstudiantes",
+                column: "TipoEmailId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Estudiante_NacionalidadId",
+                table: "Estudiante",
+                column: "NacionalidadId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FamiliarEstudiante_LugarTrabajoId",
+                table: "FamiliarEstudiante",
+                column: "LugarTrabajoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FamiliarEstudiante_ProfesionId",
+                table: "FamiliarEstudiante",
+                column: "ProfesionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FamiliarEstudiante_TipoIdentificacionId",
+                table: "FamiliarEstudiante",
+                column: "TipoIdentificacionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_IncidenciaEstudiante_EstudianteId",
+                table: "IncidenciaEstudiante",
+                column: "EstudianteId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_IncidenciaEstudiante_MateriaId",
+                table: "IncidenciaEstudiante",
+                column: "MateriaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_IncidenciaEstudiante_TipoIncidenciaId",
+                table: "IncidenciaEstudiante",
+                column: "TipoIncidenciaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_LugarTrabajo_SectorId",
+                table: "LugarTrabajo",
+                column: "SectorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Municipio_ProvinciaId",
+                table: "Municipio",
+                column: "ProvinciaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Padecimiento_EstudianteId",
+                table: "Padecimiento",
+                column: "EstudianteId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Provincia_PaisId",
+                table: "Provincia",
+                column: "PaisId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Sector_MunicipioId",
+                table: "Sector",
+                column: "MunicipioId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TelefonoEstudiante_EstudianteId",
+                table: "TelefonoEstudiante",
+                column: "EstudianteId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TelefonoEstudiante_TipoTelefonoId",
+                table: "TelefonoEstudiante",
+                column: "TipoTelefonoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TelefonoFamiliarEstudiante_FamiliarEstudianteId",
+                table: "TelefonoFamiliarEstudiante",
+                column: "FamiliarEstudianteId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TelefonoFamiliarEstudiante_TipoTelefonoId",
+                table: "TelefonoFamiliarEstudiante",
+                column: "TipoTelefonoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -1085,6 +1906,33 @@ namespace Colegio.Migrations
                 name: "AbpUserTokens");
 
             migrationBuilder.DropTable(
+                name: "DireccionEstudiante");
+
+            migrationBuilder.DropTable(
+                name: "DireccionFamiliarEstudiante");
+
+            migrationBuilder.DropTable(
+                name: "EmailEstudiante");
+
+            migrationBuilder.DropTable(
+                name: "EmailFamiliarEstudiantes");
+
+            migrationBuilder.DropTable(
+                name: "IncidenciaEstudiante");
+
+            migrationBuilder.DropTable(
+                name: "Padecimiento");
+
+            migrationBuilder.DropTable(
+                name: "Parentesco");
+
+            migrationBuilder.DropTable(
+                name: "TelefonoEstudiante");
+
+            migrationBuilder.DropTable(
+                name: "TelefonoFamiliarEstudiante");
+
+            migrationBuilder.DropTable(
                 name: "AbpEntityChanges");
 
             migrationBuilder.DropTable(
@@ -1094,10 +1942,55 @@ namespace Colegio.Migrations
                 name: "AbpEditions");
 
             migrationBuilder.DropTable(
+                name: "TipoDireccion");
+
+            migrationBuilder.DropTable(
+                name: "TipoEmail");
+
+            migrationBuilder.DropTable(
+                name: "Materia");
+
+            migrationBuilder.DropTable(
+                name: "TipoIncidencia");
+
+            migrationBuilder.DropTable(
+                name: "Estudiante");
+
+            migrationBuilder.DropTable(
+                name: "FamiliarEstudiante");
+
+            migrationBuilder.DropTable(
+                name: "TipoTelefono");
+
+            migrationBuilder.DropTable(
                 name: "AbpEntityChangeSets");
 
             migrationBuilder.DropTable(
                 name: "AbpUsers");
+
+            migrationBuilder.DropTable(
+                name: "Nacionalidad");
+
+            migrationBuilder.DropTable(
+                name: "LugarTrabajo");
+
+            migrationBuilder.DropTable(
+                name: "Profesion");
+
+            migrationBuilder.DropTable(
+                name: "TipoIdentificacion");
+
+            migrationBuilder.DropTable(
+                name: "Sector");
+
+            migrationBuilder.DropTable(
+                name: "Municipio");
+
+            migrationBuilder.DropTable(
+                name: "Provincia");
+
+            migrationBuilder.DropTable(
+                name: "Pais");
         }
     }
 }
