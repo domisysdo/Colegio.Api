@@ -8,6 +8,7 @@ using Colegio.Models.Generales.EmailFamiliarEstudianteNs;
 using Colegio.Models.Generales.IncidenciaEstudianteNs;
 using Colegio.Models.Generales.LugarTrabajoNs;
 using Colegio.Models.Generales.MunicipioNs;
+using Colegio.Models.Generales.NacionalidadNs;
 using Colegio.Models.Generales.PaisNs;
 using Colegio.Models.Generales.ProfesionNs;
 using Colegio.Models.Generales.ProvinciaNs;
@@ -52,6 +53,7 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<DireccionFamiliarEstudiante> DireccionFamiliarEstudiante { get; set; }
         public DbSet<IncidenciaEstudiante> IncidenciaEstudiante { get; set; }
         public DbSet<TipoIncidencia> TipoIncidencia { get; set; }
+        public DbSet<Nacionalidad> Nacionalidad { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

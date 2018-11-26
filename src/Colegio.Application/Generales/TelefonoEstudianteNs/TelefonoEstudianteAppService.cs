@@ -28,7 +28,7 @@ namespace Colegio.TelefonoEstudianteNs
             if (filter != null && filter != string.Empty)
             {
                 provinciaList = query
-                    .Where(x => x.Email.StartsWith(filter))
+                    .Where(x => x.Numero.StartsWith(filter))
                     .Skip(input.SkipCount)
                     .Take(input.MaxResultCount).ToList();
 
