@@ -10,5 +10,6 @@ namespace Colegio.Generales.TelefonoEstudianteNs
         public string Numero { get; set; }
         public int EstudianteId { get; set; }
         public int TipoTelefonoId { get; set; }
+        public string TipoTelefonoNombre { get; set; }
     }
 }

@@ -1582,6 +1582,30 @@ namespace Colegio.Migrations
                     b.ToTable("FamiliarEstudiante");
                 });
 
+            modelBuilder.Entity("Colegio.Models.Inscripcion.GeneralNs.GrupoNs.Grupo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<string>("Identificador");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<int>("MateriaId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MateriaId");
+
+                    b.ToTable("Grupo");
+                });
+
             modelBuilder.Entity("Colegio.Models.Inscripcion.GeneralNs.MateriaNs.Materia", b =>
                 {
                     b.Property<int>("Id")
@@ -2041,6 +2065,14 @@ namespace Colegio.Migrations
                     b.HasOne("Colegio.Models.Generales.TipoIdentificacionNs.TipoIdentificacion", "TipoIdentificacion")
                         .WithMany()
                         .HasForeignKey("TipoIdentificacionId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Colegio.Models.Inscripcion.GeneralNs.GrupoNs.Grupo", b =>
+                {
+                    b.HasOne("Colegio.Models.Inscripcion.GeneralNs.MateriaNs.Materia", "Materia")
+                        .WithMany()
+                        .HasForeignKey("MateriaId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

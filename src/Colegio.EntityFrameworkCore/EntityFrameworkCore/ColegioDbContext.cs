@@ -22,6 +22,8 @@ using Colegio.Models.Generales.TipoIncidenciaNs;
 using Colegio.Models.Generales.TipoTelefonoNs;
 using Colegio.Models.Inscripcion.EstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs;
+using Colegio.Models.Inscripcion.GeneralNs.GrupoNs;
+using Colegio.Models.Inscripcion.GeneralNs.MateriaNs;
 using Colegio.Models.Inscripcion.GeneralNs.PadecimientoNs;
 using Colegio.Models.Inscripcion.GeneralNs.ParentescoNs;
 using Colegio.MultiTenancy;
@@ -54,6 +56,8 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<IncidenciaEstudiante> IncidenciaEstudiante { get; set; }
         public DbSet<TipoIncidencia> TipoIncidencia { get; set; }
         public DbSet<Nacionalidad> Nacionalidad { get; set; }
+        public DbSet<Grupo> Grupo { get; set; }
+        public DbSet<Materia> Materia { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -179,6 +183,11 @@ namespace Colegio.EntityFrameworkCore
                 .HasOne(x => x.Sector)
                 .WithMany()
                 .HasForeignKey(x => x.SectorId);
+
+            modelBuilder.Entity<Grupo>()
+                .HasOne(x => x.Materia)
+                .WithMany()
+                .HasForeignKey(x => x.MateriaId);
             #endregion
 
             base.OnModelCreating(modelBuilder);
