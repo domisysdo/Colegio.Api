@@ -7628,3 +7628,1126 @@ WARN  2018-11-28 12:08:24,570 [75   ] calization.RequestLocalizationMiddleware -
 WARN  2018-11-28 12:08:24,576 [75   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
 WARN  2018-11-28 12:08:24,587 [75   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
 INFO  2018-11-28 12:08:24,683 [73   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 121.7686ms 200 application/json;charset=utf-8
+DEBUG 2018-11-28 13:49:23,904 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-28 13:49:24,099 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-28 13:49:24,132 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.Web.Host.Startup.ColegioWebHostModule, Colegio.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,138 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.ColegioWebCoreModule, Colegio.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,139 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.ColegioApplicationModule, Colegio.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,139 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.ColegioCoreModule, Colegio.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,142 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,142 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.EntityFrameworkCore.ColegioEntityFrameworkModule, Colegio.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,142 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,143 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,143 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,144 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,144 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,144 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:24,150 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-28 13:49:24,319 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-28 13:49:24,319 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-28 13:49:24,319 [1    ] o.Configuration.LanguageManagementConfig - Converted Colegio-es (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-28 13:49:24,319 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-28 13:49:25,224 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Colegio.EntityFrameworkCore.ColegioDbContext, Colegio.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-28 13:49:27,718 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-28 13:49:27,784 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-28 13:49:27,837 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-28 13:49:27,875 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Colegio-es
+DEBUG 2018-11-28 13:49:27,909 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-28 13:49:28,258 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-28 13:49:28,371 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2018-11-28 13:49:28,371 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-28 13:49:28,386 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Users.Dto.CreateUserDto
+DEBUG 2018-11-28 13:49:28,388 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Users.Dto.UserDto
+DEBUG 2018-11-28 13:49:28,389 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-28 13:49:28,389 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-28 13:49:28,389 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-28 13:49:28,390 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Roles.Dto.PermissionDto
+DEBUG 2018-11-28 13:49:28,390 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Roles.Dto.RoleDto
+DEBUG 2018-11-28 13:49:28,391 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-28 13:49:28,392 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.MultiTenancy.Dto.TenantDto
+DEBUG 2018-11-28 13:49:28,392 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Incripcion.ParentescoNs.ParentescoDto
+DEBUG 2018-11-28 13:49:28,392 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Incripcion.PadecimientoNs.PadecimientoDto
+DEBUG 2018-11-28 13:49:28,392 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Incripcion.MateriaNs.MateriaDto
+DEBUG 2018-11-28 13:49:28,392 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Incripcion.GrupoNs.GrupoDto
+DEBUG 2018-11-28 13:49:28,393 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Incripcion.FamiliarEstudianteNs.FamiliarEstudianteDto
+DEBUG 2018-11-28 13:49:28,393 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Incripcion.EstudianteNs.EstudianteDto
+DEBUG 2018-11-28 13:49:28,394 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoTelefonoNs.TipoTelefonoDto
+DEBUG 2018-11-28 13:49:28,395 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoIncidenciaNs.TipoIncidenciaDto
+DEBUG 2018-11-28 13:49:28,395 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoIdentificacionNs.TipoIdentificacionDto
+DEBUG 2018-11-28 13:49:28,395 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoEmailNs.TipoEmailDto
+DEBUG 2018-11-28 13:49:28,396 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoDireccionNs.TipoDireccionDto
+DEBUG 2018-11-28 13:49:28,396 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TelefonoFamiliarEstudianteNs.TelefonoFamiliarEstudianteDto
+DEBUG 2018-11-28 13:49:28,396 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TelefonoEstudianteNs.TelefonoEstudianteDto
+DEBUG 2018-11-28 13:49:28,397 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.SectorNs.SectorDto
+DEBUG 2018-11-28 13:49:28,397 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.ProvinciaNs.ProvinciaDto
+DEBUG 2018-11-28 13:49:28,397 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.ProfesionNs.ProfesionDto
+DEBUG 2018-11-28 13:49:28,397 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.NacionalidadNs.NacionalidadDto
+DEBUG 2018-11-28 13:49:28,398 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.MunicipioNs.MunicipioDto
+DEBUG 2018-11-28 13:49:28,398 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.LugarTrabajoNs.LugarTrabajoDto
+DEBUG 2018-11-28 13:49:28,398 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.IncidenciaEstudianteNs.IncidenciaEstudianteDto
+DEBUG 2018-11-28 13:49:28,399 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.EmailFamiliarEstudianteNs.EmailFamiliarEstudianteDto
+DEBUG 2018-11-28 13:49:28,399 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.EmailEstudianteNs.EmailEstudianteDto
+DEBUG 2018-11-28 13:49:28,399 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.DireccionFamiliarEstudianteNs.DireccionFamiliarEstudianteDto
+DEBUG 2018-11-28 13:49:28,400 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.PaisNs.PaisDto
+DEBUG 2018-11-28 13:49:28,400 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.DireccionEstudianteNs.DireccionEstudianteDto
+INFO  2018-11-28 13:49:37,592 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-11-28 13:49:37,592 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2018-11-28 13:49:37,593 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2018-11-28 13:49:37,754 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:49:37,808 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 229.423ms 200 
+INFO  2018-11-28 13:49:37,818 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 232.9012ms 204 
+INFO  2018-11-28 13:49:37,873 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll application/json 
+INFO  2018-11-28 13:49:37,884 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:49:38,150 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 13:49:38,255 [13   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:49:38,262 [13   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:49:38,268 [13   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:49:38,271 [13   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:49:38,274 [13   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:49:38,276 [13   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 13:49:45,565 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action Colegio.Web.Host.Controllers.HomeController.Index (Colegio.Web.Host)
+INFO  2018-11-28 13:49:45,569 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2018-11-28 13:49:45,599 [13   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:49:46,109 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2018-11-28 13:49:48,166 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Web.Host.Controllers.HomeController.Index (Colegio.Web.Host) - Validation state: Valid
+INFO  2018-11-28 13:49:48,180 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Web.Host.Controllers.HomeController.Index (Colegio.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 4.4959ms.
+INFO  2018-11-28 13:49:48,678 [10   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-11-28 13:49:48,703 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Web.Host.Controllers.HomeController.Index (Colegio.Web.Host) in 3124.636ms
+INFO  2018-11-28 13:49:48,735 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-11-28 13:49:48,747 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11178.7376ms 302 
+INFO  2018-11-28 13:49:48,838 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 87.6497ms 200 text/html
+INFO  2018-11-28 13:49:48,874 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-11-28 13:49:48,877 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-11-28 13:49:48,882 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-11-28 13:49:48,917 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-11-28 13:49:48,924 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-11-28 13:49:48,928 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-11-28 13:49:48,935 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 58.2711ms 304 application/javascript
+INFO  2018-11-28 13:49:48,936 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 71.9132ms 304 text/css
+INFO  2018-11-28 13:49:48,957 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 52.9902ms 304 application/javascript
+INFO  2018-11-28 13:49:48,968 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2018-11-28 13:49:48,972 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.js was not modified
+INFO  2018-11-28 13:49:48,982 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.5548ms 304 application/javascript
+INFO  2018-11-28 13:49:48,985 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2018-11-28 13:49:48,989 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.swagger.js was not modified
+INFO  2018-11-28 13:49:48,999 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.6964ms 304 application/javascript
+INFO  2018-11-28 13:49:49,188 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 3076.331ms.
+INFO  2018-11-28 13:49:49,260 [12   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 13:49:49,296 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-11-28 13:49:49,299 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 13:49:49,302 [11   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:49:49,325 [11   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:49:49,329 [11   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:49:49,332 [11   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 13:49:49,412 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 3836.2965ms
+INFO  2018-11-28 13:49:49,417 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11546.6679ms 200 application/json; charset=utf-8
+INFO  2018-11-28 13:49:49,462 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 13:49:49,468 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:49:49,511 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14.0874ms 204 
+INFO  2018-11-28 13:49:49,520 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 13:49:49,524 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:49:49,528 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 13:49:49,531 [7    ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:49:49,534 [7    ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:49:49,537 [7    ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:49:49,540 [7    ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 13:49:49,569 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application)
+INFO  2018-11-28 13:49:49,572 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:49:50,422 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) - Validation state: Valid
+INFO  2018-11-28 13:49:50,510 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1203.2541ms 200 application/json;charset=utf-8
+INFO  2018-11-28 13:49:50,554 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 125.6841ms.
+INFO  2018-11-28 13:49:50,595 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 13:49:50,632 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) in 1058.5823ms
+INFO  2018-11-28 13:49:50,637 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1122.1874ms 200 application/json; charset=utf-8
+INFO  2018-11-28 13:53:10,457 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2018-11-28 13:53:10,465 [33   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:53:10,480 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.3511ms 204 
+INFO  2018-11-28 13:53:10,500 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll application/json 
+INFO  2018-11-28 13:53:10,507 [16   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:53:10,511 [16   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 13:53:10,515 [16   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:53:10,532 [16   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:53:10,535 [16   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:53:10,541 [16   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:53:10,545 [16   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:53:10,549 [16   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 13:53:10,562 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2018-11-28 13:53:10,566 [16   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:53:10,572 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2018-11-28 13:53:10,591 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 15.9185ms.
+INFO  2018-11-28 13:53:10,601 [19   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 13:53:10,604 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 38.7512ms
+INFO  2018-11-28 13:53:10,613 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 109.8437ms 200 application/json; charset=utf-8
+INFO  2018-11-28 13:53:10,632 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 13:53:10,635 [16   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:53:10,647 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.3055ms 204 
+INFO  2018-11-28 13:53:10,655 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 13:53:10,659 [16   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:53:10,662 [16   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 13:53:10,665 [16   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:53:10,667 [16   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:53:10,670 [16   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:53:10,672 [16   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 13:53:10,682 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application)
+INFO  2018-11-28 13:53:10,684 [16   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:53:10,690 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) - Validation state: Valid
+INFO  2018-11-28 13:53:10,704 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11.8963ms.
+INFO  2018-11-28 13:53:10,708 [16   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 13:53:10,711 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) in 26.5432ms
+INFO  2018-11-28 13:53:10,716 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 61.5447ms 200 application/json; charset=utf-8
+INFO  2018-11-28 13:53:27,383 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/TipoEmail/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 13:53:27,386 [31   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:53:27,391 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.2838ms 204 
+INFO  2018-11-28 13:53:27,549 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/TipoEmail/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 13:53:27,584 [16   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:53:27,610 [16   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 13:53:27,633 [16   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:53:27,636 [16   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:53:27,639 [16   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:53:27,642 [16   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 13:53:27,722 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "TipoEmail"}. Executing action Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 13:53:27,725 [16   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:53:28,846 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 13:53:30,380 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1527.2142ms.
+INFO  2018-11-28 13:53:30,402 [35   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 13:53:30,412 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application) in 2683.6161ms
+INFO  2018-11-28 13:53:30,418 [35   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2871.3212ms 200 application/json; charset=utf-8
+INFO  2018-11-28 13:54:22,686 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-11-28 13:54:22,765 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 75.9384ms 200 application/json;charset=utf-8
+INFO  2018-11-28 13:54:42,723 [40   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2018-11-28 13:54:42,728 [40   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:54:42,752 [40   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 22.0264ms 204 
+INFO  2018-11-28 13:54:42,779 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll application/json 
+INFO  2018-11-28 13:54:42,783 [42   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:54:42,796 [42   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 13:54:42,801 [42   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:54:42,803 [42   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:54:42,806 [42   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:54:42,809 [42   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:54:42,811 [42   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:54:42,813 [42   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 13:54:42,822 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2018-11-28 13:54:42,825 [42   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:54:42,828 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2018-11-28 13:54:42,844 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 13.409ms.
+INFO  2018-11-28 13:54:42,854 [41   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 13:54:42,858 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 32.6515ms
+INFO  2018-11-28 13:54:42,861 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 86.6826ms 200 application/json; charset=utf-8
+INFO  2018-11-28 13:54:42,886 [40   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 13:54:42,889 [40   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:54:42,903 [40   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.0605ms 204 
+INFO  2018-11-28 13:54:42,912 [40   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 13:54:42,918 [40   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:54:42,920 [40   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 13:54:42,923 [40   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:54:42,925 [40   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:54:42,929 [40   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:54:42,934 [40   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 13:54:42,945 [40   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application)
+INFO  2018-11-28 13:54:42,949 [40   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:54:42,955 [40   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) - Validation state: Valid
+INFO  2018-11-28 13:54:42,963 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5.4845ms.
+INFO  2018-11-28 13:54:42,967 [41   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 13:54:42,976 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) in 22.7637ms
+INFO  2018-11-28 13:54:42,991 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 72.9833ms 200 application/json; charset=utf-8
+INFO  2018-11-28 13:54:48,086 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/TipoEmail/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 13:54:48,091 [39   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:54:48,095 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.9195ms 204 
+INFO  2018-11-28 13:54:48,368 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/TipoEmail/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 13:54:48,398 [39   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:54:48,416 [39   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 13:54:48,435 [39   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:54:48,452 [39   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:54:48,461 [39   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:54:48,471 [39   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 13:54:48,487 [39   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "TipoEmail"}. Executing action Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 13:54:48,490 [39   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:54:48,499 [39   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 13:54:48,506 [39   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.4183ms.
+INFO  2018-11-28 13:54:48,524 [41   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 13:54:48,527 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application) in 37.4411ms
+INFO  2018-11-28 13:54:48,535 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 178.1175ms 200 application/json; charset=utf-8
+INFO  2018-11-28 13:55:13,185 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2018-11-28 13:55:13,190 [39   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:55:13,199 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 49.6106ms 204 
+INFO  2018-11-28 13:55:13,218 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll application/json 
+INFO  2018-11-28 13:55:13,223 [45   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:55:13,226 [45   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 13:55:13,229 [45   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:55:13,232 [45   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:55:13,235 [45   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:55:13,238 [45   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:55:13,240 [45   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:55:13,245 [45   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 13:55:13,254 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2018-11-28 13:55:13,259 [45   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:55:13,273 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2018-11-28 13:55:13,306 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 22.4893ms.
+INFO  2018-11-28 13:55:13,326 [45   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 13:55:13,335 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 71.7249ms
+INFO  2018-11-28 13:55:13,340 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 120.639ms 200 application/json; charset=utf-8
+INFO  2018-11-28 13:55:13,379 [40   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 13:55:13,399 [40   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:55:13,402 [40   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 35.9298ms 204 
+INFO  2018-11-28 13:55:13,518 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 13:55:13,522 [45   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:55:13,528 [45   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 13:55:13,531 [45   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:55:13,534 [45   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:55:13,537 [45   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:55:13,540 [45   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 13:55:13,548 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application)
+INFO  2018-11-28 13:55:13,551 [45   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:55:13,560 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) - Validation state: Valid
+INFO  2018-11-28 13:55:13,568 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.8546ms.
+INFO  2018-11-28 13:55:13,573 [45   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 13:55:13,576 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) in 25.0902ms
+INFO  2018-11-28 13:55:13,579 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 69.8066ms 200 application/json; charset=utf-8
+INFO  2018-11-28 13:55:18,878 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/TipoEmail/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 13:55:18,882 [44   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:55:18,887 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.5603ms 204 
+INFO  2018-11-28 13:55:19,135 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/TipoEmail/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 13:55:19,158 [45   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:55:19,200 [45   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 13:55:19,224 [45   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:55:19,237 [45   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 13:55:19,252 [45   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 13:55:19,262 [45   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 13:55:19,283 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "TipoEmail"}. Executing action Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 13:55:19,287 [45   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 13:55:19,293 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 13:55:19,311 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.5457ms.
+INFO  2018-11-28 13:55:19,321 [43   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 13:55:19,340 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application) in 38.0827ms
+INFO  2018-11-28 13:55:19,344 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 211.9282ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:05:51,638 [68   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2018-11-28 14:05:51,643 [68   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:05:51,652 [68   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.7967ms 204 
+INFO  2018-11-28 14:05:51,661 [68   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll application/json 
+INFO  2018-11-28 14:05:51,664 [68   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:05:51,673 [68   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:05:51,678 [68   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:05:51,681 [68   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:05:51,684 [68   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:05:51,686 [68   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:05:51,688 [68   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:05:51,690 [68   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:05:51,699 [68   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2018-11-28 14:05:51,701 [68   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:05:51,705 [68   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2018-11-28 14:05:51,720 [68   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 13.0293ms.
+INFO  2018-11-28 14:05:51,730 [68   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:05:51,733 [68   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 31.4295ms
+INFO  2018-11-28 14:05:51,739 [68   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 75.073ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:05:51,777 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 14:05:51,782 [69   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:05:51,787 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.1786ms 204 
+INFO  2018-11-28 14:05:51,804 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 14:05:51,806 [67   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:05:51,809 [67   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:05:51,811 [67   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:05:51,814 [67   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:05:51,816 [67   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:05:51,818 [67   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:05:51,825 [67   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application)
+INFO  2018-11-28 14:05:51,827 [67   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:05:51,832 [67   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) - Validation state: Valid
+INFO  2018-11-28 14:05:51,839 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.8088ms.
+INFO  2018-11-28 14:05:51,843 [43   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:05:51,845 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) in 18.2529ms
+INFO  2018-11-28 14:05:51,848 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 42.8058ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:05:58,290 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/TipoEmail/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:05:58,293 [69   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:05:58,302 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.646ms 204 
+INFO  2018-11-28 14:05:58,567 [68   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/TipoEmail/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:05:58,571 [68   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:05:58,576 [68   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:05:58,623 [68   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:05:58,627 [68   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:05:58,632 [68   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:05:58,637 [68   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:05:58,646 [68   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "TipoEmail"}. Executing action Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:05:58,649 [68   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:05:58,656 [68   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 14:05:58,665 [68   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.536ms.
+INFO  2018-11-28 14:05:58,676 [71   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:05:58,681 [71   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.TipoEmailNs.TipoEmailAppService.GetAllFiltered (Colegio.Application) in 30.8078ms
+INFO  2018-11-28 14:05:58,686 [71   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 117.7315ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:06:49,148 [74   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:06:49,152 [74   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:06:49,160 [74   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.6126ms 204 
+INFO  2018-11-28 14:06:49,216 [74   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:06:49,224 [74   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:06:49,231 [74   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:06:49,239 [74   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:06:49,254 [74   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:06:49,269 [74   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:06:49,275 [74   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:06:49,301 [74   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:06:49,304 [74   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:06:50,176 [74   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 14:06:50,222 [74   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 43.1051ms.
+INFO  2018-11-28 14:06:50,235 [71   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:06:50,240 [71   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 935.7341ms
+INFO  2018-11-28 14:06:50,245 [71   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1029.6169ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:09:23,061 [84   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2018-11-28 14:09:23,067 [84   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:09:23,070 [84   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14.7862ms 204 
+INFO  2018-11-28 14:09:23,124 [83   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll application/json 
+INFO  2018-11-28 14:09:23,127 [83   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:09:23,130 [83   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:09:23,133 [83   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:09:23,137 [83   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:09:23,140 [83   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:09:23,144 [83   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:09:23,147 [83   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:09:23,149 [83   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:09:23,158 [83   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2018-11-28 14:09:23,160 [83   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:09:23,165 [83   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2018-11-28 14:09:23,185 [83   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 13.3971ms.
+INFO  2018-11-28 14:09:23,226 [83   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:09:23,243 [83   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 69.1819ms
+INFO  2018-11-28 14:09:23,268 [83   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 126.675ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:09:23,315 [86   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 14:09:23,318 [86   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:09:23,325 [86   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.4553ms 204 
+INFO  2018-11-28 14:09:23,332 [86   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 14:09:23,335 [86   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:09:23,338 [86   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:09:23,341 [86   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:09:23,343 [86   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:09:23,345 [86   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:09:23,347 [86   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:09:23,353 [86   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application)
+INFO  2018-11-28 14:09:23,356 [86   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:09:23,363 [86   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) - Validation state: Valid
+INFO  2018-11-28 14:09:23,371 [80   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5.4236ms.
+INFO  2018-11-28 14:09:23,375 [80   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:09:23,378 [80   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) in 21.6126ms
+INFO  2018-11-28 14:09:23,381 [80   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 49.8248ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:09:28,382 [84   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:09:28,386 [84   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:09:28,390 [84   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.094ms 204 
+INFO  2018-11-28 14:09:28,719 [86   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:09:28,757 [86   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:09:28,809 [86   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:09:28,820 [86   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:09:28,824 [86   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:09:28,832 [86   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:09:28,841 [86   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:09:28,858 [86   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:09:28,861 [86   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:09:28,866 [86   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 14:09:28,872 [86   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.8654ms.
+INFO  2018-11-28 14:09:28,907 [86   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:09:28,938 [86   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 49.0908ms
+INFO  2018-11-28 14:09:28,985 [86   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 260.6423ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:14:55,303 [100  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2018-11-28 14:14:55,308 [100  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:14:55,312 [100  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.3501ms 204 
+INFO  2018-11-28 14:14:55,328 [98   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll application/json 
+INFO  2018-11-28 14:14:55,332 [98   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:14:55,336 [98   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:14:55,351 [101  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:14:55,354 [101  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:14:55,358 [101  ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:14:55,361 [101  ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:14:55,364 [101  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:14:55,367 [101  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:14:55,385 [101  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2018-11-28 14:14:55,391 [101  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:14:55,397 [101  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2018-11-28 14:14:55,442 [101  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 41.2037ms.
+INFO  2018-11-28 14:14:55,455 [90   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:14:55,460 [90   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 70.7088ms
+INFO  2018-11-28 14:14:55,466 [90   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 136.1049ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:14:55,511 [100  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 14:14:55,515 [100  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:14:55,521 [100  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.7308ms 204 
+INFO  2018-11-28 14:14:55,534 [102  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 14:14:55,537 [102  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:14:55,540 [102  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:14:55,544 [102  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:14:55,547 [102  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:14:55,550 [102  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:14:55,553 [102  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:14:55,562 [102  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application)
+INFO  2018-11-28 14:14:55,567 [102  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:14:55,574 [102  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) - Validation state: Valid
+INFO  2018-11-28 14:14:55,586 [101  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.6714ms.
+INFO  2018-11-28 14:14:55,592 [101  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:14:55,597 [101  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) in 28.914ms
+INFO  2018-11-28 14:14:55,604 [101  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 67.2868ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:15:02,581 [100  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:15:02,584 [100  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:02,588 [100  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.1484ms 204 
+INFO  2018-11-28 14:15:02,823 [102  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:15:02,826 [102  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:02,829 [102  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:15:02,833 [102  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:15:02,836 [102  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:15:02,839 [102  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:15:02,842 [102  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:15:02,850 [102  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:15:02,853 [102  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:02,858 [102  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 14:15:02,864 [102  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.3782ms.
+INFO  2018-11-28 14:15:02,874 [103  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:15:02,880 [103  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 24.33ms
+INFO  2018-11-28 14:15:02,885 [103  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 61.9444ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:15:33,706 [102  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/Create  
+INFO  2018-11-28 14:15:33,710 [102  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:33,719 [102  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 21.3381ms 204 
+INFO  2018-11-28 14:15:33,745 [106  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Profesion/Create application/json 34
+INFO  2018-11-28 14:15:33,751 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:33,756 [106  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:15:33,764 [106  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:15:33,768 [106  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:15:33,771 [106  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:15:33,774 [106  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:15:33,794 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.Create (Colegio.Application)
+INFO  2018-11-28 14:15:33,797 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:33,960 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.Create (Colegio.Application) with arguments (Colegio.Generales.ProfesionNs.ProfesionDto) - Validation state: Valid
+INFO  2018-11-28 14:15:34,044 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.Create (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 79.4196ms.
+INFO  2018-11-28 14:15:34,058 [104  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:15:34,067 [104  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.Create (Colegio.Application) in 265.5448ms
+INFO  2018-11-28 14:15:34,077 [104  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 326.2242ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:15:34,127 [106  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:15:34,130 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:34,138 [106  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.8045ms 204 
+INFO  2018-11-28 14:15:34,177 [106  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:15:34,180 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:34,185 [106  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:15:34,217 [106  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:15:34,228 [106  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:15:34,236 [106  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:15:34,242 [106  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:15:34,278 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:15:34,309 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:34,319 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 14:15:34,325 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.3226ms.
+INFO  2018-11-28 14:15:34,333 [104  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:15:34,339 [104  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 53.7719ms
+INFO  2018-11-28 14:15:34,366 [104  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 169.1194ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:15:37,661 [102  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/Get?Id=1  
+INFO  2018-11-28 14:15:37,668 [102  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:37,715 [102  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.1178ms 204 
+INFO  2018-11-28 14:15:37,727 [102  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/Get?Id=1  
+INFO  2018-11-28 14:15:37,744 [102  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:37,755 [102  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:15:37,760 [102  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:15:37,773 [102  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:15:37,776 [102  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:15:37,779 [102  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:15:37,801 [102  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Get", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.Get (Colegio.Application)
+INFO  2018-11-28 14:15:37,804 [102  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:37,818 [102  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.Get (Colegio.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - Validation state: Valid
+INFO  2018-11-28 14:15:37,879 [102  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.Get (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 52.5995ms.
+INFO  2018-11-28 14:15:37,893 [102  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:15:37,897 [102  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.Get (Colegio.Application) in 92.5535ms
+INFO  2018-11-28 14:15:37,915 [102  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 182.2467ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:15:51,822 [106  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/Update  
+INFO  2018-11-28 14:15:51,826 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:51,834 [106  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.8386ms 204 
+INFO  2018-11-28 14:15:51,842 [106  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:21021/api/services/app/Profesion/Update application/json 46
+INFO  2018-11-28 14:15:51,847 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:51,854 [106  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:15:51,858 [106  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:15:51,862 [106  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:15:51,866 [106  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:15:51,871 [106  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:15:51,888 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Update", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.Update (Colegio.Application)
+INFO  2018-11-28 14:15:51,893 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:51,907 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.Update (Colegio.Application) with arguments (Colegio.Generales.ProfesionNs.ProfesionDto) - Validation state: Valid
+INFO  2018-11-28 14:15:51,964 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.Update (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 52.7763ms.
+INFO  2018-11-28 14:15:51,978 [104  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:15:51,983 [104  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.Update (Colegio.Application) in 91.0495ms
+INFO  2018-11-28 14:15:51,990 [104  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 149.5653ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:15:52,042 [105  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:15:52,049 [105  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:52,056 [105  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.2137ms 204 
+INFO  2018-11-28 14:15:52,105 [106  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:15:52,118 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:52,134 [106  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:15:52,143 [106  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:15:52,150 [106  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:15:52,162 [106  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:15:52,186 [106  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:15:52,230 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:15:52,233 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:15:52,242 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 14:15:52,248 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.2001ms.
+INFO  2018-11-28 14:15:52,260 [104  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:15:52,280 [104  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 29.9208ms
+INFO  2018-11-28 14:15:52,291 [104  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 201.3025ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:16:07,971 [105  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/Create  
+INFO  2018-11-28 14:16:07,981 [105  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:07,991 [105  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.5341ms 204 
+INFO  2018-11-28 14:16:08,000 [105  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Profesion/Create application/json 34
+INFO  2018-11-28 14:16:08,003 [105  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:08,012 [105  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:16:08,018 [105  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:16:08,023 [105  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:16:08,030 [105  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:16:08,033 [105  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:16:08,044 [105  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.Create (Colegio.Application)
+INFO  2018-11-28 14:16:08,048 [105  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:08,055 [105  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.Create (Colegio.Application) with arguments (Colegio.Generales.ProfesionNs.ProfesionDto) - Validation state: Valid
+INFO  2018-11-28 14:16:08,074 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.Create (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 15.6096ms.
+INFO  2018-11-28 14:16:08,086 [107  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:16:08,089 [107  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.Create (Colegio.Application) in 41.6547ms
+INFO  2018-11-28 14:16:08,104 [107  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 93.7593ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:16:08,163 [105  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:16:08,168 [105  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:08,171 [105  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.0561ms 204 
+INFO  2018-11-28 14:16:08,236 [106  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:16:08,249 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:08,273 [106  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:16:08,278 [106  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:16:08,284 [106  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:16:08,298 [106  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:16:08,304 [106  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:16:08,314 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:16:08,319 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:08,336 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 14:16:08,343 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.8157ms.
+INFO  2018-11-28 14:16:08,354 [106  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:16:08,367 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 40.4194ms
+INFO  2018-11-28 14:16:08,371 [106  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 150.1685ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:16:36,119 [106  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/Create  
+INFO  2018-11-28 14:16:36,136 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:36,153 [106  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 28.9233ms 204 
+INFO  2018-11-28 14:16:36,164 [106  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Profesion/Create application/json 33
+INFO  2018-11-28 14:16:36,171 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:36,176 [106  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:16:36,184 [106  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:16:36,196 [106  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:16:36,201 [106  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:16:36,204 [106  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:16:36,218 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.Create (Colegio.Application)
+INFO  2018-11-28 14:16:36,226 [106  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:36,232 [106  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.Create (Colegio.Application) with arguments (Colegio.Generales.ProfesionNs.ProfesionDto) - Validation state: Valid
+INFO  2018-11-28 14:16:36,242 [107  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.Create (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6.1221ms.
+INFO  2018-11-28 14:16:36,259 [108  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:16:36,262 [108  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.Create (Colegio.Application) in 40.6926ms
+INFO  2018-11-28 14:16:36,266 [108  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 109.8374ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:16:36,314 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:16:36,319 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:36,326 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.2565ms 204 
+INFO  2018-11-28 14:16:36,368 [110  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:16:36,374 [110  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:36,378 [110  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:16:36,386 [110  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:16:36,394 [110  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:16:36,404 [110  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:16:36,408 [110  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:16:36,436 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:16:36,467 [110  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:36,482 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 14:16:36,493 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.3171ms.
+INFO  2018-11-28 14:16:36,514 [110  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:16:36,519 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 75.7755ms
+INFO  2018-11-28 14:16:36,525 [110  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 156.8528ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:16:58,075 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/Delete?Id=3  
+INFO  2018-11-28 14:16:58,086 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:58,107 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.0945ms 204 
+INFO  2018-11-28 14:16:58,136 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DELETE http://localhost:21021/api/services/app/Profesion/Delete?Id=3  
+INFO  2018-11-28 14:16:58,144 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:58,149 [111  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:16:58,153 [111  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:16:58,155 [111  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:16:58,163 [111  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:16:58,169 [111  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:16:58,183 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Delete", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.Delete (Colegio.Application)
+INFO  2018-11-28 14:16:58,186 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:58,193 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.Delete (Colegio.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - Validation state: Valid
+INFO  2018-11-28 14:16:58,237 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.Delete (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.EmptyResult in 40.6273ms.
+INFO  2018-11-28 14:16:58,305 [112  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:16:58,313 [112  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.Delete (Colegio.Application) in 122.0099ms
+INFO  2018-11-28 14:16:58,327 [112  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 207.8739ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:16:58,354 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:16:58,358 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:58,362 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.0677ms 204 
+INFO  2018-11-28 14:16:58,387 [115  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:16:58,394 [115  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:58,399 [115  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:16:58,402 [115  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:16:58,406 [115  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:16:58,410 [115  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:16:58,414 [115  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:16:58,422 [115  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:16:58,425 [115  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:16:58,430 [115  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 14:16:58,437 [115  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.6268ms.
+INFO  2018-11-28 14:16:58,454 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:16:58,459 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 32.1777ms
+INFO  2018-11-28 14:16:58,487 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 86.7075ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:02,389 [115  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=p  
+INFO  2018-11-28 14:17:02,393 [115  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:02,396 [115  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.7757ms 204 
+INFO  2018-11-28 14:17:02,403 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=p  
+INFO  2018-11-28 14:17:02,406 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:02,410 [114  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:02,414 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:02,417 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:02,421 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:02,424 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:02,433 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:02,436 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:02,442 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, p) - Validation state: Valid
+INFO  2018-11-28 14:17:02,520 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 74.5502ms.
+INFO  2018-11-28 14:17:02,532 [112  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:02,536 [112  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 98.535ms
+INFO  2018-11-28 14:17:02,542 [112  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 137.413ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:02,685 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=pu  
+INFO  2018-11-28 14:17:02,690 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:02,697 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.7894ms 204 
+INFO  2018-11-28 14:17:02,702 [110  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=pu  
+INFO  2018-11-28 14:17:02,705 [110  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:02,710 [110  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:02,714 [110  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:02,717 [110  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:02,723 [110  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:02,726 [110  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:02,736 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:02,739 [110  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:02,744 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, pu) - Validation state: Valid
+INFO  2018-11-28 14:17:02,752 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.7242ms.
+INFO  2018-11-28 14:17:02,763 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:02,766 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 27.3855ms
+INFO  2018-11-28 14:17:02,772 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 68.7992ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:02,862 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=pub  
+INFO  2018-11-28 14:17:02,865 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:02,872 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.482ms 204 
+INFO  2018-11-28 14:17:02,878 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=pub  
+INFO  2018-11-28 14:17:02,884 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:02,893 [111  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:02,897 [111  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:02,900 [111  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:02,908 [111  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:02,914 [111  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:02,927 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:02,931 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:02,939 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, pub) - Validation state: Valid
+INFO  2018-11-28 14:17:02,947 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.8981ms.
+INFO  2018-11-28 14:17:02,963 [114  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:02,971 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 36.7591ms
+INFO  2018-11-28 14:17:02,979 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 99.2107ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:03,078 [110  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=publ  
+INFO  2018-11-28 14:17:03,084 [110  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:03,089 [110  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.8357ms 204 
+INFO  2018-11-28 14:17:03,107 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=publ  
+INFO  2018-11-28 14:17:03,114 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:03,119 [114  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:03,126 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:03,132 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:03,142 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:03,145 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:03,157 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:03,161 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:03,167 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, publ) - Validation state: Valid
+INFO  2018-11-28 14:17:03,175 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.7808ms.
+INFO  2018-11-28 14:17:03,186 [112  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:03,188 [112  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 28.8353ms
+INFO  2018-11-28 14:17:03,192 [112  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 92.8336ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:03,260 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=publo  
+INFO  2018-11-28 14:17:03,264 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:03,270 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.0327ms 204 
+INFO  2018-11-28 14:17:03,274 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=publo  
+INFO  2018-11-28 14:17:03,277 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:03,281 [111  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:03,285 [111  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:03,288 [111  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:03,293 [111  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:03,296 [111  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:03,306 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:03,310 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:03,317 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, publo) - Validation state: Valid
+INFO  2018-11-28 14:17:03,327 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.3906ms.
+INFO  2018-11-28 14:17:03,344 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:03,351 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 37.9212ms
+INFO  2018-11-28 14:17:03,358 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 81.3822ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:03,386 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=publoc  
+INFO  2018-11-28 14:17:03,389 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:03,395 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.6328ms 204 
+INFO  2018-11-28 14:17:03,411 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=publoc  
+INFO  2018-11-28 14:17:03,415 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:03,421 [114  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:03,427 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:03,432 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:03,436 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:03,438 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:03,447 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:03,449 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:03,456 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, publoc) - Validation state: Valid
+INFO  2018-11-28 14:17:03,463 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.8672ms.
+INFO  2018-11-28 14:17:03,474 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:03,476 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 26.8263ms
+INFO  2018-11-28 14:17:03,483 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 76.3529ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:03,780 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=publo  
+INFO  2018-11-28 14:17:03,784 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:03,787 [114  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:03,794 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:03,800 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:03,810 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:03,814 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:03,827 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:03,833 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:03,839 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, publo) - Validation state: Valid
+INFO  2018-11-28 14:17:03,846 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.888ms.
+INFO  2018-11-28 14:17:03,861 [113  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:03,866 [113  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 33.7533ms
+INFO  2018-11-28 14:17:03,871 [113  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 90.4863ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:03,997 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=publ  
+INFO  2018-11-28 14:17:04,002 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:04,006 [114  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:04,015 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:04,020 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:04,024 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:04,027 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:04,036 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:04,043 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:04,050 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, publ) - Validation state: Valid
+INFO  2018-11-28 14:17:04,057 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.0605ms.
+INFO  2018-11-28 14:17:04,068 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:04,074 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 31.7109ms
+INFO  2018-11-28 14:17:04,083 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 99.6229ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:04,146 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=pub  
+INFO  2018-11-28 14:17:04,150 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:04,154 [114  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:04,158 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:04,161 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:04,169 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:04,174 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:04,185 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:04,190 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:04,203 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, pub) - Validation state: Valid
+INFO  2018-11-28 14:17:04,211 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.1142ms.
+INFO  2018-11-28 14:17:04,223 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:04,229 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 37.4054ms
+INFO  2018-11-28 14:17:04,234 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 85.9023ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:05,446 [110  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=pu  
+INFO  2018-11-28 14:17:05,449 [110  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:05,455 [110  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:05,458 [110  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:05,463 [110  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:05,469 [110  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:05,473 [110  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:05,483 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:05,486 [110  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:05,492 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, pu) - Validation state: Valid
+INFO  2018-11-28 14:17:05,499 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.4893ms.
+INFO  2018-11-28 14:17:05,511 [112  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:05,515 [112  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 28.2602ms
+INFO  2018-11-28 14:17:05,519 [112  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 75.212ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:05,616 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=p  
+INFO  2018-11-28 14:17:05,620 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:05,626 [111  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:05,630 [111  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:05,634 [111  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:05,638 [111  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:05,642 [111  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:05,653 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:05,656 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:05,662 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, p) - Validation state: Valid
+INFO  2018-11-28 14:17:05,670 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.8624ms.
+INFO  2018-11-28 14:17:05,682 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:05,686 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 29.4961ms
+INFO  2018-11-28 14:17:05,709 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 79.757ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:05,805 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:17:05,815 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:05,831 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.0547ms 204 
+INFO  2018-11-28 14:17:05,861 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:17:05,867 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:05,872 [111  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:05,876 [111  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:05,883 [111  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:05,890 [111  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:05,895 [111  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:05,905 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:05,908 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:05,914 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 14:17:05,920 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.6265ms.
+INFO  2018-11-28 14:17:05,931 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:05,934 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 26.1595ms
+INFO  2018-11-28 14:17:05,938 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 103.1051ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:08,894 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=p  
+INFO  2018-11-28 14:17:08,899 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:08,906 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.927ms 204 
+INFO  2018-11-28 14:17:08,920 [110  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=p  
+INFO  2018-11-28 14:17:08,934 [110  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:08,937 [110  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:08,941 [110  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:08,945 [110  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:08,948 [110  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:08,951 [110  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:08,961 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:08,965 [110  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:08,970 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, p) - Validation state: Valid
+INFO  2018-11-28 14:17:08,977 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.0493ms.
+INFO  2018-11-28 14:17:08,989 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:08,993 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 28.1278ms
+INFO  2018-11-28 14:17:08,999 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 86.0761ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:09,148 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=pu  
+INFO  2018-11-28 14:17:09,151 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:09,156 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 16.9438ms 204 
+INFO  2018-11-28 14:17:09,166 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=pu  
+INFO  2018-11-28 14:17:09,169 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:09,173 [114  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:09,177 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:09,180 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:09,184 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:09,187 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:09,198 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:09,202 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:09,209 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, pu) - Validation state: Valid
+INFO  2018-11-28 14:17:09,216 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.3118ms.
+INFO  2018-11-28 14:17:09,228 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:09,232 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 29.6441ms
+INFO  2018-11-28 14:17:09,247 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 71.6682ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:09,812 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=p  
+INFO  2018-11-28 14:17:09,815 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:09,819 [114  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:09,822 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:09,826 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:09,829 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:09,832 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:09,843 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:09,846 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:09,852 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, p) - Validation state: Valid
+INFO  2018-11-28 14:17:09,858 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.0205ms.
+INFO  2018-11-28 14:17:09,870 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:09,875 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 27.9003ms
+INFO  2018-11-28 14:17:09,880 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 68.1433ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:10,036 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:17:10,040 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:10,045 [114  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:10,050 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:10,054 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:10,058 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:10,062 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:10,072 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:10,075 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:10,082 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 14:17:10,090 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.1728ms.
+INFO  2018-11-28 14:17:10,103 [113  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:10,107 [113  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 31.6666ms
+INFO  2018-11-28 14:17:10,118 [113  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 83.1667ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:10,835 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=c  
+INFO  2018-11-28 14:17:10,840 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:10,854 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.2105ms 204 
+INFO  2018-11-28 14:17:10,860 [110  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=c  
+INFO  2018-11-28 14:17:10,864 [110  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:10,868 [110  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:10,873 [110  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:10,879 [110  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:10,882 [110  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:10,886 [110  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:10,896 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:10,900 [110  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:10,907 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, c) - Validation state: Valid
+INFO  2018-11-28 14:17:10,914 [110  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.9553ms.
+INFO  2018-11-28 14:17:10,925 [112  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:10,929 [112  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 29.8013ms
+INFO  2018-11-28 14:17:10,939 [112  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 74.1016ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:10,956 [112  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=ci  
+INFO  2018-11-28 14:17:10,964 [112  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:10,974 [112  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 25.1097ms 204 
+INFO  2018-11-28 14:17:10,997 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=ci  
+INFO  2018-11-28 14:17:11,056 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:11,065 [114  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:11,069 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:11,074 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:11,078 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:11,081 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:11,089 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:11,092 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:11,096 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ci) - Validation state: Valid
+INFO  2018-11-28 14:17:11,102 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.3074ms.
+INFO  2018-11-28 14:17:11,111 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:11,114 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 22.1715ms
+INFO  2018-11-28 14:17:11,119 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 130.5039ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:11,174 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=cib  
+INFO  2018-11-28 14:17:11,177 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:11,181 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.5894ms 204 
+INFO  2018-11-28 14:17:11,185 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=cib  
+INFO  2018-11-28 14:17:11,188 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:11,190 [111  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:11,194 [111  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:11,196 [111  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:11,198 [111  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:11,201 [111  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:11,209 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:11,211 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:11,216 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, cib) - Validation state: Valid
+INFO  2018-11-28 14:17:11,220 [111  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.7329ms.
+INFO  2018-11-28 14:17:11,228 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:11,232 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 19.5401ms
+INFO  2018-11-28 14:17:11,239 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 50.3161ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:11,420 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=cibt  
+INFO  2018-11-28 14:17:11,426 [111  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:11,432 [111  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.6412ms 204 
+INFO  2018-11-28 14:17:11,438 [109  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=cibt  
+INFO  2018-11-28 14:17:11,442 [109  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:11,450 [109  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:11,453 [109  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:11,458 [109  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:11,462 [109  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:11,465 [109  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:11,478 [109  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:11,483 [109  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:11,488 [109  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, cibt) - Validation state: Valid
+INFO  2018-11-28 14:17:11,497 [109  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.8402ms.
+INFO  2018-11-28 14:17:11,509 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:11,518 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 30.8276ms
+INFO  2018-11-28 14:17:11,526 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 85.1332ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:11,988 [115  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=cib  
+INFO  2018-11-28 14:17:11,995 [115  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:12,001 [115  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:12,005 [115  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:12,008 [115  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:12,013 [115  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:12,017 [115  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:12,027 [115  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:12,030 [115  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:12,037 [115  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, cib) - Validation state: Valid
+INFO  2018-11-28 14:17:12,044 [115  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.9318ms.
+INFO  2018-11-28 14:17:12,056 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:12,060 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 29.0816ms
+INFO  2018-11-28 14:17:12,067 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 78.6151ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:12,170 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=ci  
+INFO  2018-11-28 14:17:12,175 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:12,179 [114  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:12,184 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:12,187 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:12,190 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:12,194 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:12,204 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:12,207 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:12,212 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ci) - Validation state: Valid
+INFO  2018-11-28 14:17:12,220 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.2886ms.
+INFO  2018-11-28 14:17:12,232 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:12,236 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 28.5903ms
+INFO  2018-11-28 14:17:12,240 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 77.6404ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:12,883 [117  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=c  
+INFO  2018-11-28 14:17:12,886 [117  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:12,890 [117  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:12,894 [117  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:12,897 [117  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:12,900 [117  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:12,903 [117  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:12,913 [117  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:12,916 [117  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:12,921 [117  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, c) - Validation state: Valid
+INFO  2018-11-28 14:17:12,928 [117  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.1794ms.
+INFO  2018-11-28 14:17:12,940 [114  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:12,943 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 27.6149ms
+INFO  2018-11-28 14:17:12,949 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 65.6633ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:13,253 [117  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=co  
+INFO  2018-11-28 14:17:13,256 [117  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:13,262 [117  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.9716ms 204 
+INFO  2018-11-28 14:17:13,268 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=co  
+INFO  2018-11-28 14:17:13,272 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:13,276 [114  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:13,280 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:13,284 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:13,287 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:13,290 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:13,299 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:13,302 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:13,308 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, co) - Validation state: Valid
+INFO  2018-11-28 14:17:13,315 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.1701ms.
+INFO  2018-11-28 14:17:13,327 [117  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:13,330 [117  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 28.0152ms
+INFO  2018-11-28 14:17:13,337 [117  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 67.0299ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:13,546 [115  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=con  
+INFO  2018-11-28 14:17:13,550 [115  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:13,558 [115  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.8121ms 204 
+INFO  2018-11-28 14:17:13,568 [115  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=conb  
+INFO  2018-11-28 14:17:13,572 [117  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=con  
+INFO  2018-11-28 14:17:13,576 [115  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:13,581 [115  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.7735ms 204 
+INFO  2018-11-28 14:17:13,585 [117  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:13,590 [114  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=conb  
+INFO  2018-11-28 14:17:13,601 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:13,607 [117  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-28 14:17:13,611 [114  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:13,614 [117  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:13,618 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:13,621 [114  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:13,627 [117  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:13,649 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:13,655 [114  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:13,656 [117  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:13,659 [117  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:13,668 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:13,671 [117  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:13,674 [114  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:13,677 [117  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:13,682 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, conb) - Validation state: Valid
+INFO  2018-11-28 14:17:13,685 [117  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, con) - Validation state: Valid
+INFO  2018-11-28 14:17:13,692 [114  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6.7647ms.
+INFO  2018-11-28 14:17:13,705 [116  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:13,709 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 36.967ms
+INFO  2018-11-28 14:17:13,713 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 125.222ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:13,719 [117  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 28.0943ms.
+INFO  2018-11-28 14:17:13,741 [117  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:13,747 [117  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 69.7315ms
+INFO  2018-11-28 14:17:13,751 [117  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 178.4526ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:49,000 [110  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2018-11-28 14:17:49,012 [110  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:49,023 [110  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 18.5929ms 204 
+INFO  2018-11-28 14:17:49,086 [117  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll application/json 
+INFO  2018-11-28 14:17:49,088 [117  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:49,096 [117  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:49,099 [117  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:49,101 [117  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:49,103 [117  ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:49,106 [117  ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:49,109 [117  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:49,112 [117  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:49,120 [117  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2018-11-28 14:17:49,123 [117  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:49,127 [117  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2018-11-28 14:17:49,147 [117  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 18.2562ms.
+INFO  2018-11-28 14:17:49,156 [116  ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:49,160 [116  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 36.7422ms
+INFO  2018-11-28 14:17:49,163 [116  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 76.2936ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:49,184 [119  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 14:17:49,189 [119  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:49,193 [119  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.3045ms 204 
+INFO  2018-11-28 14:17:49,200 [120  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-11-28 14:17:49,206 [120  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:49,211 [120  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:49,219 [120  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:49,222 [120  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:49,225 [120  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:49,229 [120  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:49,239 [120  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application)
+INFO  2018-11-28 14:17:49,242 [120  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:49,251 [120  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) - Validation state: Valid
+INFO  2018-11-28 14:17:49,263 [118  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.1021ms.
+INFO  2018-11-28 14:17:49,269 [118  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:49,273 [118  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) in 30.0996ms
+INFO  2018-11-28 14:17:49,279 [118  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 77.0362ms 200 application/json; charset=utf-8
+INFO  2018-11-28 14:17:53,597 [119  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:17:53,600 [119  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:53,603 [119  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.7697ms 204 
+INFO  2018-11-28 14:17:53,744 [119  ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Profesion/GetAllFiltered?Sorting=&SkipCount=0&MaxResultCount=10&filter=  
+INFO  2018-11-28 14:17:53,752 [119  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:53,764 [119  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2018-11-28 14:17:53,768 [119  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:53,775 [119  ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2018-11-28 14:17:53,780 [119  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2018-11-28 14:17:53,783 [119  ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2018-11-28 14:17:53,791 [119  ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllFiltered", controller = "Profesion"}. Executing action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application)
+INFO  2018-11-28 14:17:53,795 [119  ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-11-28 14:17:53,799 [119  ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto, ) - Validation state: Valid
+INFO  2018-11-28 14:17:53,810 [119  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6.0761ms.
+INFO  2018-11-28 14:17:53,828 [119  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-28 14:17:53,832 [119  ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.ProfesionNs.ProfesionAppService.GetAllFiltered (Colegio.Application) in 36.5072ms
+INFO  2018-11-28 14:17:53,839 [119  ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 94.4747ms 200 application/json; charset=utf-8
