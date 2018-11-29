@@ -3,14 +3,16 @@ using System;
 using Colegio.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Colegio.Migrations
 {
     [DbContext(typeof(ColegioDbContext))]
-    partial class ColegioDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181129025340_6")]
+    partial class _6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1434,26 +1436,6 @@ namespace Colegio.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TipoIncidencia");
-                });
-
-            modelBuilder.Entity("Colegio.Models.Generales.TipoPadecimientoNs.TipoPadecimiento", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<long?>("CreatorUserId");
-
-                    b.Property<string>("Descripcion");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<long?>("LastModifierUserId");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TipoPadecimiento");
                 });
 
             modelBuilder.Entity("Colegio.Models.Generales.TipoTelefonoNs.TipoTelefono", b =>

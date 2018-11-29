@@ -8,7 +8,7 @@ namespace Colegio.Generales.PaisNs.Dto
     {
         public EmailEstudianteMapProfile()
         {
-            CreateMap<EmailEstudianteDto, EmailEstudiante>();
+            CreateMap<EmailEstudianteDto, EmailEstudiante>();               
             CreateMap<EmailEstudiante, EmailEstudianteDto>()
                 .ForMember(x => x.TipoEmailNombre, o => o.MapFrom(x => x.TipoEmail.Descripcion));
         }

@@ -3,14 +3,16 @@ using System;
 using Colegio.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Colegio.Migrations
 {
     [DbContext(typeof(ColegioDbContext))]
-    partial class ColegioDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181129003203_4")]
+    partial class _4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1152,6 +1154,30 @@ namespace Colegio.Migrations
                     b.ToTable("IncidenciaEstudiante");
                 });
 
+            modelBuilder.Entity("Colegio.Models.Generales.LugarTrabajoNs.LugarTrabajo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<string>("Descripcion");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<int>("SectorId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SectorId");
+
+                    b.ToTable("LugarTrabajo");
+                });
+
             modelBuilder.Entity("Colegio.Models.Generales.MunicipioNs.Municipio", b =>
                 {
                     b.Property<int>("Id")
@@ -1436,26 +1462,6 @@ namespace Colegio.Migrations
                     b.ToTable("TipoIncidencia");
                 });
 
-            modelBuilder.Entity("Colegio.Models.Generales.TipoPadecimientoNs.TipoPadecimiento", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<long?>("CreatorUserId");
-
-                    b.Property<string>("Descripcion");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<long?>("LastModifierUserId");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TipoPadecimiento");
-                });
-
             modelBuilder.Entity("Colegio.Models.Generales.TipoTelefonoNs.TipoTelefono", b =>
                 {
                     b.Property<int>("Id")
@@ -1541,11 +1547,11 @@ namespace Colegio.Migrations
 
                     b.Property<long?>("LastModifierUserId");
 
+                    b.Property<int>("LugarTrabajoId");
+
                     b.Property<string>("Nombres");
 
                     b.Property<string>("NumeroIdentificacion");
-
-                    b.Property<int>("ParentescoId");
 
                     b.Property<string>("PrimerApellido");
 
@@ -1557,7 +1563,7 @@ namespace Colegio.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ParentescoId");
+                    b.HasIndex("LugarTrabajoId");
 
                     b.HasIndex("ProfesionId");
 
@@ -1879,7 +1885,7 @@ namespace Colegio.Migrations
             modelBuilder.Entity("Colegio.Models.Generales.DireccionFamiliarEstudianteNs.DireccionFamiliarEstudiante", b =>
                 {
                     b.HasOne("Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs.FamiliarEstudiante", "FamiliarEstudiante")
-                        .WithMany("ListaDirecciones")
+                        .WithMany("ListaDireccion")
                         .HasForeignKey("FamiliarEstudianteId")
                         .OnDelete(DeleteBehavior.Cascade);
 
@@ -1953,6 +1959,14 @@ namespace Colegio.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("Colegio.Models.Generales.LugarTrabajoNs.LugarTrabajo", b =>
+                {
+                    b.HasOne("Colegio.Models.Generales.SectorNs.Sector", "Sector")
+                        .WithMany()
+                        .HasForeignKey("SectorId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Colegio.Models.Generales.MunicipioNs.Municipio", b =>
                 {
                     b.HasOne("Colegio.Models.Generales.ProvinciaNs.Provincia", "Provincia")
@@ -2013,9 +2027,9 @@ namespace Colegio.Migrations
 
             modelBuilder.Entity("Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs.FamiliarEstudiante", b =>
                 {
-                    b.HasOne("Colegio.Models.Inscripcion.GeneralNs.ParentescoNs.Parentesco", "Parentesco")
+                    b.HasOne("Colegio.Models.Generales.LugarTrabajoNs.LugarTrabajo", "LugarTrabajo")
                         .WithMany()
-                        .HasForeignKey("ParentescoId")
+                        .HasForeignKey("LugarTrabajoId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Colegio.Models.Generales.ProfesionNs.Profesion", "Profesion")
