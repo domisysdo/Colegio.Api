@@ -6,7 +6,6 @@ using Colegio.Models.Generales.DireccionFamiliarEstudianteNs;
 using Colegio.Models.Generales.EmailEstudianteNs;
 using Colegio.Models.Generales.EmailFamiliarEstudianteNs;
 using Colegio.Models.Generales.IncidenciaEstudianteNs;
-using Colegio.Models.Generales.LugarTrabajoNs;
 using Colegio.Models.Generales.MunicipioNs;
 using Colegio.Models.Generales.NacionalidadNs;
 using Colegio.Models.Generales.PaisNs;
@@ -40,7 +39,6 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<Sector> Sector { get; set; }
         public DbSet<TipoTelefono> TipoTelefono { get; set; }
         public DbSet<TipoDireccion> TipoDireccion { get; set; }
-        public DbSet<LugarTrabajo> LugarTrabajo { get; set; }
         public DbSet<FamiliarEstudiante> FamiliarEstudiante { get; set; }
         public DbSet<Profesion> Profesion { get; set; }
         public DbSet<TipoIdentificacion> TipoIdentificacion { get; set; }
@@ -58,7 +56,6 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<Nacionalidad> Nacionalidad { get; set; }
         public DbSet<Grupo> Grupo { get; set; }
         public DbSet<Materia> Materia { get; set; }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -89,16 +86,6 @@ namespace Colegio.EntityFrameworkCore
                 .WithMany()
                 .HasForeignKey(x => x.TipoEmailId);
 
-            modelBuilder.Entity<LugarTrabajo>()
-                .HasOne(x => x.Sector)
-                .WithMany()
-                .HasForeignKey(x => x.SectorId);
-
-            modelBuilder.Entity<FamiliarEstudiante>()
-                .HasOne(x => x.LugarTrabajo)
-                .WithMany()
-                .HasForeignKey(x => x.LugarTrabajoId);
-
             modelBuilder.Entity<FamiliarEstudiante>()
                 .HasOne(x => x.Profesion)
                 .WithMany()
@@ -108,6 +95,11 @@ namespace Colegio.EntityFrameworkCore
                 .HasOne(x => x.TipoIdentificacion)
                 .WithMany()
                 .HasForeignKey(x => x.TipoIdentificacionId);
+
+            modelBuilder.Entity<FamiliarEstudiante>()
+                .HasOne(x => x.Parentesco)
+                .WithMany()
+                .HasForeignKey(x => x.ParentescoId);
 
             modelBuilder.Entity<TelefonoFamiliarEstudiante>()
                 .HasOne(x => x.FamiliarEstudiante)
@@ -140,28 +132,13 @@ namespace Colegio.EntityFrameworkCore
                 .HasForeignKey(x => x.EstudianteId);
 
             modelBuilder.Entity<DireccionEstudiante>()
-                .HasOne(x => x.Pais)
-                .WithMany()
-                .HasForeignKey(x => x.PaisId);
-
-            modelBuilder.Entity<DireccionEstudiante>()
-                .HasOne(x => x.Provincia)
-                .WithMany()
-                .HasForeignKey(x => x.ProvinciaId);
-
-            modelBuilder.Entity<DireccionEstudiante>()
-                .HasOne(x => x.Municipio)
-                .WithMany()
-                .HasForeignKey(x => x.MunicipioId);
-
-            modelBuilder.Entity<DireccionEstudiante>()
                 .HasOne(x => x.Sector)
                 .WithMany()
                 .HasForeignKey(x => x.SectorId);
 
             modelBuilder.Entity<DireccionFamiliarEstudiante>()
                 .HasOne(x => x.FamiliarEstudiante)
-                .WithMany(x => x.ListaDireccion)
+                .WithMany(x => x.ListaDirecciones)
                 .HasForeignKey(x => x.FamiliarEstudianteId);
 
             modelBuilder.Entity<DireccionFamiliarEstudiante>()

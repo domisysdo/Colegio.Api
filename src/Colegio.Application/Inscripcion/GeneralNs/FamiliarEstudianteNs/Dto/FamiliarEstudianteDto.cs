@@ -1,7 +1,11 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
 using Colegio.Enums;
+using Colegio.Generales.DireccionFamiliarEstudianteNs;
+using Colegio.Generales.EmailFamiliarEstudianteNs;
+using Colegio.Generales.TelefonoFamiliarEstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs;
+using System.Collections.Generic;
 using System;
 
 namespace Colegio.Incripcion.FamiliarEstudianteNs
@@ -18,5 +22,12 @@ namespace Colegio.Incripcion.FamiliarEstudianteNs
         public EstadoCivil EstadoCivil { get; set; }
         public Estado Estado { get; set; }
         public int NacionalidadId { get; set; }
+        public int ParentescoId { get; set; }
+        public int ProfesionId { get; set; }
+        public string ParentescoNombre { get; set; }
+        public string NombreCompleto { get; set; }
+        public List<TelefonoFamiliarEstudianteDto> ListaTelefonos { get; set; }
+        public List<EmailFamiliarEstudianteDto> ListaEmail { get; set; }
+        public List<DireccionFamiliarEstudianteDto> ListaDirecciones { get; set; }
     }
 }
