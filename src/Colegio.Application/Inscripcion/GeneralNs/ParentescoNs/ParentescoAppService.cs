@@ -51,7 +51,7 @@ namespace Colegio.Incripcion.General.ParentescoNs
         {
             if (input.Sorting.IsNullOrEmpty())
             {
-                input.Sorting = "Identificador asc";
+                input.Sorting = "Descripcion asc";
             }
             return base.ApplySorting(query, input);
         }

@@ -27,7 +27,7 @@ namespace Colegio.Incripcion.FamiliarEstudianteNs
             if (filter != null && filter != string.Empty)
             {
                 provinciaList = query
-                    .Where(x => x.Nombres.StartsWith(filter) || x.PrimerApellido.StartsWith(filter) 
+                    .Where(x => x.Nombres.StartsWith(filter) || x.PrimerApellido.StartsWith(filter)
                                                              || x.SegundoApellido.StartsWith(filter))
                     .Skip(input.SkipCount)
                     .Take(input.MaxResultCount).ToList();
@@ -60,7 +60,7 @@ namespace Colegio.Incripcion.FamiliarEstudianteNs
         {
             var paisList = new List<FamiliarEstudiante>();
 
-            var query = Repository.GetAll();
+            var query = Repository.GetAllIncluding(x => x.Parentesco);
             paisList = query.ToList();
 
             return new List<FamiliarEstudianteDto>(ObjectMapper.Map<List<FamiliarEstudianteDto>>(paisList));

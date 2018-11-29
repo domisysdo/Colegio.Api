@@ -10,6 +10,6 @@ namespace Colegio.Generales.EmailEstudianteNs
         public string Email { get; set; }
         public int EstudianteId { get; set; }
         public int TipoEmailId { get; set; }
-        public int TipoEmailNombre { get; set; }
+        public string TipoEmailNombre { get; set; }
     }
 }
