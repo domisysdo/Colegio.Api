@@ -19,6 +19,7 @@ using Colegio.Models.Generales.TipoEmailNs;
 using Colegio.Models.Generales.TipoIdentificacionNs;
 using Colegio.Models.Generales.TipoIncidenciaNs;
 using Colegio.Models.Generales.TipoTelefonoNs;
+using Colegio.Models.Generales.TipoPadecimientoNs;
 using Colegio.Models.Inscripcion.EstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.GrupoNs;
@@ -56,6 +57,7 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<Nacionalidad> Nacionalidad { get; set; }
         public DbSet<Grupo> Grupo { get; set; }
         public DbSet<Materia> Materia { get; set; }
+        public DbSet<TipoPadecimiento> TipoPadecimiento { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
