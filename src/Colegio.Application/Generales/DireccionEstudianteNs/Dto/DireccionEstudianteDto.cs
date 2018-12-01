@@ -10,10 +10,10 @@ namespace Colegio.Generales.DireccionEstudianteNs
         public string Descripcion { get; set; }
         public int EstudianteId { get; set; }
         public int TipoDireccionId { get; set; }
-        public int PaisId { get; set; }
-        public int ProvinciaId { get; set; }
-        public int MunicipioId { get; set; }
         public int SectorId { get; set; }
+
+        public string SectorNombre { get; set; }
+        public string TipoDireccionNombre { get; set; }
 
     }
 }

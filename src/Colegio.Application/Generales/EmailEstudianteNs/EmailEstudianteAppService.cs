@@ -60,7 +60,7 @@ namespace Colegio.EmailEstudianteNs
         {
             var paisList = new List<EmailEstudiante>();
 
-            var query = Repository.GetAll();
+            var query = Repository.GetAllIncluding(x => x.TipoEmail);
             paisList = query.ToList();
 
             return new List<EmailEstudianteDto>(ObjectMapper.Map<List<EmailEstudianteDto>>(paisList));

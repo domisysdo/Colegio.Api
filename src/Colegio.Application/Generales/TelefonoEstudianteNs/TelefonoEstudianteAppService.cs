@@ -28,7 +28,7 @@ namespace Colegio.TelefonoEstudianteNs
             if (filter != null && filter != string.Empty)
             {
                 provinciaList = query
-                    //.Where(x => x.Email.StartsWith(filter))
+                    .Where(x => x.Numero.StartsWith(filter))
                     .Skip(input.SkipCount)
                     .Take(input.MaxResultCount).ToList();
 
@@ -51,7 +51,7 @@ namespace Colegio.TelefonoEstudianteNs
         {
             if (input.Sorting.IsNullOrEmpty())
             {
-                input.Sorting = "Identificador asc";
+                input.Sorting = "Numero asc";
             }
             return base.ApplySorting(query, input);
         }
@@ -60,7 +60,7 @@ namespace Colegio.TelefonoEstudianteNs
         {
             var paisList = new List<TelefonoEstudiante>();
 
-            var query = Repository.GetAll();
+            var query = Repository.GetAllIncluding(x => x.TipoTelefono);
             paisList = query.ToList();
 
             return new List<TelefonoEstudianteDto>(ObjectMapper.Map<List<TelefonoEstudianteDto>>(paisList));
