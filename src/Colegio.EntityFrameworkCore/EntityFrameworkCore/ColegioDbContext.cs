@@ -23,6 +23,7 @@ using Colegio.Models.Inscripcion.EstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.PadecimientoNs;
 using Colegio.Models.Inscripcion.GeneralNs.ParentescoNs;
+using Colegio.Models.Nomina.ProfesorNs;
 using Colegio.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
 
@@ -52,6 +53,7 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<DireccionFamiliarEstudiante> DireccionFamiliarEstudiante { get; set; }
         public DbSet<IncidenciaEstudiante> IncidenciaEstudiante { get; set; }
         public DbSet<TipoIncidencia> TipoIncidencia { get; set; }
+        public DbSet<Profesor> Profesor { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

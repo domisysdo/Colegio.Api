@@ -1650,6 +1650,40 @@ namespace Colegio.Migrations
                     b.ToTable("Parentesco");
                 });
 
+            modelBuilder.Entity("Colegio.Models.Nomina.ProfesorNs.Profesor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<int>("Estado");
+
+                    b.Property<int>("EstadoCivil");
+
+                    b.Property<DateTime>("FechaNacimiento");
+
+                    b.Property<string>("Identificador");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Nombres");
+
+                    b.Property<string>("PrimerApellido");
+
+                    b.Property<string>("SegundoApellido");
+
+                    b.Property<int>("Sexo");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Profesor");
+                });
+
             modelBuilder.Entity("Colegio.MultiTenancy.Tenant", b =>
                 {
                     b.Property<int>("Id")
