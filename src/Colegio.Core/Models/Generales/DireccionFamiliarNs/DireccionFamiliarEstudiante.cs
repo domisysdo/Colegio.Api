@@ -15,13 +15,7 @@ namespace Colegio.Models.Generales.DireccionFamiliarEstudianteNs
         public int FamiliarEstudianteId { get; set; }
         public virtual FamiliarEstudiante FamiliarEstudiante { get; set; }
         public int TipoDireccionId { get; set; }
-        public virtual TipoDireccion TipoDireccion { get; set; }
-        public int PaisId { get; set; }
-        public virtual Pais Pais { get; set; }
-        public int ProvinciaId { get; set; }
-        public virtual Provincia Provincia { get; set; }
-        public int MunicipioId { get; set; }
-        public virtual Municipio Municipio { get; set; }
+        public virtual TipoDireccion TipoDireccion { get; set; }        
         public int SectorId { get; set; }
         public virtual Sector Sector { get; set; }
     }

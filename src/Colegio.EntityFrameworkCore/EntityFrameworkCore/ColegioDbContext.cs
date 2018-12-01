@@ -46,7 +46,7 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<TelefonoEstudiante> TelefonoEstudiante { get; set; }
         public DbSet<TelefonoFamiliarEstudiante> TelefonoFamiliarEstudiante { get; set; }
         public DbSet<EmailEstudiante> EmailEstudiante { get; set; }
-        public DbSet<EmailFamiliarEstudiante> EmailFamiliarEstudiantes { get; set; }
+        public DbSet<EmailFamiliarEstudiante> EmailFamiliarEstudiante { get; set; }
         public DbSet<Padecimiento> Padecimiento { get; set; }
         public DbSet<TipoEmail> TipoEmail { get; set; }
         public DbSet<Parentesco> Parentesco { get; set; }
@@ -142,21 +142,6 @@ namespace Colegio.EntityFrameworkCore
                 .HasOne(x => x.FamiliarEstudiante)
                 .WithMany(x => x.ListaDirecciones)
                 .HasForeignKey(x => x.FamiliarEstudianteId);
-
-            modelBuilder.Entity<DireccionFamiliarEstudiante>()
-                .HasOne(x => x.Pais)
-                .WithMany()
-                .HasForeignKey(x => x.PaisId);
-
-            modelBuilder.Entity<DireccionFamiliarEstudiante>()
-                .HasOne(x => x.Provincia)
-                .WithMany()
-                .HasForeignKey(x => x.ProvinciaId);
-
-            modelBuilder.Entity<DireccionFamiliarEstudiante>()
-                .HasOne(x => x.Municipio)
-                .WithMany()
-                .HasForeignKey(x => x.MunicipioId);
 
             modelBuilder.Entity<DireccionFamiliarEstudiante>()
                 .HasOne(x => x.Sector)

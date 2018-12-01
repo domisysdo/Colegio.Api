@@ -10,5 +10,7 @@ namespace Colegio.Incripcion.PadecimientoNs
         public string Descripcion { get; set; }
         public string Nota { get; set; }
         public int EstudianteId { get; set; }
+        public int TipoPadecimientoId { get; set; }
+        public string TipoPadecimientoDescripcion { get; set; }
     }
 }

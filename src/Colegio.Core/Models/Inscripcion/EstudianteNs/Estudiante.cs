@@ -4,6 +4,7 @@ using Colegio.Models.Generales.DireccionEstudianteNs;
 using Colegio.Models.Generales.EmailEstudianteNs;
 using Colegio.Models.Generales.NacionalidadNs;
 using Colegio.Models.Generales.TelefonoEstudianteNs;
+using Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.PadecimientoNs;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace Colegio.Models.Inscripcion.EstudianteNs
         public virtual IEnumerable<Padecimiento> ListaPadecimientos { get; set; }
         public virtual IEnumerable<EmailEstudiante> ListaEmail { get; set; }
         public virtual IEnumerable<DireccionEstudiante> ListaDireccionEstudiante { get; set; }
+        public virtual IEnumerable<FamiliarEstudiante> ListaFamiliarEstudiante { get; set; }
 
 
     }

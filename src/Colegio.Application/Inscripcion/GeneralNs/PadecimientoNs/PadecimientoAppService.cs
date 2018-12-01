@@ -51,7 +51,7 @@ namespace Colegio.Incripcion.PadecimientoNs
         {
             if (input.Sorting.IsNullOrEmpty())
             {
-                input.Sorting = "Identificador asc";
+                input.Sorting = "Descripcion asc";
             }
             return base.ApplySorting(query, input);
         }
@@ -60,7 +60,7 @@ namespace Colegio.Incripcion.PadecimientoNs
         {
             var paisList = new List<Padecimiento>();
 
-            var query = Repository.GetAll();
+            var query = Repository.GetAllIncluding(x => x.TipoPadecimiento);
             paisList = query.ToList();
 
             return new List<PadecimientoDto>(ObjectMapper.Map<List<PadecimientoDto>>(paisList));

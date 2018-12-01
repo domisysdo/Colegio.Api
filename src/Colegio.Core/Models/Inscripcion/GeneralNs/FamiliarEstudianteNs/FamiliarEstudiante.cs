@@ -24,7 +24,7 @@ namespace Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs
         public int TipoIdentificacionId { get; set; }
         public virtual TipoIdentificacion TipoIdentificacion { get; set; }
         public virtual IEnumerable<TelefonoFamiliarEstudiante> ListaTelefonos { get; set; }
-        public virtual IEnumerable<EmailFamiliarEstudiante> ListaEmail { get; set; }
+        public virtual IEnumerable<EmailFamiliarEstudiante> ListaEmails { get; set; }
         public virtual IEnumerable<DireccionFamiliarEstudiante> ListaDirecciones { get; set; }
     }
 }
