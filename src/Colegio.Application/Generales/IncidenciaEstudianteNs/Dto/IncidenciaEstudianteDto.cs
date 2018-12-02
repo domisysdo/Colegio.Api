@@ -14,5 +14,8 @@ namespace Colegio.Generales.IncidenciaEstudianteNs
         public int MateriaId { get; set; }
         public int EstudianteId { get; set; }
         public int TipoIncidenciaId { get; set; }
+        public string MateriaNombre { get; set; }
+        public string TipoIncidenciaNombre { get; set; }
+        public string EstudianteNombreCompleto { get; set; }
     }
 }
