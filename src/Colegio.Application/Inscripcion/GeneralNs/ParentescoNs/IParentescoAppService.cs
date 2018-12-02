@@ -3,7 +3,7 @@ using Abp.Application.Services.Dto;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Colegio.Incripcion.ParentescoNs
+namespace Colegio.Inscripcion.ParentescoNs
 {
     public interface IParentescoAppService: IAsyncCrudAppService<ParentescoDto, int, PagedAndSortedResultRequestDto, ParentescoDto, ParentescoDto>
     {

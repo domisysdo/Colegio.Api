@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Colegio.Incripcion.EstudianteNs
+namespace Colegio.Inscripcion.EstudianteNs
 {
     public class EstudianteAppService : AsyncCrudAppService<Estudiante, EstudianteDto, int, PagedAndSortedResultRequestDto, EstudianteDto, EstudianteDto>, IEstudianteAppService
     {

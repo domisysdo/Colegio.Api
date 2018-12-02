@@ -1,13 +1,13 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
-using Colegio.Incripcion.GrupoNs;
+using Colegio.Inscripcion.GrupoNs;
 using Colegio.Models.Inscripcion.InscripcionNs;
-using Colegio.Incripcion.EstudianteNs;
-using Colegio.Incripcion.PeriodoNs;
+using Colegio.Inscripcion.EstudianteNs;
+using Colegio.Inscripcion.PeriodoNs;
 
-namespace Colegio.Incripcion.InscripcionNs
+namespace Colegio.Inscripcion.InscripcionNs
 {
-    [AutoMap(typeof(Inscripcion))]
+    [AutoMap(typeof(Models.Inscripcion.InscripcionNs.Inscripcion))]
     public class InscripcionDto: EntityDto<int>
     {
         public int EstudianteId { get; set; }

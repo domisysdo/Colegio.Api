@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Colegio.Incripcion.GrupoNs
+namespace Colegio.Inscripcion.GrupoNs
 {
     public class GrupoAppService : AsyncCrudAppService<Grupo, GrupoDto, int, PagedAndSortedResultRequestDto, GrupoDto, GrupoDto>, IGrupoAppService
     {

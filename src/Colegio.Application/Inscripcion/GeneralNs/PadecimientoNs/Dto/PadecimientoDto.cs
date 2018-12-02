@@ -2,7 +2,7 @@
 using Abp.AutoMapper;
 using Colegio.Models.Inscripcion.GeneralNs.PadecimientoNs;
 
-namespace Colegio.Incripcion.PadecimientoNs
+namespace Colegio.Inscripcion.PadecimientoNs
 {
     [AutoMap(typeof(Padecimiento))]
     public class PadecimientoDto: EntityDto<int>

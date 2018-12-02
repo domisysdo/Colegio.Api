@@ -3,7 +3,7 @@ using Abp.Application.Services.Dto;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Colegio.Incripcion.InscripcionNs
+namespace Colegio.Inscripcion.InscripcionNs
 {
     public interface IInscripcionAppService: IAsyncCrudAppService<InscripcionDto, int, PagedAndSortedResultRequestDto, InscripcionDto, InscripcionDto>
     {

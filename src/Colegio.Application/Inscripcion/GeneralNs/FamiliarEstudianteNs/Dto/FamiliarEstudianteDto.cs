@@ -8,7 +8,7 @@ using Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs;
 using System.Collections.Generic;
 using System;
 
-namespace Colegio.Incripcion.FamiliarEstudianteNs
+namespace Colegio.Inscripcion.FamiliarEstudianteNs
 {
     [AutoMap(typeof(FamiliarEstudiante))]
     public class FamiliarEstudianteDto: EntityDto<int>

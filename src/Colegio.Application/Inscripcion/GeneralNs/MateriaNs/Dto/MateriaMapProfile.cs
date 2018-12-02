@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Colegio.Models.Inscripcion.GeneralNs.MateriaNs;
 
-namespace Colegio.Incripcion.MateriaNs.Dto
+namespace Colegio.Inscripcion.MateriaNs.Dto
 {
     public class MateriaMapProfile: Profile
     {

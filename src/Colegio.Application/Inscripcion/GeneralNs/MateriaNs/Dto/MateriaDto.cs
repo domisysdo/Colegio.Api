@@ -2,7 +2,7 @@
 using Abp.AutoMapper;
 using Colegio.Models.Inscripcion.GeneralNs.MateriaNs;
 
-namespace Colegio.Incripcion.MateriaNs
+namespace Colegio.Inscripcion.MateriaNs
 {
     [AutoMap(typeof(Materia))]
     public class MateriaDto: EntityDto<int>

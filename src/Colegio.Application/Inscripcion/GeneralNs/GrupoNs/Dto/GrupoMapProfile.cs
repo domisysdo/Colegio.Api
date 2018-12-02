@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Colegio.Models.Inscripcion.GeneralNs.GrupoNs;
 
-namespace Colegio.Incripcion.GrupoNs.Dto
+namespace Colegio.Inscripcion.GrupoNs.Dto
 {
     public class GrupoMapProfile: Profile
     {

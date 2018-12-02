@@ -2,13 +2,13 @@
 using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
-using Colegio.Incripcion.General.PadecimientoNs;
+using Colegio.Inscripcion.General.PadecimientoNs;
 using Colegio.Models.Inscripcion.GeneralNs.PadecimientoNs;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Colegio.Incripcion.PadecimientoNs
+namespace Colegio.Inscripcion.PadecimientoNs
 {
     public class PadecimientoAppService : AsyncCrudAppService<Padecimiento, PadecimientoDto, int, PagedAndSortedResultRequestDto, PadecimientoDto, PadecimientoDto>, IPadecimientoAppService
     {

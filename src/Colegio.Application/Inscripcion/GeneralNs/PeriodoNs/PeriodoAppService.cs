@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Colegio.Incripcion.PeriodoNs
+namespace Colegio.Inscripcion.PeriodoNs
 {
     public class PeriodoAppService : AsyncCrudAppService<Periodo, PeriodoDto, int, PagedAndSortedResultRequestDto, PeriodoDto, PeriodoDto>, IPeriodoAppService
     {
