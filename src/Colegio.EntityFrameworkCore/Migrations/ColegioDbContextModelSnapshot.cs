@@ -1607,6 +1607,10 @@ namespace Colegio.Migrations
 
                     b.Property<string>("Nombre");
 
+                    b.Property<decimal>("PrecioInscripcion");
+
+                    b.Property<decimal>("PrecioTotal");
+
                     b.HasKey("Id");
 
                     b.ToTable("Materia");
@@ -1682,6 +1686,42 @@ namespace Colegio.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Periodo");
+                });
+
+            modelBuilder.Entity("Colegio.Models.Inscripcion.InscripcionNs.Inscripcion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<int>("EstudianteId");
+
+                    b.Property<int>("GrupoId");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<int>("PeriodoId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EstudianteId");
+
+                    b.HasIndex("GrupoId");
+
+                    b.HasIndex("PeriodoId");
+
+                    b.ToTable("Inscripcion");
                 });
 
             modelBuilder.Entity("Colegio.Models.Nomina.ProfesorNs.Profesor", b =>
@@ -2102,6 +2142,24 @@ namespace Colegio.Migrations
                     b.HasOne("Colegio.Models.Inscripcion.EstudianteNs.Estudiante", "Estudiante")
                         .WithMany("ListaPadecimientos")
                         .HasForeignKey("EstudianteId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Colegio.Models.Inscripcion.InscripcionNs.Inscripcion", b =>
+                {
+                    b.HasOne("Colegio.Models.Inscripcion.EstudianteNs.Estudiante", "Estudiante")
+                        .WithMany()
+                        .HasForeignKey("EstudianteId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Colegio.Models.Inscripcion.GeneralNs.GrupoNs.Grupo", "Grupo")
+                        .WithMany()
+                        .HasForeignKey("GrupoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Colegio.Models.Inscripcion.GeneralNs.PeriodoNs.Periodo", "Periodo")
+                        .WithMany()
+                        .HasForeignKey("PeriodoId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

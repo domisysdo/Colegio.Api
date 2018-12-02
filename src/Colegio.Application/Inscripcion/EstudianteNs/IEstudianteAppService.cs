@@ -10,5 +10,6 @@ namespace Colegio.Incripcion.EstudianteNs
         Task<PagedResultDto<EstudianteDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter);
 
         List<EstudianteDto> GetAllForSelect();
+        EstudianteDto GetIncluding(int estudianteId);
     }
 }

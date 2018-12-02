@@ -64,5 +64,16 @@ namespace Colegio.Incripcion.GrupoNs
 
             return new List<GrupoDto>(ObjectMapper.Map<List<GrupoDto>>(paisList));
         }
+
+        public List<GrupoDto> GetAllForSelectByMateria(int materiaId)
+        {
+            var paisList = new List<Grupo>();
+
+            var query = Repository.GetAll()
+                .Where(x => x.MateriaId == materiaId);
+            paisList = query.ToList();
+
+            return new List<GrupoDto>(ObjectMapper.Map<List<GrupoDto>>(paisList));
+        }
     }
 }
