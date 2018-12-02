@@ -3,7 +3,7 @@ using Abp.Application.Services.Dto;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Colegio.Incripcion.FamiliarEstudianteNs
+namespace Colegio.Inscripcion.FamiliarEstudianteNs
 {
     public interface IFamiliarEstudianteAppService: IAsyncCrudAppService<FamiliarEstudianteDto, int, PagedAndSortedResultRequestDto, FamiliarEstudianteDto, FamiliarEstudianteDto>
     {

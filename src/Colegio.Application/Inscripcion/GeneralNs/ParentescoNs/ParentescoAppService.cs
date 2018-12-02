@@ -2,13 +2,13 @@
 using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
-using Colegio.Incripcion.ParentescoNs;
+using Colegio.Inscripcion.ParentescoNs;
 using Colegio.Models.Inscripcion.GeneralNs.ParentescoNs;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Colegio.Incripcion.General.ParentescoNs
+namespace Colegio.Inscripcion.General.ParentescoNs
 {
     public class ParentescoAppService : AsyncCrudAppService<Parentesco, ParentescoDto, int, PagedAndSortedResultRequestDto, ParentescoDto, ParentescoDto>, IParentescoAppService
     {

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Colegio.Models.Inscripcion.EstudianteNs;
 
-namespace Colegio.Incripcion.EstudianteNs.Dto
+namespace Colegio.Inscripcion.EstudianteNs.Dto
 {
     public class EstudianteMapProfile: Profile
     {

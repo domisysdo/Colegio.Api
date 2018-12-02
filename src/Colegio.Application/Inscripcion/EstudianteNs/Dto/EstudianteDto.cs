@@ -4,13 +4,12 @@ using Colegio.Enums;
 using Colegio.Generales.DireccionEstudianteNs;
 using Colegio.Generales.EmailEstudianteNs;
 using Colegio.Generales.TelefonoEstudianteNs;
-using Colegio.Incripcion.FamiliarEstudianteNs;
-using Colegio.Incripcion.PadecimientoNs;
+using Colegio.Inscripcion.PadecimientoNs;
 using Colegio.Models.Inscripcion.EstudianteNs;
 using System;
 using System.Collections.Generic;
 
-namespace Colegio.Incripcion.EstudianteNs
+namespace Colegio.Inscripcion.EstudianteNs
 {
     [AutoMap(typeof(Estudiante))]
     public class EstudianteDto: EntityDto<int>
@@ -28,7 +27,5 @@ namespace Colegio.Incripcion.EstudianteNs
         public List<PadecimientoDto> ListaPadecimientos { get; set; }
         public List<EmailEstudianteDto> ListaEmail { get; set; }
         public List<DireccionEstudianteDto> ListaDireccionEstudiante { get; set; }
-        public virtual List<FamiliarEstudianteDto> ListaFamiliarEstudiante { get; set; }
-
     }
 }

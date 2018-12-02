@@ -3,7 +3,7 @@ using Abp.Application.Services.Dto;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Colegio.Incripcion.PeriodoNs
+namespace Colegio.Inscripcion.PeriodoNs
 {
     public interface IPeriodoAppService: IAsyncCrudAppService<PeriodoDto, int, PagedAndSortedResultRequestDto, PeriodoDto, PeriodoDto>
     {

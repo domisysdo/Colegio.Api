@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Colegio.Models.Inscripcion.GeneralNs.PeriodoNs;
 
-namespace Colegio.Incripcion.PeriodoNs.Dto
+namespace Colegio.Inscripcion.PeriodoNs.Dto
 {
     public class PeriodoMapProfile: Profile
     {

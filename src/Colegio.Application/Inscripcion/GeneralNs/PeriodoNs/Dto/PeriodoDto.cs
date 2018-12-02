@@ -4,7 +4,7 @@ using Colegio.Enums;
 using Colegio.Models.Inscripcion.GeneralNs.PeriodoNs;
 using System;
 
-namespace Colegio.Incripcion.PeriodoNs
+namespace Colegio.Inscripcion.PeriodoNs
 {
     [AutoMap(typeof(Periodo))]
     public class PeriodoDto: EntityDto<int>

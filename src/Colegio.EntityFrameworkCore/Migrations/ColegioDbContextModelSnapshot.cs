@@ -1464,6 +1464,44 @@ namespace Colegio.Migrations
                     b.ToTable("TipoTelefono");
                 });
 
+            modelBuilder.Entity("Colegio.Models.Inscripcion.CuotaNs.Cuota", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<int>("Estado");
+
+                    b.Property<DateTime>("FechaVencimiento");
+
+                    b.Property<int>("InscripcionId");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<decimal>("Monto");
+
+                    b.Property<decimal>("MontoMoraPago");
+
+                    b.Property<decimal>("MontoPago");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("InscripcionId");
+
+                    b.ToTable("Cuota");
+                });
+
             modelBuilder.Entity("Colegio.Models.Inscripcion.EstudianteNs.Estudiante", b =>
                 {
                     b.Property<int>("Id")
@@ -2081,6 +2119,14 @@ namespace Colegio.Migrations
                     b.HasOne("Colegio.Models.Generales.TipoTelefonoNs.TipoTelefono", "TipoTelefono")
                         .WithMany()
                         .HasForeignKey("TipoTelefonoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Colegio.Models.Inscripcion.CuotaNs.Cuota", b =>
+                {
+                    b.HasOne("Colegio.Models.Inscripcion.InscripcionNs.Inscripcion", "Inscripcion")
+                        .WithMany()
+                        .HasForeignKey("InscripcionId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

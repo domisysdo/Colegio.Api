@@ -31,6 +31,7 @@ using Colegio.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
 using Colegio.Models.Inscripcion.GeneralNs.PeriodoNs;
 using Colegio.Models.Inscripcion.InscripcionNs;
+using Colegio.Models.Inscripcion.CuotaNs;
 
 namespace Colegio.EntityFrameworkCore
 {
@@ -64,6 +65,7 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<Profesor> Profesor { get; set; }
         public DbSet<Periodo> Periodo { get; set; }
         public DbSet<Inscripcion> Inscripcion { get; set; }
+        public DbSet<Cuota> Cuota { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -174,6 +176,11 @@ namespace Colegio.EntityFrameworkCore
                 .HasOne(x => x.Periodo)
                 .WithMany()
                 .HasForeignKey(x => x.PeriodoId);
+
+            modelBuilder.Entity<Cuota>()
+                .HasOne(x => x.Inscripcion)
+                .WithMany()
+                .HasForeignKey(x => x.InscripcionId);
 
             #endregion
 

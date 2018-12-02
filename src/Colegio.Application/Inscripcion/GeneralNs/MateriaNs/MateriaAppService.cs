@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Colegio.Incripcion.MateriaNs
+namespace Colegio.Inscripcion.MateriaNs
 {
     public class MateriaAppService : AsyncCrudAppService<Materia, MateriaDto, int, PagedAndSortedResultRequestDto, MateriaDto, MateriaDto>, IMateriaAppService
     {
