@@ -3,6 +3,7 @@ using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
 using Colegio.Models.Inscripcion.EstudianteNs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -66,5 +67,19 @@ namespace Colegio.Incripcion.EstudianteNs
 
             return new List<EstudianteDto>(ObjectMapper.Map<List<EstudianteDto>>(paisList));
         }
+
+        public EstudianteDto GetIncluding(int estudianteId)
+        {
+            var estudiante = new List<Estudiante>();
+            estudiante = Repository.GetAllIncluding(x => x.ListaDireccionEstudiante,
+                    x => x.ListaTelefonos,
+                    x => x.ListaEmail)
+                .Where(x => x.Id == estudianteId)
+                .ToList();
+
+            return new List<EstudianteDto>(ObjectMapper.Map<List<EstudianteDto>>(estudiante))
+                .FirstOrDefault();
+        }
+
     }
 }

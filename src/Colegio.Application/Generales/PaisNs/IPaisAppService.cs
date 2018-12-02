@@ -9,6 +9,5 @@ namespace Colegio.Generales.PaisNs
     {
         Task<PagedResultDto<PaisDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter);
         List<PaisDto> GetAllForSelect();
-
     }
 }

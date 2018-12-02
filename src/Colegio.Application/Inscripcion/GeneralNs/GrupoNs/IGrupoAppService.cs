@@ -10,5 +10,6 @@ namespace Colegio.Incripcion.GrupoNs
         Task<PagedResultDto<GrupoDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter);
 
         List<GrupoDto> GetAllForSelect();
+        List<GrupoDto> GetAllForSelectByMateria(int materiaId);
     }
 }
