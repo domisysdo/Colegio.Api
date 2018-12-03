@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Colegio.Migrations
 {
-    public partial class F1 : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -372,6 +372,25 @@ namespace Colegio.Migrations
                         principalTable: "AbpUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Aula",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    Identificador = table.Column<string>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true),
+                    Ubicacion = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Aula", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -1351,6 +1370,37 @@ namespace Colegio.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Cuota",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CreationTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<long>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModifierUserId = table.Column<long>(nullable: true),
+                    IsDeleted = table.Column<bool>(nullable: false),
+                    DeleterUserId = table.Column<long>(nullable: true),
+                    DeletionTime = table.Column<DateTime>(nullable: true),
+                    InscripcionId = table.Column<int>(nullable: false),
+                    FechaVencimiento = table.Column<DateTime>(nullable: false),
+                    Monto = table.Column<decimal>(nullable: false),
+                    MontoPago = table.Column<decimal>(nullable: false),
+                    MontoMoraPago = table.Column<decimal>(nullable: false),
+                    Estado = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cuota", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Cuota_Inscripcion_InscripcionId",
+                        column: x => x.InscripcionId,
+                        principalTable: "Inscripcion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Sector",
                 columns: table => new
                 {
@@ -1752,6 +1802,11 @@ namespace Colegio.Migrations
                 columns: new[] { "TenantId", "UserId" });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Cuota_InscripcionId",
+                table: "Cuota",
+                column: "InscripcionId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_DireccionEstudiante_EstudianteId",
                 table: "DireccionEstudiante",
                 column: "EstudianteId");
@@ -1976,6 +2031,12 @@ namespace Colegio.Migrations
                 name: "AbpUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Aula");
+
+            migrationBuilder.DropTable(
+                name: "Cuota");
+
+            migrationBuilder.DropTable(
                 name: "DireccionEstudiante");
 
             migrationBuilder.DropTable(
@@ -1989,9 +2050,6 @@ namespace Colegio.Migrations
 
             migrationBuilder.DropTable(
                 name: "IncidenciaEstudiante");
-
-            migrationBuilder.DropTable(
-                name: "Inscripcion");
 
             migrationBuilder.DropTable(
                 name: "Padecimiento");
@@ -2015,6 +2073,9 @@ namespace Colegio.Migrations
                 name: "AbpEditions");
 
             migrationBuilder.DropTable(
+                name: "Inscripcion");
+
+            migrationBuilder.DropTable(
                 name: "Sector");
 
             migrationBuilder.DropTable(
@@ -2025,12 +2086,6 @@ namespace Colegio.Migrations
 
             migrationBuilder.DropTable(
                 name: "TipoIncidencia");
-
-            migrationBuilder.DropTable(
-                name: "Grupo");
-
-            migrationBuilder.DropTable(
-                name: "Periodo");
 
             migrationBuilder.DropTable(
                 name: "TipoPadecimiento");
@@ -2048,10 +2103,13 @@ namespace Colegio.Migrations
                 name: "AbpUsers");
 
             migrationBuilder.DropTable(
-                name: "Municipio");
+                name: "Grupo");
 
             migrationBuilder.DropTable(
-                name: "Materia");
+                name: "Periodo");
+
+            migrationBuilder.DropTable(
+                name: "Municipio");
 
             migrationBuilder.DropTable(
                 name: "Estudiante");
@@ -2064,6 +2122,9 @@ namespace Colegio.Migrations
 
             migrationBuilder.DropTable(
                 name: "TipoIdentificacion");
+
+            migrationBuilder.DropTable(
+                name: "Materia");
 
             migrationBuilder.DropTable(
                 name: "Provincia");

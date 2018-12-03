@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Colegio.Migrations
 {
     [DbContext(typeof(ColegioDbContext))]
-    [Migration("20181129190457_7")]
-    partial class _7
+    [Migration("20181203200155_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -986,6 +986,30 @@ namespace Colegio.Migrations
                     b.ToTable("AbpUsers");
                 });
 
+            modelBuilder.Entity("Colegio.Models.Generales.AulaNs.Aula", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<string>("Descripcion");
+
+                    b.Property<string>("Identificador");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Ubicacion");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Aula");
+                });
+
             modelBuilder.Entity("Colegio.Models.Generales.DireccionEstudianteNs.DireccionEstudiante", b =>
                 {
                     b.Property<int>("Id")
@@ -1035,12 +1059,6 @@ namespace Colegio.Migrations
 
                     b.Property<long?>("LastModifierUserId");
 
-                    b.Property<int>("MunicipioId");
-
-                    b.Property<int>("PaisId");
-
-                    b.Property<int>("ProvinciaId");
-
                     b.Property<int>("SectorId");
 
                     b.Property<int>("TipoDireccionId");
@@ -1048,12 +1066,6 @@ namespace Colegio.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("FamiliarEstudianteId");
-
-                    b.HasIndex("MunicipioId");
-
-                    b.HasIndex("PaisId");
-
-                    b.HasIndex("ProvinciaId");
 
                     b.HasIndex("SectorId");
 
@@ -1115,7 +1127,7 @@ namespace Colegio.Migrations
 
                     b.HasIndex("TipoEmailId");
 
-                    b.ToTable("EmailFamiliarEstudiantes");
+                    b.ToTable("EmailFamiliarEstudiante");
                 });
 
             modelBuilder.Entity("Colegio.Models.Generales.IncidenciaEstudianteNs.IncidenciaEstudiante", b =>
@@ -1478,6 +1490,44 @@ namespace Colegio.Migrations
                     b.ToTable("TipoTelefono");
                 });
 
+            modelBuilder.Entity("Colegio.Models.Inscripcion.CuotaNs.Cuota", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<int>("Estado");
+
+                    b.Property<DateTime>("FechaVencimiento");
+
+                    b.Property<int>("InscripcionId");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<decimal>("Monto");
+
+                    b.Property<decimal>("MontoMoraPago");
+
+                    b.Property<decimal>("MontoPago");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("InscripcionId");
+
+                    b.ToTable("Cuota");
+                });
+
             modelBuilder.Entity("Colegio.Models.Inscripcion.EstudianteNs.Estudiante", b =>
                 {
                     b.Property<int>("Id")
@@ -1535,6 +1585,8 @@ namespace Colegio.Migrations
 
                     b.Property<DateTime?>("DeletionTime");
 
+                    b.Property<int?>("EstudianteId");
+
                     b.Property<DateTime>("FechaNacimiento");
 
                     b.Property<bool>("IsDeleted");
@@ -1558,6 +1610,8 @@ namespace Colegio.Migrations
                     b.Property<int>("TipoIdentificacionId");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EstudianteId");
 
                     b.HasIndex("ParentescoId");
 
@@ -1609,6 +1663,10 @@ namespace Colegio.Migrations
 
                     b.Property<string>("Nombre");
 
+                    b.Property<decimal>("PrecioInscripcion");
+
+                    b.Property<decimal>("PrecioTotal");
+
                     b.HasKey("Id");
 
                     b.ToTable("Materia");
@@ -1633,9 +1691,13 @@ namespace Colegio.Migrations
 
                     b.Property<string>("Nota");
 
+                    b.Property<int>("TipoPadecimientoId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("EstudianteId");
+
+                    b.HasIndex("TipoPadecimientoId");
 
                     b.ToTable("Padecimiento");
                 });
@@ -1658,6 +1720,102 @@ namespace Colegio.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Parentesco");
+                });
+
+            modelBuilder.Entity("Colegio.Models.Inscripcion.GeneralNs.PeriodoNs.Periodo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<int>("Estado");
+
+                    b.Property<DateTime>("FechaFin");
+
+                    b.Property<DateTime>("FechaInicio");
+
+                    b.Property<string>("Identificador");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Periodo");
+                });
+
+            modelBuilder.Entity("Colegio.Models.Inscripcion.InscripcionNs.Inscripcion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<int>("EstudianteId");
+
+                    b.Property<int>("GrupoId");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<int>("PeriodoId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EstudianteId");
+
+                    b.HasIndex("GrupoId");
+
+                    b.HasIndex("PeriodoId");
+
+                    b.ToTable("Inscripcion");
+                });
+
+            modelBuilder.Entity("Colegio.Models.Nomina.ProfesorNs.Profesor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<int>("Estado");
+
+                    b.Property<int>("EstadoCivil");
+
+                    b.Property<DateTime>("FechaNacimiento");
+
+                    b.Property<string>("Identificador");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Nombres");
+
+                    b.Property<string>("PrimerApellido");
+
+                    b.Property<string>("SegundoApellido");
+
+                    b.Property<int>("Sexo");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Profesor");
                 });
 
             modelBuilder.Entity("Colegio.MultiTenancy.Tenant", b =>
@@ -1885,21 +2043,6 @@ namespace Colegio.Migrations
                         .HasForeignKey("FamiliarEstudianteId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Colegio.Models.Generales.MunicipioNs.Municipio", "Municipio")
-                        .WithMany()
-                        .HasForeignKey("MunicipioId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Colegio.Models.Generales.PaisNs.Pais", "Pais")
-                        .WithMany()
-                        .HasForeignKey("PaisId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Colegio.Models.Generales.ProvinciaNs.Provincia", "Provincia")
-                        .WithMany()
-                        .HasForeignKey("ProvinciaId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("Colegio.Models.Generales.SectorNs.Sector", "Sector")
                         .WithMany()
                         .HasForeignKey("SectorId")
@@ -1927,7 +2070,7 @@ namespace Colegio.Migrations
             modelBuilder.Entity("Colegio.Models.Generales.EmailFamiliarEstudianteNs.EmailFamiliarEstudiante", b =>
                 {
                     b.HasOne("Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs.FamiliarEstudiante", "FamiliarEstudiante")
-                        .WithMany("ListaEmail")
+                        .WithMany("ListaEmails")
                         .HasForeignKey("FamiliarEstudianteId")
                         .OnDelete(DeleteBehavior.Cascade);
 
@@ -2005,6 +2148,14 @@ namespace Colegio.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("Colegio.Models.Inscripcion.CuotaNs.Cuota", b =>
+                {
+                    b.HasOne("Colegio.Models.Inscripcion.InscripcionNs.Inscripcion", "Inscripcion")
+                        .WithMany()
+                        .HasForeignKey("InscripcionId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Colegio.Models.Inscripcion.EstudianteNs.Estudiante", b =>
                 {
                     b.HasOne("Colegio.Models.Generales.NacionalidadNs.Nacionalidad", "Nacionalidad")
@@ -2015,6 +2166,10 @@ namespace Colegio.Migrations
 
             modelBuilder.Entity("Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs.FamiliarEstudiante", b =>
                 {
+                    b.HasOne("Colegio.Models.Inscripcion.EstudianteNs.Estudiante")
+                        .WithMany("ListaFamiliarEstudiante")
+                        .HasForeignKey("EstudianteId");
+
                     b.HasOne("Colegio.Models.Inscripcion.GeneralNs.ParentescoNs.Parentesco", "Parentesco")
                         .WithMany()
                         .HasForeignKey("ParentescoId")
@@ -2044,6 +2199,29 @@ namespace Colegio.Migrations
                     b.HasOne("Colegio.Models.Inscripcion.EstudianteNs.Estudiante", "Estudiante")
                         .WithMany("ListaPadecimientos")
                         .HasForeignKey("EstudianteId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Colegio.Models.Generales.TipoPadecimientoNs.TipoPadecimiento", "TipoPadecimiento")
+                        .WithMany()
+                        .HasForeignKey("TipoPadecimientoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Colegio.Models.Inscripcion.InscripcionNs.Inscripcion", b =>
+                {
+                    b.HasOne("Colegio.Models.Inscripcion.EstudianteNs.Estudiante", "Estudiante")
+                        .WithMany()
+                        .HasForeignKey("EstudianteId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Colegio.Models.Inscripcion.GeneralNs.GrupoNs.Grupo", "Grupo")
+                        .WithMany()
+                        .HasForeignKey("GrupoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Colegio.Models.Inscripcion.GeneralNs.PeriodoNs.Periodo", "Periodo")
+                        .WithMany()
+                        .HasForeignKey("PeriodoId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
