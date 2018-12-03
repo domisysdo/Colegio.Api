@@ -26,6 +26,7 @@ using Colegio.Models.Inscripcion.GeneralNs.GrupoNs;
 using Colegio.Models.Inscripcion.GeneralNs.MateriaNs;
 using Colegio.Models.Inscripcion.GeneralNs.PadecimientoNs;
 using Colegio.Models.Inscripcion.GeneralNs.ParentescoNs;
+using Colegio.Models.Generales.AulaNs;
 using Colegio.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
 
@@ -58,6 +59,7 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<Grupo> Grupo { get; set; }
         public DbSet<Materia> Materia { get; set; }
         public DbSet<TipoPadecimiento> TipoPadecimiento { get; set; }
+        public DbSet<Aula> Aula { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
