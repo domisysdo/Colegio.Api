@@ -8,7 +8,7 @@ using Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs;
 using System.Collections.Generic;
 using System;
 
-namespace Colegio.Incripcion.FamiliarEstudianteNs
+namespace Colegio.Inscripcion.FamiliarEstudianteNs
 {
     [AutoMap(typeof(FamiliarEstudiante))]
     public class FamiliarEstudianteDto: EntityDto<int>
@@ -24,10 +24,11 @@ namespace Colegio.Incripcion.FamiliarEstudianteNs
         public int NacionalidadId { get; set; }
         public int ParentescoId { get; set; }
         public int ProfesionId { get; set; }
+        public int TipoIdentificacionId { get; set; }
         public string ParentescoNombre { get; set; }
         public string NombreCompleto { get; set; }
         public List<TelefonoFamiliarEstudianteDto> ListaTelefonos { get; set; }
-        public List<EmailFamiliarEstudianteDto> ListaEmail { get; set; }
+        public List<EmailFamiliarEstudianteDto> ListaEmails { get; set; }
         public List<DireccionFamiliarEstudianteDto> ListaDirecciones { get; set; }
     }
 }

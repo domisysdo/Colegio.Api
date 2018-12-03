@@ -2,13 +2,13 @@
 using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
-using Colegio.Incripcion.General.PadecimientoNs;
+using Colegio.Inscripcion.General.PadecimientoNs;
 using Colegio.Models.Inscripcion.GeneralNs.PadecimientoNs;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Colegio.Incripcion.PadecimientoNs
+namespace Colegio.Inscripcion.PadecimientoNs
 {
     public class PadecimientoAppService : AsyncCrudAppService<Padecimiento, PadecimientoDto, int, PagedAndSortedResultRequestDto, PadecimientoDto, PadecimientoDto>, IPadecimientoAppService
     {
@@ -51,7 +51,7 @@ namespace Colegio.Incripcion.PadecimientoNs
         {
             if (input.Sorting.IsNullOrEmpty())
             {
-                input.Sorting = "Identificador asc";
+                input.Sorting = "Descripcion asc";
             }
             return base.ApplySorting(query, input);
         }
@@ -60,7 +60,7 @@ namespace Colegio.Incripcion.PadecimientoNs
         {
             var paisList = new List<Padecimiento>();
 
-            var query = Repository.GetAll();
+            var query = Repository.GetAllIncluding(x => x.TipoPadecimiento);
             paisList = query.ToList();
 
             return new List<PadecimientoDto>(ObjectMapper.Map<List<PadecimientoDto>>(paisList));

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Colegio.Incripcion.GrupoNs
+namespace Colegio.Inscripcion.GrupoNs
 {
     public class GrupoAppService : AsyncCrudAppService<Grupo, GrupoDto, int, PagedAndSortedResultRequestDto, GrupoDto, GrupoDto>, IGrupoAppService
     {
@@ -60,6 +60,17 @@ namespace Colegio.Incripcion.GrupoNs
             var paisList = new List<Grupo>();
 
             var query = Repository.GetAll();
+            paisList = query.ToList();
+
+            return new List<GrupoDto>(ObjectMapper.Map<List<GrupoDto>>(paisList));
+        }
+
+        public List<GrupoDto> GetAllForSelectByMateria(int materiaId)
+        {
+            var paisList = new List<Grupo>();
+
+            var query = Repository.GetAll()
+                .Where(x => x.MateriaId == materiaId);
             paisList = query.ToList();
 
             return new List<GrupoDto>(ObjectMapper.Map<List<GrupoDto>>(paisList));

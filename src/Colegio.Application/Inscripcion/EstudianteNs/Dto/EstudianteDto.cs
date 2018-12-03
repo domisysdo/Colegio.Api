@@ -4,12 +4,12 @@ using Colegio.Enums;
 using Colegio.Generales.DireccionEstudianteNs;
 using Colegio.Generales.EmailEstudianteNs;
 using Colegio.Generales.TelefonoEstudianteNs;
-using Colegio.Incripcion.PadecimientoNs;
+using Colegio.Inscripcion.PadecimientoNs;
 using Colegio.Models.Inscripcion.EstudianteNs;
 using System;
 using System.Collections.Generic;
 
-namespace Colegio.Incripcion.EstudianteNs
+namespace Colegio.Inscripcion.EstudianteNs
 {
     [AutoMap(typeof(Estudiante))]
     public class EstudianteDto: EntityDto<int>

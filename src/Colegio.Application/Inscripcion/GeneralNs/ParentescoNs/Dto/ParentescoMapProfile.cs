@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Colegio.Models.Inscripcion.GeneralNs.ParentescoNs;
 
-namespace Colegio.Incripcion.ParentescoNs.Dto
+namespace Colegio.Inscripcion.ParentescoNs.Dto
 {
     public class ParentescoMapProfile: Profile
     {

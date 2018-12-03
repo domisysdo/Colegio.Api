@@ -27,8 +27,12 @@ using Colegio.Models.Inscripcion.GeneralNs.MateriaNs;
 using Colegio.Models.Inscripcion.GeneralNs.PadecimientoNs;
 using Colegio.Models.Inscripcion.GeneralNs.ParentescoNs;
 using Colegio.Models.Generales.AulaNs;
+using Colegio.Models.Nomina.ProfesorNs;
 using Colegio.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
+using Colegio.Models.Inscripcion.GeneralNs.PeriodoNs;
+using Colegio.Models.Inscripcion.InscripcionNs;
+using Colegio.Models.Inscripcion.CuotaNs;
 
 namespace Colegio.EntityFrameworkCore
 {
@@ -47,7 +51,7 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<TelefonoEstudiante> TelefonoEstudiante { get; set; }
         public DbSet<TelefonoFamiliarEstudiante> TelefonoFamiliarEstudiante { get; set; }
         public DbSet<EmailEstudiante> EmailEstudiante { get; set; }
-        public DbSet<EmailFamiliarEstudiante> EmailFamiliarEstudiantes { get; set; }
+        public DbSet<EmailFamiliarEstudiante> EmailFamiliarEstudiante { get; set; }
         public DbSet<Padecimiento> Padecimiento { get; set; }
         public DbSet<TipoEmail> TipoEmail { get; set; }
         public DbSet<Parentesco> Parentesco { get; set; }
@@ -59,7 +63,13 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<Grupo> Grupo { get; set; }
         public DbSet<Materia> Materia { get; set; }
         public DbSet<TipoPadecimiento> TipoPadecimiento { get; set; }
+        public DbSet<Profesor> Profesor { get; set; }
+        public DbSet<Periodo> Periodo { get; set; }
+        public DbSet<Inscripcion> Inscripcion { get; set; }
+        public DbSet<Cuota> Cuota { get; set; }
+
         public DbSet<Aula> Aula { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -146,21 +156,6 @@ namespace Colegio.EntityFrameworkCore
                 .HasForeignKey(x => x.FamiliarEstudianteId);
 
             modelBuilder.Entity<DireccionFamiliarEstudiante>()
-                .HasOne(x => x.Pais)
-                .WithMany()
-                .HasForeignKey(x => x.PaisId);
-
-            modelBuilder.Entity<DireccionFamiliarEstudiante>()
-                .HasOne(x => x.Provincia)
-                .WithMany()
-                .HasForeignKey(x => x.ProvinciaId);
-
-            modelBuilder.Entity<DireccionFamiliarEstudiante>()
-                .HasOne(x => x.Municipio)
-                .WithMany()
-                .HasForeignKey(x => x.MunicipioId);
-
-            modelBuilder.Entity<DireccionFamiliarEstudiante>()
                 .HasOne(x => x.Sector)
                 .WithMany()
                 .HasForeignKey(x => x.SectorId);
@@ -169,6 +164,27 @@ namespace Colegio.EntityFrameworkCore
                 .HasOne(x => x.Materia)
                 .WithMany()
                 .HasForeignKey(x => x.MateriaId);
+
+            modelBuilder.Entity<Inscripcion>()
+                .HasOne(x => x.Estudiante)
+                .WithMany()
+                .HasForeignKey(x => x.EstudianteId);
+
+            modelBuilder.Entity<Inscripcion>()
+                .HasOne(x => x.Grupo)
+                .WithMany()
+                .HasForeignKey(x => x.GrupoId);
+
+            modelBuilder.Entity<Inscripcion>()
+                .HasOne(x => x.Periodo)
+                .WithMany()
+                .HasForeignKey(x => x.PeriodoId);
+
+            modelBuilder.Entity<Cuota>()
+                .HasOne(x => x.Inscripcion)
+                .WithMany()
+                .HasForeignKey(x => x.InscripcionId);
+
             #endregion
 
             base.OnModelCreating(modelBuilder);

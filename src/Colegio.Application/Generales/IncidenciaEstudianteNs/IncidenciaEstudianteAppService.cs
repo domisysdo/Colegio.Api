@@ -20,7 +20,7 @@ namespace Colegio.IncidenciaEstudianteNs
         public Task<PagedResultDto<IncidenciaEstudianteDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter)
         {
             var provinciaList = new List<IncidenciaEstudiante>();
-            var query = Repository.GetAll();
+            var query = Repository.GetAllIncluding(x => x.Estudiante, x => x.TipoIncidencia, x => x.Materia);
 
             query = ApplySorting(query, input);
 
@@ -51,7 +51,7 @@ namespace Colegio.IncidenciaEstudianteNs
         {
             if (input.Sorting.IsNullOrEmpty())
             {
-                input.Sorting = "Identificador asc";
+                input.Sorting = "Descripcion asc";
             }
             return base.ApplySorting(query, input);
         }
@@ -60,7 +60,7 @@ namespace Colegio.IncidenciaEstudianteNs
         {
             var paisList = new List<IncidenciaEstudiante>();
 
-            var query = Repository.GetAll();
+            var query = Repository.GetAllIncluding(x => x.Estudiante, x => x.TipoIncidencia, x => x.Materia);
             paisList = query.ToList();
 
             return new List<IncidenciaEstudianteDto>(ObjectMapper.Map<List<IncidenciaEstudianteDto>>(paisList));

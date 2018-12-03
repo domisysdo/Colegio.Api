@@ -3,17 +3,25 @@ using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
 using Colegio.Models.Inscripcion.EstudianteNs;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Colegio.Incripcion.EstudianteNs
+namespace Colegio.Inscripcion.EstudianteNs
 {
     public class EstudianteAppService : AsyncCrudAppService<Estudiante, EstudianteDto, int, PagedAndSortedResultRequestDto, EstudianteDto, EstudianteDto>, IEstudianteAppService
     {
         public EstudianteAppService(IRepository<Estudiante> repository)
             : base(repository)
         {
+        }
+
+        public override Task<EstudianteDto> Create(EstudianteDto input)
+        {
+            var result = Repository.InsertOrUpdate(ObjectMapper.Map<Estudiante>(input));
+
+            return Task.FromResult(ObjectMapper.Map<EstudianteDto>(result));
         }
 
         public Task<PagedResultDto<EstudianteDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter)
@@ -27,7 +35,7 @@ namespace Colegio.Incripcion.EstudianteNs
             if (filter != null && filter != string.Empty)
             {
                 provinciaList = query
-                    .Where(x => x.Nombres.StartsWith(filter) || x.PrimerApellido.StartsWith(filter) 
+                    .Where(x => x.Nombres.StartsWith(filter) || x.PrimerApellido.StartsWith(filter)
                                                              || x.SegundoApellido.StartsWith(filter)
                                                              || x.Identificador.StartsWith(filter))
                     .Skip(input.SkipCount)
@@ -66,5 +74,27 @@ namespace Colegio.Incripcion.EstudianteNs
 
             return new List<EstudianteDto>(ObjectMapper.Map<List<EstudianteDto>>(paisList));
         }
+
+        public EstudianteDto GetIncluding(int estudianteId)
+        {
+            var estudiante = new List<Estudiante>();
+
+            estudiante = Repository.GetAll()
+                        .Include(x => x.ListaDireccionEstudiante)
+                        .Include(x => x.ListaTelefonos)
+                            .ThenInclude(x => x.TipoTelefono)
+                        .Include(x => x.ListaFamiliarEstudiante)
+                        .Include(x => x.ListaEmail)
+                            .ThenInclude(x => x.TipoEmail)
+
+                .Where(x => x.Id == estudianteId)
+                .ToList();
+
+            var res = new List<EstudianteDto>(ObjectMapper.Map<List<EstudianteDto>>(estudiante))
+                       .FirstOrDefault();
+
+            return res;
+        }
+
     }
 }
