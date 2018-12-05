@@ -1583,6 +1583,8 @@ namespace Colegio.Migrations
 
                     b.Property<DateTime?>("DeletionTime");
 
+                    b.Property<int>("EstadoCivil");
+
                     b.Property<int?>("EstudianteId");
 
                     b.Property<DateTime>("FechaNacimiento");
@@ -1592,6 +1594,8 @@ namespace Colegio.Migrations
                     b.Property<DateTime?>("LastModificationTime");
 
                     b.Property<long?>("LastModifierUserId");
+
+                    b.Property<int>("NacionalidadId");
 
                     b.Property<string>("Nombres");
 
@@ -1605,11 +1609,15 @@ namespace Colegio.Migrations
 
                     b.Property<string>("SegundoApellido");
 
+                    b.Property<int>("Sexo");
+
                     b.Property<int>("TipoIdentificacionId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("EstudianteId");
+
+                    b.HasIndex("NacionalidadId");
 
                     b.HasIndex("ParentescoId");
 
@@ -2167,6 +2175,11 @@ namespace Colegio.Migrations
                     b.HasOne("Colegio.Models.Inscripcion.EstudianteNs.Estudiante")
                         .WithMany("ListaFamiliarEstudiante")
                         .HasForeignKey("EstudianteId");
+
+                    b.HasOne("Colegio.Models.Generales.NacionalidadNs.Nacionalidad", "Nacionalidad")
+                        .WithMany()
+                        .HasForeignKey("NacionalidadId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Colegio.Models.Inscripcion.GeneralNs.ParentescoNs.Parentesco", "Parentesco")
                         .WithMany()

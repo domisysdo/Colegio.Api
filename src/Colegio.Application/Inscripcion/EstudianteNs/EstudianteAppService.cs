@@ -75,25 +75,26 @@ namespace Colegio.Inscripcion.EstudianteNs
             return new List<EstudianteDto>(ObjectMapper.Map<List<EstudianteDto>>(paisList));
         }
 
-        public EstudianteDto GetIncluding(int estudianteId)
+        public Task<EstudianteDto> GetIncluding(int estudianteId)
         {
             var estudiante = new List<Estudiante>();
 
             estudiante = Repository.GetAll()
-                        .Include(x => x.ListaDireccionEstudiante)
-                        .Include(x => x.ListaTelefonos)
-                            .ThenInclude(x => x.TipoTelefono)
-                        .Include(x => x.ListaFamiliarEstudiante)
-                        .Include(x => x.ListaEmail)
-                            .ThenInclude(x => x.TipoEmail)
+                    .Include(x => x.ListaDireccionEstudiante)
+                    .Include(x => x.ListaTelefonos)
+                        .ThenInclude(x => x.TipoTelefono)
+                    .Include(x => x.ListaFamiliarEstudiante)
+                    .Include(x => x.ListaEmail)
+                        .ThenInclude(x => x.TipoEmail)
 
-                .Where(x => x.Id == estudianteId)
-                .ToList();
+            .Where(x => x.Id == estudianteId)
+            .ToList();
+
 
             var res = new List<EstudianteDto>(ObjectMapper.Map<List<EstudianteDto>>(estudiante))
                        .FirstOrDefault();
 
-            return res;
+            return Task.FromResult(res);
         }
 
     }

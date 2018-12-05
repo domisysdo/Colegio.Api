@@ -20,7 +20,6 @@ namespace Colegio.Inscripcion.FamiliarEstudianteNs
         public DateTime FechaNacimiento { get; set; }
         public Sexo Sexo { get; set; }
         public EstadoCivil EstadoCivil { get; set; }
-        public Estado Estado { get; set; }
         public int NacionalidadId { get; set; }
         public int ParentescoId { get; set; }
         public int ProfesionId { get; set; }
