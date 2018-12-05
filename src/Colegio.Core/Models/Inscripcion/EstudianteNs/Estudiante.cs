@@ -23,12 +23,11 @@ namespace Colegio.Models.Inscripcion.EstudianteNs
         public Estado Estado { get; set; }
         public int NacionalidadId { get; set; }
         public virtual Nacionalidad Nacionalidad { get; set; }
-        public virtual IEnumerable<TelefonoEstudiante> ListaTelefonos { get; set; }
-        public virtual IEnumerable<Padecimiento> ListaPadecimientos { get; set; }
-        public virtual IEnumerable<EmailEstudiante> ListaEmail { get; set; }
-        public virtual IEnumerable<DireccionEstudiante> ListaDireccionEstudiante { get; set; }
-        public virtual IEnumerable<FamiliarEstudiante> ListaFamiliarEstudiante { get; set; }
-
+        public virtual List<TelefonoEstudiante> ListaTelefonos { get; set; }
+        public virtual List<Padecimiento> ListaPadecimientos { get; set; }
+        public virtual List<EmailEstudiante> ListaEmail { get; set; }
+        public virtual List<DireccionEstudiante> ListaDireccionEstudiante { get; set; }
+        public virtual List<FamiliarEstudiante> ListaFamiliarEstudiante { get; set; }
 
     }
 }

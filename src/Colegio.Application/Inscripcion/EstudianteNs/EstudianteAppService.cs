@@ -1,7 +1,12 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
+using Abp.EntityFrameworkCore.Extensions;
+using Abp.EntityFrameworkCore.Repositories;
 using Abp.Extensions;
+using Abp.UI;
+using Colegio.Generales.EmailEstudianteNs;
+using Colegio.Models.Generales.EmailEstudianteNs;
 using Colegio.Models.Inscripcion.EstudianteNs;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -12,15 +17,60 @@ namespace Colegio.Inscripcion.EstudianteNs
 {
     public class EstudianteAppService : AsyncCrudAppService<Estudiante, EstudianteDto, int, PagedAndSortedResultRequestDto, EstudianteDto, EstudianteDto>, IEstudianteAppService
     {
-        public EstudianteAppService(IRepository<Estudiante> repository)
+        IRepository<EmailEstudiante> _emailRepository;
+        public EstudianteAppService(IRepository<Estudiante> repository, IRepository<EmailEstudiante> emailReposiroty)
             : base(repository)
         {
+            _emailRepository = emailReposiroty;
         }
 
         public override Task<EstudianteDto> Create(EstudianteDto input)
         {
-            var result = Repository.InsertOrUpdate(ObjectMapper.Map<Estudiante>(input));
+            if (input.Id > 0)
+            {
+                Estudiante estudiante = Repository.GetAll().Where(x => x.Id == input.Id).Include(x => x.ListaEmail).FirstOrDefault();
 
+                if (estudiante != null)
+                {
+                    if (estudiante.ListaEmail == null)
+                    {
+                        estudiante.ListaEmail = new List<EmailEstudiante>();
+                    }
+                    if (estudiante.ListaEmail.Count() > 0)
+                    {
+                        for (int i = 0; i < estudiante.ListaEmail.Count(); i++)
+                        {
+                            var emailEstudiante = estudiante.ListaEmail[i];
+                            var item = input.ListaEmail.FirstOrDefault(x => x.Id == emailEstudiante.Id);
+
+                            if (item == null)
+                            {
+                                estudiante.ListaEmail.Remove(emailEstudiante);
+                            }
+                            else
+                            {
+                                emailEstudiante.Email = item.Email;
+                                emailEstudiante.TipoEmailId = item.TipoEmailId;
+                            }
+                        }
+                        if (input.ListaEmail != null)
+                        {
+                            foreach (EmailEstudianteDto emailEstudianteDto in input.ListaEmail.Where(x => x.Id == 0))
+                            {
+                                var emailEstudiante = ObjectMapper.Map<EmailEstudiante>(emailEstudianteDto);
+                                estudiante.ListaEmail.Add(emailEstudiante);
+                            }
+                        }
+                    }
+                    Repository.DetachFromDbContext(estudiante);
+                }
+                else
+                {
+                    throw new UserFriendlyException("No se pudo buscar el estudiante");
+                }
+            }
+
+            var result = Repository.InsertOrUpdate(ObjectMapper.Map<Estudiante>(input));
             return Task.FromResult(ObjectMapper.Map<EstudianteDto>(result));
         }
 
