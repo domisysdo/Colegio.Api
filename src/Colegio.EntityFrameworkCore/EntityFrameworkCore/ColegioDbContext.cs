@@ -117,7 +117,7 @@ namespace Colegio.EntityFrameworkCore
 
             modelBuilder.Entity<TelefonoFamiliarEstudiante>()
                 .HasOne(x => x.FamiliarEstudiante)
-                .WithMany(x => x.ListaTelefonos)
+                .WithMany()
                 .HasForeignKey(x => x.FamiliarEstudianteId);
 
             modelBuilder.Entity<TelefonoEstudiante>()
@@ -152,7 +152,7 @@ namespace Colegio.EntityFrameworkCore
 
             modelBuilder.Entity<DireccionFamiliarEstudiante>()
                 .HasOne(x => x.FamiliarEstudiante)
-                .WithMany(x => x.ListaDirecciones)
+                .WithMany()
                 .HasForeignKey(x => x.FamiliarEstudianteId);
 
             modelBuilder.Entity<DireccionFamiliarEstudiante>()

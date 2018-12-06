@@ -7,6 +7,7 @@ using Colegio.Generales.TelefonoFamiliarEstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs;
 using System.Collections.Generic;
 using System;
+using Colegio.Models.Inscripcion.EstudianteNs;
 
 namespace Colegio.Inscripcion.FamiliarEstudianteNs
 {
@@ -23,11 +24,10 @@ namespace Colegio.Inscripcion.FamiliarEstudianteNs
         public int NacionalidadId { get; set; }
         public int ParentescoId { get; set; }
         public int ProfesionId { get; set; }
+        public string NumeroIdentificacion { get; set; }
         public int TipoIdentificacionId { get; set; }
         public string ParentescoNombre { get; set; }
         public string NombreCompleto { get; set; }
-        public List<TelefonoFamiliarEstudianteDto> ListaTelefonos { get; set; }
-        public List<EmailFamiliarEstudianteDto> ListaEmails { get; set; }
-        public List<DireccionFamiliarEstudianteDto> ListaDirecciones { get; set; }
+        public int EstudianteId { get; set; }
     }
 }

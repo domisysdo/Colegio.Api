@@ -2,7 +2,7 @@
 using Colegio.Generales.DireccionEstudianteNs;
 using Colegio.Models.Generales.DireccionEstudianteNs;
 
-namespace Colegio.Generales.PaisNs.Dto
+namespace Colegio.Generales.DireccionEstudianteNs.Dto
 {
     public class DireccionEstudianteMapProfile : Profile
     {

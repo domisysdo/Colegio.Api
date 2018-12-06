@@ -4,6 +4,7 @@ using Colegio.Enums;
 using Colegio.Generales.DireccionEstudianteNs;
 using Colegio.Generales.EmailEstudianteNs;
 using Colegio.Generales.TelefonoEstudianteNs;
+using Colegio.Inscripcion.FamiliarEstudianteNs;
 using Colegio.Inscripcion.PadecimientoNs;
 using Colegio.Models.Inscripcion.EstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs;
@@ -28,6 +29,6 @@ namespace Colegio.Inscripcion.EstudianteNs
         public List<PadecimientoDto> ListaPadecimientos { get; set; }
         public List<EmailEstudianteDto> ListaEmail { get; set; }
         public List<DireccionEstudianteDto> ListaDireccionEstudiante { get; set; }
-        public List<FamiliarEstudiante> ListaFamiliarEstudiante { get; set; }
+        public List<FamiliarEstudianteDto> ListaFamiliarEstudiante { get; set; }
     }
 }

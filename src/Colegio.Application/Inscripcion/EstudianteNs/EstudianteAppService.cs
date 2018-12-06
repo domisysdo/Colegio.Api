@@ -1,13 +1,14 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
-using Abp.EntityFrameworkCore.Extensions;
 using Abp.EntityFrameworkCore.Repositories;
 using Abp.Extensions;
-using Abp.UI;
-using Colegio.Generales.EmailEstudianteNs;
+using Colegio.Models.Generales.DireccionEstudianteNs;
 using Colegio.Models.Generales.EmailEstudianteNs;
+using Colegio.Models.Generales.TelefonoEstudianteNs;
 using Colegio.Models.Inscripcion.EstudianteNs;
+using Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs;
+using Colegio.Models.Inscripcion.GeneralNs.PadecimientoNs;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,59 +19,39 @@ namespace Colegio.Inscripcion.EstudianteNs
     public class EstudianteAppService : AsyncCrudAppService<Estudiante, EstudianteDto, int, PagedAndSortedResultRequestDto, EstudianteDto, EstudianteDto>, IEstudianteAppService
     {
         IRepository<EmailEstudiante> _emailRepository;
-        public EstudianteAppService(IRepository<Estudiante> repository, IRepository<EmailEstudiante> emailReposiroty)
+        IRepository<TelefonoEstudiante> _telefonoRepository;
+        IRepository<DireccionEstudiante> _direccionRepository;
+        IRepository<FamiliarEstudiante> _familiarRepository;
+        IRepository<Padecimiento> _padecimientoRepository;
+
+        public EstudianteAppService(IRepository<Estudiante> repository,
+                                    IRepository<EmailEstudiante> emailRepository,
+                                    IRepository<TelefonoEstudiante> telefonoRepository,
+                                    IRepository<DireccionEstudiante> direccionRepository,
+                                    IRepository<FamiliarEstudiante> familiarRepository,
+                                    IRepository<Padecimiento> padecimientoRepository)
             : base(repository)
         {
-            _emailRepository = emailReposiroty;
+            _emailRepository = emailRepository;
+            _telefonoRepository = telefonoRepository;
+            _direccionRepository = direccionRepository;
+            _familiarRepository = familiarRepository;
+            _padecimientoRepository = padecimientoRepository;
         }
 
         public override Task<EstudianteDto> Create(EstudianteDto input)
         {
+            var result = Repository.InsertOrUpdate(ObjectMapper.Map<Estudiante>(input));
             if (input.Id > 0)
             {
-                Estudiante estudiante = Repository.GetAll().Where(x => x.Id == input.Id).Include(x => x.ListaEmail).FirstOrDefault();
-
-                if (estudiante != null)
-                {
-                    if (estudiante.ListaEmail == null)
-                    {
-                        estudiante.ListaEmail = new List<EmailEstudiante>();
-                    }
-                    if (estudiante.ListaEmail.Count() > 0)
-                    {
-                        for (int i = 0; i < estudiante.ListaEmail.Count(); i++)
-                        {
-                            var emailEstudiante = estudiante.ListaEmail[i];
-                            var item = input.ListaEmail.FirstOrDefault(x => x.Id == emailEstudiante.Id);
-
-                            if (item == null)
-                            {
-                                estudiante.ListaEmail.Remove(emailEstudiante);
-                            }
-                            else
-                            {
-                                emailEstudiante.Email = item.Email;
-                                emailEstudiante.TipoEmailId = item.TipoEmailId;
-                            }
-                        }
-                        if (input.ListaEmail != null)
-                        {
-                            foreach (EmailEstudianteDto emailEstudianteDto in input.ListaEmail.Where(x => x.Id == 0))
-                            {
-                                var emailEstudiante = ObjectMapper.Map<EmailEstudiante>(emailEstudianteDto);
-                                estudiante.ListaEmail.Add(emailEstudiante);
-                            }
-                        }
-                    }
-                    Repository.DetachFromDbContext(estudiante);
-                }
-                else
-                {
-                    throw new UserFriendlyException("No se pudo buscar el estudiante");
-                }
+                Estudiante estudiante = Repository.Get(input.Id);
+                ModificaEmails(ObjectMapper.Map<List<EmailEstudiante>>(input.ListaEmail), estudiante.Id);
+                ModificarDirecciones(ObjectMapper.Map<List<DireccionEstudiante>>(input.ListaDireccionEstudiante), estudiante.Id);
+                ModificarFamiliares(ObjectMapper.Map<List<FamiliarEstudiante>>(input.ListaFamiliarEstudiante), estudiante.Id);
+                ModificarTelefonos(ObjectMapper.Map<List<TelefonoEstudiante>>(input.ListaTelefonos), estudiante.Id);
+                ModificarPadecimientos(ObjectMapper.Map<List<Padecimiento>>(input.ListaPadecimientos), estudiante.Id);
+                CurrentUnitOfWork.SaveChanges();
             }
-
-            var result = Repository.InsertOrUpdate(ObjectMapper.Map<Estudiante>(input));
             return Task.FromResult(ObjectMapper.Map<EstudianteDto>(result));
         }
 
@@ -131,11 +112,17 @@ namespace Colegio.Inscripcion.EstudianteNs
 
             estudiante = Repository.GetAll()
                     .Include(x => x.ListaDireccionEstudiante)
+                        .ThenInclude(x=>x.TipoDireccion)
+                    .Include(x => x.ListaDireccionEstudiante)
+                        .ThenInclude(x => x.Sector)
                     .Include(x => x.ListaTelefonos)
                         .ThenInclude(x => x.TipoTelefono)
                     .Include(x => x.ListaFamiliarEstudiante)
+                        .ThenInclude(x => x.Parentesco)                       
                     .Include(x => x.ListaEmail)
                         .ThenInclude(x => x.TipoEmail)
+                    .Include(x => x.ListaPadecimientos) 
+                        .ThenInclude(x => x.TipoPadecimiento)
 
             .Where(x => x.Id == estudianteId)
             .ToList();
@@ -147,5 +134,39 @@ namespace Colegio.Inscripcion.EstudianteNs
             return Task.FromResult(res);
         }
 
+        public void ModificaEmails(List<EmailEstudiante> emailEstudiantes, int estudianteId)
+        {
+            emailEstudiantes.ToList().ForEach(x => x.EstudianteId = estudianteId);
+            _emailRepository.GetDbContext().RemoveRange(_emailRepository.GetAll());
+            _emailRepository.GetDbContext().AddRange(emailEstudiantes.Where(x => x.Id > 0));
+        }
+
+        public void ModificarTelefonos(List<TelefonoEstudiante> telefonoEstudiante, int estudianteId)
+        {
+            telefonoEstudiante.ToList().ForEach(x => x.EstudianteId = estudianteId);
+            _telefonoRepository.GetDbContext().RemoveRange(_telefonoRepository.GetAll());
+            _telefonoRepository.GetDbContext().AddRange(telefonoEstudiante.Where(x => x.Id > 0));
+        }
+
+        public void ModificarDirecciones(List<DireccionEstudiante> direccionEstudiante, int estudianteId)
+        {
+            direccionEstudiante.ToList().ForEach(x => x.EstudianteId = estudianteId);
+            _direccionRepository.GetDbContext().RemoveRange(_direccionRepository.GetAll());
+            _direccionRepository.GetDbContext().AddRange(direccionEstudiante.Where(x => x.Id > 0));
+        }
+
+        public void ModificarFamiliares(List<FamiliarEstudiante> familiarEstudiante, int estudianteId)
+        {
+            familiarEstudiante.ToList().ForEach(x => x.EstudianteId = estudianteId);
+            _familiarRepository.GetDbContext().RemoveRange(_familiarRepository.GetAll());
+            _familiarRepository.GetDbContext().AddRange(familiarEstudiante.Where(x => x.Id > 0));
+        }
+
+        public void ModificarPadecimientos(List<Padecimiento> padecimiento, int estudianteId)
+        {
+            padecimiento.ToList().ForEach(x => x.EstudianteId = estudianteId);
+            _padecimientoRepository.GetDbContext().RemoveRange(_padecimientoRepository.GetAll());
+            _padecimientoRepository.GetDbContext().AddRange(padecimiento.Where(x => x.Id > 0));
+        }
     }
 }

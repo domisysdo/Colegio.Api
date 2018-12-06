@@ -1585,7 +1585,7 @@ namespace Colegio.Migrations
 
                     b.Property<int>("EstadoCivil");
 
-                    b.Property<int?>("EstudianteId");
+                    b.Property<int>("EstudianteId");
 
                     b.Property<DateTime>("FechaNacimiento");
 
@@ -2045,7 +2045,7 @@ namespace Colegio.Migrations
             modelBuilder.Entity("Colegio.Models.Generales.DireccionFamiliarEstudianteNs.DireccionFamiliarEstudiante", b =>
                 {
                     b.HasOne("Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs.FamiliarEstudiante", "FamiliarEstudiante")
-                        .WithMany("ListaDirecciones")
+                        .WithMany()
                         .HasForeignKey("FamiliarEstudianteId")
                         .OnDelete(DeleteBehavior.Cascade);
 
@@ -2076,7 +2076,7 @@ namespace Colegio.Migrations
             modelBuilder.Entity("Colegio.Models.Generales.EmailFamiliarEstudianteNs.EmailFamiliarEstudiante", b =>
                 {
                     b.HasOne("Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs.FamiliarEstudiante", "FamiliarEstudiante")
-                        .WithMany("ListaEmails")
+                        .WithMany()
                         .HasForeignKey("FamiliarEstudianteId")
                         .OnDelete(DeleteBehavior.Cascade);
 
@@ -2144,7 +2144,7 @@ namespace Colegio.Migrations
             modelBuilder.Entity("Colegio.Models.Generales.TelefonoFamiliarNs.TelefonoFamiliarEstudiante", b =>
                 {
                     b.HasOne("Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs.FamiliarEstudiante", "FamiliarEstudiante")
-                        .WithMany("ListaTelefonos")
+                        .WithMany()
                         .HasForeignKey("FamiliarEstudianteId")
                         .OnDelete(DeleteBehavior.Cascade);
 
@@ -2172,9 +2172,10 @@ namespace Colegio.Migrations
 
             modelBuilder.Entity("Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs.FamiliarEstudiante", b =>
                 {
-                    b.HasOne("Colegio.Models.Inscripcion.EstudianteNs.Estudiante")
+                    b.HasOne("Colegio.Models.Inscripcion.EstudianteNs.Estudiante", "Estudiante")
                         .WithMany("ListaFamiliarEstudiante")
-                        .HasForeignKey("EstudianteId");
+                        .HasForeignKey("EstudianteId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Colegio.Models.Generales.NacionalidadNs.Nacionalidad", "Nacionalidad")
                         .WithMany()

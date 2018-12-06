@@ -6,6 +6,7 @@ using Colegio.Models.Generales.NacionalidadNs;
 using Colegio.Models.Generales.ProfesionNs;
 using Colegio.Models.Generales.TelefonoFamiliarNs;
 using Colegio.Models.Generales.TipoIdentificacionNs;
+using Colegio.Models.Inscripcion.EstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.ParentescoNs;
 using System;
 using System.Collections.Generic;
@@ -28,9 +29,8 @@ namespace Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs
         public int NacionalidadId { get; set; }
         public virtual Nacionalidad Nacionalidad { get; set; }
         public int TipoIdentificacionId { get; set; }
-        public virtual TipoIdentificacion TipoIdentificacion { get; set; }
-        public virtual IEnumerable<TelefonoFamiliarEstudiante> ListaTelefonos { get; set; }
-        public virtual IEnumerable<EmailFamiliarEstudiante> ListaEmails { get; set; }
-        public virtual IEnumerable<DireccionFamiliarEstudiante> ListaDirecciones { get; set; }
+        public int EstudianteId { get; set; }
+        public Estudiante Estudiante { get; set; }
+        public virtual TipoIdentificacion TipoIdentificacion { get; set; }    
     }
 }
