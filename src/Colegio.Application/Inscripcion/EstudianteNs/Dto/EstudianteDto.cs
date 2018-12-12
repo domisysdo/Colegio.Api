@@ -25,6 +25,7 @@ namespace Colegio.Inscripcion.EstudianteNs
         public EstadoCivil EstadoCivil { get; set; }
         public Estado Estado { get; set; }
         public int NacionalidadId { get; set; }
+        public double SecuenciaIdentificador { get; set; }
         public List<TelefonoEstudianteDto> ListaTelefonos { get; set; }
         public List<PadecimientoDto> ListaPadecimientos { get; set; }
         public List<EmailEstudianteDto> ListaEmail { get; set; }

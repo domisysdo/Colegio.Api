@@ -1,6 +1,7 @@
 ﻿using Abp.Zero.EntityFrameworkCore;
 using Colegio.Authorization.Roles;
 using Colegio.Authorization.Users;
+using Colegio.Models.Generales.AulaNs;
 using Colegio.Models.Generales.DireccionEstudianteNs;
 using Colegio.Models.Generales.DireccionFamiliarEstudianteNs;
 using Colegio.Models.Generales.EmailEstudianteNs;
@@ -18,21 +19,21 @@ using Colegio.Models.Generales.TipoDireccionNs;
 using Colegio.Models.Generales.TipoEmailNs;
 using Colegio.Models.Generales.TipoIdentificacionNs;
 using Colegio.Models.Generales.TipoIncidenciaNs;
-using Colegio.Models.Generales.TipoTelefonoNs;
 using Colegio.Models.Generales.TipoPadecimientoNs;
+using Colegio.Models.Generales.TipoTelefonoNs;
+using Colegio.Models.Inscripcion.CuotaNs;
 using Colegio.Models.Inscripcion.EstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.FamiliarEstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.GrupoNs;
 using Colegio.Models.Inscripcion.GeneralNs.MateriaNs;
 using Colegio.Models.Inscripcion.GeneralNs.PadecimientoNs;
 using Colegio.Models.Inscripcion.GeneralNs.ParentescoNs;
-using Colegio.Models.Generales.AulaNs;
-using Colegio.Models.Nomina.ProfesorNs;
-using Colegio.MultiTenancy;
-using Microsoft.EntityFrameworkCore;
 using Colegio.Models.Inscripcion.GeneralNs.PeriodoNs;
 using Colegio.Models.Inscripcion.InscripcionNs;
-using Colegio.Models.Inscripcion.CuotaNs;
+using Colegio.Models.Nomina.ProfesorNs;
+using Colegio.Models.Notas.MetodoEvaluacionNs;
+using Colegio.MultiTenancy;
+using Microsoft.EntityFrameworkCore;
 
 namespace Colegio.EntityFrameworkCore
 {
@@ -67,9 +68,9 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<Periodo> Periodo { get; set; }
         public DbSet<Inscripcion> Inscripcion { get; set; }
         public DbSet<Cuota> Cuota { get; set; }
-
         public DbSet<Aula> Aula { get; set; }
-
+        public DbSet<MetodoEvaluacion> MetodoEvaluacion { get; set; }
+        public DbSet<DetalleMetodoEvaluacion> DetalleMetodoEvaluacion { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -184,6 +185,11 @@ namespace Colegio.EntityFrameworkCore
                 .HasOne(x => x.Inscripcion)
                 .WithMany()
                 .HasForeignKey(x => x.InscripcionId);
+
+            modelBuilder.Entity<DetalleMetodoEvaluacion>()
+                .HasOne(x => x.MetodoEvaluacion)
+                .WithMany(x => x.ListaMetodoEvaluacion)
+                .HasForeignKey(x => x.MetodoEvaluacionId);
 
             #endregion
 

@@ -13,7 +13,7 @@ namespace Colegio.EmailEstudianteNs
 {
     public class EmailEstudianteAppService : ApplicationService //AsyncCrudAppService<EmailEstudiante, EmailEstudianteDto, int, PagedAndSortedResultRequestDto, EmailEstudianteDto, EmailEstudianteDto>, IEmailEstudianteAppService
     {
-        IRepository<EmailEstudiante> _emailRepository;
+        private IRepository<EmailEstudiante> _emailRepository;
         public EmailEstudianteAppService(IRepository<EmailEstudiante> emailRepository)
         {
 

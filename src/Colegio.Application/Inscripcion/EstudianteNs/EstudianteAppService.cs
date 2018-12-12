@@ -23,13 +23,15 @@ namespace Colegio.Inscripcion.EstudianteNs
         IRepository<DireccionEstudiante> _direccionRepository;
         IRepository<FamiliarEstudiante> _familiarRepository;
         IRepository<Padecimiento> _padecimientoRepository;
+        IEstudianteManager _estudianteManager;
 
         public EstudianteAppService(IRepository<Estudiante> repository,
                                     IRepository<EmailEstudiante> emailRepository,
                                     IRepository<TelefonoEstudiante> telefonoRepository,
                                     IRepository<DireccionEstudiante> direccionRepository,
                                     IRepository<FamiliarEstudiante> familiarRepository,
-                                    IRepository<Padecimiento> padecimientoRepository)
+                                    IRepository<Padecimiento> padecimientoRepository,
+                                    IEstudianteManager estudianteManager)
             : base(repository)
         {
             _emailRepository = emailRepository;
@@ -37,6 +39,7 @@ namespace Colegio.Inscripcion.EstudianteNs
             _direccionRepository = direccionRepository;
             _familiarRepository = familiarRepository;
             _padecimientoRepository = padecimientoRepository;
+            _estudianteManager = estudianteManager;
         }
 
         public override Task<EstudianteDto> Create(EstudianteDto input)
@@ -167,6 +170,11 @@ namespace Colegio.Inscripcion.EstudianteNs
             padecimiento.ToList().ForEach(x => x.EstudianteId = estudianteId);
             _padecimientoRepository.GetDbContext().RemoveRange(_padecimientoRepository.GetAll());
             _padecimientoRepository.GetDbContext().AddRange(padecimiento.Where(x => x.Id > 0));
+        }
+
+        public string GetSiguienteIdentificador()
+        {
+            return _estudianteManager.GetSiguienteIdentificador();
         }
     }
 }

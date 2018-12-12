@@ -1559,6 +1559,8 @@ namespace Colegio.Migrations
 
                     b.Property<string>("PrimerApellido");
 
+                    b.Property<double>("SecuenciaIdentificador");
+
                     b.Property<string>("SegundoApellido");
 
                     b.Property<int>("Sexo");
@@ -1822,6 +1824,52 @@ namespace Colegio.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Profesor");
+                });
+
+            modelBuilder.Entity("Colegio.Models.Notas.MetodoEvaluacionNs.DetalleMetodoEvaluacion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<string>("Descripcion");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<int>("MetodoEvaluacionId");
+
+                    b.Property<double>("Puntuacion");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MetodoEvaluacionId");
+
+                    b.ToTable("DetalleMetodoEvaluacion");
+                });
+
+            modelBuilder.Entity("Colegio.Models.Notas.MetodoEvaluacionNs.MetodoEvaluacion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<string>("Descripcion");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MetodoEvaluacion");
                 });
 
             modelBuilder.Entity("Colegio.MultiTenancy.Tenant", b =>
@@ -2234,6 +2282,14 @@ namespace Colegio.Migrations
                     b.HasOne("Colegio.Models.Inscripcion.GeneralNs.PeriodoNs.Periodo", "Periodo")
                         .WithMany()
                         .HasForeignKey("PeriodoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Colegio.Models.Notas.MetodoEvaluacionNs.DetalleMetodoEvaluacion", b =>
+                {
+                    b.HasOne("Colegio.Models.Notas.MetodoEvaluacionNs.MetodoEvaluacion", "MetodoEvaluacion")
+                        .WithMany("ListaMetodoEvaluacion")
+                        .HasForeignKey("MetodoEvaluacionId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
