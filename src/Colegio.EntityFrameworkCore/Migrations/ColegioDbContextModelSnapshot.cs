@@ -1669,6 +1669,8 @@ namespace Colegio.Migrations
 
                     b.Property<long?>("LastModifierUserId");
 
+                    b.Property<int>("MetodoEvaluacionId");
+
                     b.Property<string>("Nombre");
 
                     b.Property<decimal>("PrecioInscripcion");
@@ -1676,6 +1678,8 @@ namespace Colegio.Migrations
                     b.Property<decimal>("PrecioTotal");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("MetodoEvaluacionId");
 
                     b.ToTable("Materia");
                 });
@@ -2251,6 +2255,14 @@ namespace Colegio.Migrations
                     b.HasOne("Colegio.Models.Inscripcion.GeneralNs.MateriaNs.Materia", "Materia")
                         .WithMany()
                         .HasForeignKey("MateriaId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Colegio.Models.Inscripcion.GeneralNs.MateriaNs.Materia", b =>
+                {
+                    b.HasOne("Colegio.Models.Notas.MetodoEvaluacionNs.MetodoEvaluacion", "MetodoEvaluacion")
+                        .WithMany()
+                        .HasForeignKey("MetodoEvaluacionId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

@@ -11,5 +11,6 @@ namespace Colegio.Inscripcion.MateriaNs
         public string Nombre { get; set; }
         public decimal PrecioTotal { get; set; }
         public decimal PrecioInscripcion { get; set; }
+        public int MetodoEvaluacionId { get; set; }
     }
 }

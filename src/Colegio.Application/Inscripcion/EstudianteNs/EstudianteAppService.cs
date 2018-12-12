@@ -140,35 +140,50 @@ namespace Colegio.Inscripcion.EstudianteNs
         public void ModificaEmails(List<EmailEstudiante> emailEstudiantes, int estudianteId)
         {
             emailEstudiantes.ToList().ForEach(x => x.EstudianteId = estudianteId);
-            _emailRepository.GetDbContext().RemoveRange(_emailRepository.GetAll());
+            _emailRepository.GetDbContext().RemoveRange(_emailRepository
+                                                        .GetAll().Where(x=>x.EstudianteId == estudianteId)                                                        
+                                                        );
+
             _emailRepository.GetDbContext().AddRange(emailEstudiantes.Where(x => x.Id > 0));
         }
 
         public void ModificarTelefonos(List<TelefonoEstudiante> telefonoEstudiante, int estudianteId)
         {
             telefonoEstudiante.ToList().ForEach(x => x.EstudianteId = estudianteId);
-            _telefonoRepository.GetDbContext().RemoveRange(_telefonoRepository.GetAll());
+            _telefonoRepository.GetDbContext().RemoveRange(_telefonoRepository
+                                                            .GetAll().Where(x => x.EstudianteId == estudianteId)
+                                                            );
+
             _telefonoRepository.GetDbContext().AddRange(telefonoEstudiante.Where(x => x.Id > 0));
         }
 
         public void ModificarDirecciones(List<DireccionEstudiante> direccionEstudiante, int estudianteId)
         {
             direccionEstudiante.ToList().ForEach(x => x.EstudianteId = estudianteId);
-            _direccionRepository.GetDbContext().RemoveRange(_direccionRepository.GetAll());
+            _direccionRepository.GetDbContext().RemoveRange(_direccionRepository
+                                                            .GetAll().Where(x => x.EstudianteId == estudianteId)
+                                                            );
+
             _direccionRepository.GetDbContext().AddRange(direccionEstudiante.Where(x => x.Id > 0));
         }
 
         public void ModificarFamiliares(List<FamiliarEstudiante> familiarEstudiante, int estudianteId)
         {
             familiarEstudiante.ToList().ForEach(x => x.EstudianteId = estudianteId);
-            _familiarRepository.GetDbContext().RemoveRange(_familiarRepository.GetAll());
+            _familiarRepository.GetDbContext().RemoveRange(_familiarRepository
+                                                            .GetAll().Where(x => x.EstudianteId == estudianteId)
+                                                            );
+
             _familiarRepository.GetDbContext().AddRange(familiarEstudiante.Where(x => x.Id > 0));
         }
 
         public void ModificarPadecimientos(List<Padecimiento> padecimiento, int estudianteId)
         {
             padecimiento.ToList().ForEach(x => x.EstudianteId = estudianteId);
-            _padecimientoRepository.GetDbContext().RemoveRange(_padecimientoRepository.GetAll());
+            _padecimientoRepository.GetDbContext().RemoveRange(_padecimientoRepository
+                                                                .GetAll().Where(x => x.EstudianteId == estudianteId)
+                                                                );
+            
             _padecimientoRepository.GetDbContext().AddRange(padecimiento.Where(x => x.Id > 0));
         }
 
