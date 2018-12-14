@@ -10,5 +10,6 @@ namespace Colegio.Generales.MetodoEvaluacionNs
     {
         Task<PagedResultDto<MetodoEvaluacionDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter);
         List<MetodoEvaluacionDto> GetAllForSelect();
+        Task<MetodoEvaluacionDto> GetIncluding(int metodoEvaluacionId);
     }
 }
