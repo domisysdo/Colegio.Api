@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
+using Colegio.Notas.DetalleMetodoEvaluacionNs;
 using Colegio.Notas.MetodoEvaluacionNs;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace Colegio.Generales.MetodoEvaluacionNs
     {
         Task<PagedResultDto<MetodoEvaluacionDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter);
         List<MetodoEvaluacionDto> GetAllForSelect();
-        Task<MetodoEvaluacionDto> GetIncluding(int metodoEvaluacionId);
+        Task<MetodoEvaluacionDto> GetIncluding();
+        List<DetalleMetodoEvaluacionDto> GetDetalleMetodosEvaluacion(int metodoEvaluacionId);
     }
 }

@@ -30,7 +30,9 @@ using Colegio.Models.Inscripcion.GeneralNs.PadecimientoNs;
 using Colegio.Models.Inscripcion.GeneralNs.ParentescoNs;
 using Colegio.Models.Inscripcion.GeneralNs.PeriodoNs;
 using Colegio.Models.Inscripcion.InscripcionNs;
+using Colegio.Models.Nomina.ProfesorGrupoNs;
 using Colegio.Models.Nomina.ProfesorNs;
+using Colegio.Models.Notas.CalificacionNs;
 using Colegio.Models.Notas.MetodoEvaluacionNs;
 using Colegio.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
@@ -71,7 +73,8 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<Aula> Aula { get; set; }
         public DbSet<MetodoEvaluacion> MetodoEvaluacion { get; set; }
         public DbSet<DetalleMetodoEvaluacion> DetalleMetodoEvaluacion { get; set; }
-
+        public DbSet<ProfesorGrupo> ProfesorGrupo { get; set; }
+        public DbSet<Calificacion> Calificacion { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             #region Relaciones

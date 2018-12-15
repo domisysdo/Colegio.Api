@@ -5,6 +5,7 @@ using Abp.EntityFrameworkCore.Repositories;
 using Abp.Extensions;
 using Colegio.Generales.MetodoEvaluacionNs;
 using Colegio.Models.Notas.MetodoEvaluacionNs;
+using Colegio.Notas.DetalleMetodoEvaluacionNs;
 using Colegio.Notas.MetodoEvaluacionNs;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -77,13 +78,12 @@ namespace Colegio.MetodoEvaluacionNs
             return base.ApplySorting(query, input);
         }
 
-        public Task<MetodoEvaluacionDto> GetIncluding(int metodoEvaluacionId)
+        public Task<MetodoEvaluacionDto> GetIncluding()
         {
             var metodoEvaluacion = new List<MetodoEvaluacion>();
 
             metodoEvaluacion = Repository.GetAll()
                                .Include(x => x.ListaMetodoEvaluacion)
-                               .Where(x => x.Id == metodoEvaluacionId)
                                .ToList();
 
             var res = new List<MetodoEvaluacionDto>(ObjectMapper.Map<List<MetodoEvaluacionDto>>(metodoEvaluacion))
@@ -103,14 +103,23 @@ namespace Colegio.MetodoEvaluacionNs
             return new List<MetodoEvaluacionDto>(ObjectMapper.Map<List<MetodoEvaluacionDto>>(MetodoEvaluacionList));
         }
 
+        public List<DetalleMetodoEvaluacionDto> GetDetalleMetodosEvaluacion(int metodoEvaluacionId)
+        {
+            var MetodoEvaluacionList = new List<DetalleMetodoEvaluacion>();
+
+            var query = _detalleMetodoEvaluacionRepository.GetAll().Where(x => x.MetodoEvaluacionId == metodoEvaluacionId);
+            MetodoEvaluacionList = query.ToList();
+
+            return new List<DetalleMetodoEvaluacionDto>(ObjectMapper.Map<List<DetalleMetodoEvaluacionDto>>(MetodoEvaluacionList));
+        }
+
         public void ModificarDetalleMetodoEvaluacion(List<DetalleMetodoEvaluacion> detalleMetodoEvaluacion, int metodoEvaluacionId)
         {
             detalleMetodoEvaluacion.ToList().ForEach(x => x.MetodoEvaluacionId = metodoEvaluacionId);
 
             _detalleMetodoEvaluacionRepository.GetDbContext().RemoveRange(_detalleMetodoEvaluacionRepository
                                                                           .GetAll()
-                                                                          .Where(x => x.MetodoEvaluacionId == metodoEvaluacionId)
-                                                                          );
+                                                                          .Where(x => x.MetodoEvaluacionId == metodoEvaluacionId));
 
             _detalleMetodoEvaluacionRepository.GetDbContext().AddRange(detalleMetodoEvaluacion.Where(x => x.Id > 0));
         }

@@ -13,7 +13,6 @@ namespace Colegio.ProvinciaNs
 {
     public class ProvinciaAppService : AsyncCrudAppService<Provincia, ProvinciaDto, int, PagedAndSortedResultRequestDto, ProvinciaDto, ProvinciaDto>, IProvinciaAppService
     {
-        readonly IRepository<Pais> _paisRepository;
         public ProvinciaAppService(IRepository<Provincia> repository)
             : base(repository)
         {

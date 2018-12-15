@@ -19,6 +19,6 @@ namespace Colegio.Nomina.ProfesorNs
         public Sexo Sexo { get; set; }
         public EstadoCivil EstadoCivil { get; set; }
         public Estado Estado { get; set; }
-        public List<ProfesorMateriaDto> ListaMaterias { get; set; }
+        public List<ProfesorGrupoDto> ListaGrupos { get; set; }
     }
 }

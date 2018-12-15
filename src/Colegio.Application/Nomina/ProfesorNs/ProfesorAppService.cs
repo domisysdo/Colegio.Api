@@ -1,10 +1,12 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
+using Abp.EntityFrameworkCore.Repositories;
 using Abp.Extensions;
-using Colegio.Nomina.ProfesorNs;
-using Colegio.Models.Generales.PaisNs;
+using Colegio.Models.Nomina.ProfesorGrupoNs;
 using Colegio.Models.Nomina.ProfesorNs;
+using Colegio.Nomina.ProfesorNs;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,10 +15,24 @@ namespace Colegio.ProfesorNs
 {
     public class ProfesorAppService : AsyncCrudAppService<Profesor, ProfesorDto, int, PagedAndSortedResultRequestDto, ProfesorDto, ProfesorDto>, IProfesorAppService
     {
-        readonly IRepository<Pais> _paisRepository;
-        public ProfesorAppService(IRepository<Profesor> repository)
+        IRepository<ProfesorGrupo> _profesorMateriaRepository;
+        public ProfesorAppService(IRepository<Profesor> repository,
+                                  IRepository<ProfesorGrupo> profesorMateriaRepository)
             : base(repository)
         {
+            _profesorMateriaRepository = profesorMateriaRepository;
+        }
+
+        public override Task<ProfesorDto> Create(ProfesorDto input)
+        {
+            var result = Repository.InsertOrUpdate(ObjectMapper.Map<Profesor>(input));
+            if (input.Id > 0)
+            {
+                Profesor profesor = Repository.Get(input.Id);
+                ModificaMaterias(ObjectMapper.Map<List<ProfesorGrupo>>(input.ListaGrupos), profesor.Id);
+                CurrentUnitOfWork.SaveChanges();
+            }
+            return Task.FromResult(ObjectMapper.Map<ProfesorDto>(result));
         }
 
         public Task<PagedResultDto<ProfesorDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter)
@@ -68,6 +84,35 @@ namespace Colegio.ProfesorNs
 
             return new List<ProfesorDto>(ObjectMapper.Map<List<ProfesorDto>>(profesorList));
 
+        }
+
+        public Task<ProfesorDto> GetIncluding(int profesorId)
+        {
+            var profesor = new List<Profesor>();
+
+            profesor = Repository.GetAll()
+                    .Include(x => x.ListaGrupos)
+                        .ThenInclude(x => x.Profesor)
+                    .Include(x => x.ListaGrupos)
+                        .ThenInclude(x => x.Grupo)
+
+            .Where(x => x.Id == profesorId)
+            .ToList();
+
+
+            var res = new List<ProfesorDto>(ObjectMapper.Map<List<ProfesorDto>>(profesor))
+                       .FirstOrDefault();
+
+            return Task.FromResult(res);
+        }
+
+        public void ModificaMaterias(List<ProfesorGrupo> profesorMateria, int profesorId)
+        {
+            profesorMateria.ToList().ForEach(x => x.ProfesorId = profesorId);
+            _profesorMateriaRepository.GetDbContext().RemoveRange(_profesorMateriaRepository
+                                                     .GetAll().Where(x => x.ProfesorId == profesorId));
+
+            _profesorMateriaRepository.GetDbContext().AddRange(profesorMateria.Where(x => x.Id > 0));
         }
     }
 }

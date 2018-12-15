@@ -3,14 +3,16 @@ using System;
 using Colegio.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Colegio.Migrations
 {
     [DbContext(typeof(ColegioDbContext))]
-    partial class ColegioDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181215023914_profesorMateriaMigration2")]
+    partial class profesorMateriaMigration2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1796,7 +1798,7 @@ namespace Colegio.Migrations
                     b.ToTable("Inscripcion");
                 });
 
-            modelBuilder.Entity("Colegio.Models.Nomina.ProfesorGrupoNs.ProfesorGrupo", b =>
+            modelBuilder.Entity("Colegio.Models.Nomina.ProfesorMateriaNs.ProfesorMateria", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -1805,21 +1807,21 @@ namespace Colegio.Migrations
 
                     b.Property<long?>("CreatorUserId");
 
-                    b.Property<int>("GrupoId");
-
                     b.Property<DateTime?>("LastModificationTime");
 
                     b.Property<long?>("LastModifierUserId");
+
+                    b.Property<int>("MateriaId");
 
                     b.Property<int>("ProfesorId");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("GrupoId");
+                    b.HasIndex("MateriaId");
 
                     b.HasIndex("ProfesorId");
 
-                    b.ToTable("ProfesorGrupo");
+                    b.ToTable("ProfesorMateria");
                 });
 
             modelBuilder.Entity("Colegio.Models.Nomina.ProfesorNs.Profesor", b =>
@@ -1854,42 +1856,6 @@ namespace Colegio.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Profesor");
-                });
-
-            modelBuilder.Entity("Colegio.Models.Notas.CalificacionNs.Calificacion", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<long?>("CreatorUserId");
-
-                    b.Property<int>("DetalleMetodoEvaluacionId");
-
-                    b.Property<int>("EstudianteId");
-
-                    b.Property<int>("GrupoId");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<long?>("LastModifierUserId");
-
-                    b.Property<int>("MateriaId");
-
-                    b.Property<int>("Puntuacion");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DetalleMetodoEvaluacionId");
-
-                    b.HasIndex("EstudianteId");
-
-                    b.HasIndex("GrupoId");
-
-                    b.HasIndex("MateriaId");
-
-                    b.ToTable("Calificacion");
                 });
 
             modelBuilder.Entity("Colegio.Models.Notas.MetodoEvaluacionNs.DetalleMetodoEvaluacion", b =>
@@ -2359,39 +2325,16 @@ namespace Colegio.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Colegio.Models.Nomina.ProfesorGrupoNs.ProfesorGrupo", b =>
+            modelBuilder.Entity("Colegio.Models.Nomina.ProfesorMateriaNs.ProfesorMateria", b =>
                 {
-                    b.HasOne("Colegio.Models.Inscripcion.GeneralNs.GrupoNs.Grupo", "Grupo")
-                        .WithMany()
-                        .HasForeignKey("GrupoId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Colegio.Models.Nomina.ProfesorNs.Profesor", "Profesor")
-                        .WithMany("ListaGrupos")
-                        .HasForeignKey("ProfesorId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Colegio.Models.Notas.CalificacionNs.Calificacion", b =>
-                {
-                    b.HasOne("Colegio.Models.Notas.MetodoEvaluacionNs.DetalleMetodoEvaluacion", "DetalleMetodoEvaluacion")
-                        .WithMany()
-                        .HasForeignKey("DetalleMetodoEvaluacionId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Colegio.Models.Inscripcion.EstudianteNs.Estudiante", "Estudiante")
-                        .WithMany()
-                        .HasForeignKey("EstudianteId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Colegio.Models.Inscripcion.GeneralNs.GrupoNs.Grupo", "Grupo")
-                        .WithMany()
-                        .HasForeignKey("GrupoId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("Colegio.Models.Inscripcion.GeneralNs.MateriaNs.Materia", "Materia")
                         .WithMany()
                         .HasForeignKey("MateriaId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Colegio.Models.Nomina.ProfesorNs.Profesor", "Profesor")
+                        .WithMany("ListaMaterias")
+                        .HasForeignKey("ProfesorId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
