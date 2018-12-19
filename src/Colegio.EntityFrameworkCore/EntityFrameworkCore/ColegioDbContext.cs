@@ -6,6 +6,7 @@ using Colegio.Models.Generales.DireccionEstudianteNs;
 using Colegio.Models.Generales.DireccionFamiliarEstudianteNs;
 using Colegio.Models.Generales.EmailEstudianteNs;
 using Colegio.Models.Generales.EmailFamiliarEstudianteNs;
+using Colegio.Models.Generales.EstadoIncidenciaNs;
 using Colegio.Models.Generales.IncidenciaEstudianteNs;
 using Colegio.Models.Generales.MunicipioNs;
 using Colegio.Models.Generales.NacionalidadNs;
@@ -75,6 +76,7 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<DetalleMetodoEvaluacion> DetalleMetodoEvaluacion { get; set; }
         public DbSet<ProfesorGrupo> ProfesorGrupo { get; set; }
         public DbSet<Calificacion> Calificacion { get; set; }
+        public DbSet<EstadoIncidencia> EstadoIncidencia { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             #region Relaciones
@@ -193,6 +195,11 @@ namespace Colegio.EntityFrameworkCore
                 .HasOne(x => x.MetodoEvaluacion)
                 .WithMany(x => x.ListaMetodoEvaluacion)
                 .HasForeignKey(x => x.MetodoEvaluacionId);
+
+            modelBuilder.Entity<IncidenciaEstudiante>()
+                .HasOne(x => x.EstadoIncidencia)
+                .WithMany()
+                .HasForeignKey(x => x.EstadoIncidenciaId);
 
             #endregion
 

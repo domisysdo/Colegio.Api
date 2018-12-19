@@ -1,4 +1,5 @@
 ﻿using Abp.Domain.Entities.Auditing;
+using Colegio.Models.Generales.EstadoIncidenciaNs;
 using Colegio.Models.Generales.TipoIncidenciaNs;
 using Colegio.Models.Inscripcion.EstudianteNs;
 using Colegio.Models.Inscripcion.GeneralNs.MateriaNs;
@@ -17,5 +18,7 @@ namespace Colegio.Models.Generales.IncidenciaEstudianteNs
         public virtual Estudiante Estudiante { get; set; }
         public int TipoIncidenciaId { get; set; }
         public virtual TipoIncidencia TipoIncidencia { get; set; }
+        public int? EstadoIncidenciaId { get; set; }
+        public virtual EstadoIncidencia EstadoIncidencia { get; set; }
     }
 }

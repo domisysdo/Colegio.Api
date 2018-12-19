@@ -3,14 +3,16 @@ using System;
 using Colegio.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Colegio.Migrations
 {
     [DbContext(typeof(ColegioDbContext))]
-    partial class ColegioDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181217225557_estadoIncidenciaMigration")]
+    partial class estadoIncidenciaMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1163,8 +1165,6 @@ namespace Colegio.Migrations
 
                     b.Property<string>("Descripcion");
 
-                    b.Property<int?>("EstadoIncidenciaId");
-
                     b.Property<int>("EstudianteId");
 
                     b.Property<DateTime>("Fecha");
@@ -1180,8 +1180,6 @@ namespace Colegio.Migrations
                     b.Property<int>("TipoIncidenciaId");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("EstadoIncidenciaId");
 
                     b.HasIndex("EstudianteId");
 
@@ -2238,10 +2236,6 @@ namespace Colegio.Migrations
 
             modelBuilder.Entity("Colegio.Models.Generales.IncidenciaEstudianteNs.IncidenciaEstudiante", b =>
                 {
-                    b.HasOne("Colegio.Models.Generales.EstadoIncidenciaNs.EstadoIncidencia", "EstadoIncidencia")
-                        .WithMany()
-                        .HasForeignKey("EstadoIncidenciaId");
-
                     b.HasOne("Colegio.Models.Inscripcion.EstudianteNs.Estudiante", "Estudiante")
                         .WithMany()
                         .HasForeignKey("EstudianteId")
