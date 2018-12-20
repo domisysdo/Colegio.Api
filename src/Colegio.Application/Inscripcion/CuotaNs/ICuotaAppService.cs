@@ -10,5 +10,6 @@ namespace Colegio.Inscripcion.CuotaNs
         Task<PagedResultDto<CuotaDto>> GetAllFiltered(PagedAndSortedResultRequestDto input, string filter);
 
         List<CuotaDto> GetAllForSelect();
+        List<CuotaDto> GetCuotasPendiente(int estudianteId);
     }
 }

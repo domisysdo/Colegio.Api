@@ -36,6 +36,8 @@ using Colegio.Models.Nomina.ProfesorGrupoNs;
 using Colegio.Models.Nomina.ProfesorNs;
 using Colegio.Models.Notas.CalificacionNs;
 using Colegio.Models.Notas.MetodoEvaluacionNs;
+using Colegio.Models.Inscripcion.PagoDetalleNs;
+using Colegio.Models.Inscripcion.PagoNs;
 using Colegio.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
 
@@ -78,6 +80,8 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<ProfesorGrupo> ProfesorGrupo { get; set; }
         public DbSet<Calificacion> Calificacion { get; set; }
         public DbSet<EstadoIncidencia> EstadoIncidencia { get; set; }
+        public DbSet<Pago> Pago { get; set; }
+        public DbSet<PagoDetalle> PagoDetalle { get; set; }
         public DbSet<Horario> Horario { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -203,6 +207,20 @@ namespace Colegio.EntityFrameworkCore
                 .WithMany()
                 .HasForeignKey(x => x.EstadoIncidenciaId);
 
+            modelBuilder.Entity<Pago>()
+                .HasOne(x => x.Inscripcion)
+                .WithMany()
+                .HasForeignKey(x => x.InscripcionId);
+
+            modelBuilder.Entity<PagoDetalle>()
+                .HasOne(x => x.Pago)
+                .WithMany(o => o.PagoDetalle)
+                .HasForeignKey(x => x.PagoId);
+
+            modelBuilder.Entity<PagoDetalle>()
+                .HasOne(x => x.Cuota)
+                .WithMany()
+                .HasForeignKey(x => x.CuotaId);
             #endregion
 
             base.OnModelCreating(modelBuilder);

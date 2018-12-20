@@ -3,14 +3,16 @@ using System;
 using Colegio.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Colegio.Migrations
 {
     [DbContext(typeof(ColegioDbContext))]
-    partial class ColegioDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191220045957_merge")]
+    partial class merge
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1150,44 +1152,6 @@ namespace Colegio.Migrations
                     b.HasIndex("TipoIncidenciaId");
 
                     b.ToTable("EstadoIncidencia");
-                });
-
-            modelBuilder.Entity("Colegio.Models.Generales.HorarioNs.Horario", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("AulaId");
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<long?>("CreatorUserId");
-
-                    b.Property<long?>("DeleterUserId");
-
-                    b.Property<DateTime?>("DeletionTime");
-
-                    b.Property<int>("Dia");
-
-                    b.Property<int>("GrupoId");
-
-                    b.Property<TimeSpan>("HoraFin");
-
-                    b.Property<TimeSpan>("HoraInicio");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<long?>("LastModifierUserId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AulaId");
-
-                    b.HasIndex("GrupoId");
-
-                    b.ToTable("Horario");
                 });
 
             modelBuilder.Entity("Colegio.Models.Generales.IncidenciaEstudianteNs.IncidenciaEstudiante", b =>
@@ -2337,19 +2301,6 @@ namespace Colegio.Migrations
                     b.HasOne("Colegio.Models.Generales.TipoIncidenciaNs.TipoIncidencia")
                         .WithMany("ListaEstadoIncidencia")
                         .HasForeignKey("TipoIncidenciaId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Colegio.Models.Generales.HorarioNs.Horario", b =>
-                {
-                    b.HasOne("Colegio.Models.Generales.AulaNs.Aula", "Aula")
-                        .WithMany()
-                        .HasForeignKey("AulaId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Colegio.Models.Inscripcion.GeneralNs.GrupoNs.Grupo", "Grupo")
-                        .WithMany("ListaHorarios")
-                        .HasForeignKey("GrupoId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

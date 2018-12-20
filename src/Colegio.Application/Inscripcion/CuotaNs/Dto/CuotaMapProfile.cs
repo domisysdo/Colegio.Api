@@ -8,7 +8,8 @@ namespace Colegio.Inscripcion.CuotaNs.Dto
         public CuotaMapProfile()
         {
             CreateMap<CuotaDto, Cuota>();
-            CreateMap<Cuota, CuotaDto>();
+            CreateMap<Cuota, CuotaDto>()
+            .ForMember(x => x.MontoMoraPendiente, o => o.MapFrom(x => x.MontoMora - x.MontoMoraPago));
         }
     }
 }
