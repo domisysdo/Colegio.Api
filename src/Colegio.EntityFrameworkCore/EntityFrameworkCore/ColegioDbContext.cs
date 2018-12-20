@@ -7,6 +7,7 @@ using Colegio.Models.Generales.DireccionFamiliarEstudianteNs;
 using Colegio.Models.Generales.EmailEstudianteNs;
 using Colegio.Models.Generales.EmailFamiliarEstudianteNs;
 using Colegio.Models.Generales.EstadoIncidenciaNs;
+using Colegio.Models.Generales.HorarioNs;
 using Colegio.Models.Generales.IncidenciaEstudianteNs;
 using Colegio.Models.Generales.MunicipioNs;
 using Colegio.Models.Generales.NacionalidadNs;
@@ -77,6 +78,7 @@ namespace Colegio.EntityFrameworkCore
         public DbSet<ProfesorGrupo> ProfesorGrupo { get; set; }
         public DbSet<Calificacion> Calificacion { get; set; }
         public DbSet<EstadoIncidencia> EstadoIncidencia { get; set; }
+        public DbSet<Horario> Horario { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             #region Relaciones
