@@ -112,12 +112,12 @@ namespace Colegio.Inscripcion.InscripcionNs
                     fechaAnterior = vencimiento;
                 }
 
-                cuotas.ForEach(x =>
+                foreach(var item in cuotas)
                 {
-                    x.Monto = input.Grupo.Materia.PrecioTotal / cuotas.Count;
-                    x.MontoPago = 0;
-                    x.MontoMoraPago = 0;
-                });
+                    item.Monto = input.Grupo.Materia.PrecioTotal / cuotas.Count;
+                    item.Balance = item.Monto;
+                    item.MontoMoraPago = 0;
+                }
 
                 cuotas.OrderBy(x => x.FechaVencimiento);
 

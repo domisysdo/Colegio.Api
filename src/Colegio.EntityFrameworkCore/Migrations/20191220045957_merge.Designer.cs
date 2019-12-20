@@ -3,14 +3,16 @@ using System;
 using Colegio.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Colegio.Migrations
 {
     [DbContext(typeof(ColegioDbContext))]
-    partial class ColegioDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191220045957_merge")]
+    partial class merge
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

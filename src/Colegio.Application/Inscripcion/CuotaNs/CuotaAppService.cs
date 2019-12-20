@@ -3,6 +3,7 @@ using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
 using Colegio.Models.Inscripcion.CuotaNs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -63,6 +64,29 @@ namespace Colegio.Inscripcion.CuotaNs
             paisList = query.ToList();
 
             return new List<CuotaDto>(ObjectMapper.Map<List<CuotaDto>>(paisList));
+        }
+
+        public List<CuotaDto> GetCuotasPendiente(int estudianteId)
+        {
+            var cuotas = new List<Cuota>();
+
+            var query = Repository.GetAll()
+                .Where(x => x.Estado == Enums.Estado.A)
+                .Where(x => x.Inscripcion.EstudianteId == estudianteId);
+            cuotas = query.ToList();
+
+            foreach (var item in cuotas)
+            {
+                item.MontoMora = 0;
+                if(item.FechaVencimiento < DateTime.Now)
+                {
+                    var diasAtraso = DateTime.Now - item.FechaVencimiento;
+
+                    item.MontoMora = Convert.ToDecimal(item.Monto * (Convert.ToDecimal(diasAtraso.Days) / 360) * 0.6M);
+                }
+            }
+
+            return new List<CuotaDto>(ObjectMapper.Map<List<CuotaDto>>(cuotas));
         }
     }
 }

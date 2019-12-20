@@ -7,7 +7,9 @@ namespace Colegio.Enums
         [Description("Activo")]
         A,
         [Description("Inactivo")]
-        I        
+        I,
+        [Description("Cancelado")]
+        C
     }
     public enum Sexo
     {

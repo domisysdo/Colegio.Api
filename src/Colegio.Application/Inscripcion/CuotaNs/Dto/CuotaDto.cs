@@ -14,9 +14,10 @@ namespace Colegio.Inscripcion.CuotaNs
         public virtual InscripcionDto Inscripcion { get; set; }
         public DateTime FechaVencimiento { get; set; }
         public decimal Monto { get; set; }
-        public decimal MontoPago { get; set; }
+        public decimal Balance { get; set; }
         public decimal MontoMora { get; set; }
         public decimal MontoMoraPago { get; set; }
+        public decimal MontoMoraPendiente { get; set; }
         public Estado Estado { get; set; }
     }
 }

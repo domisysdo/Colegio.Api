@@ -13573,3 +13573,644 @@ INFO  2018-12-19 05:26:37,869 [31   ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2018-12-19 05:26:37,916 [26   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
 INFO  2018-12-19 05:26:37,947 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.IncidenciaEstudianteNs.IncidenciaEstudianteAppService.GetAllFiltered (Colegio.Application) in 87.2465ms
 INFO  2018-12-19 05:26:38,010 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 714.2169ms 200 application/json; charset=utf-8
+DEBUG 2019-12-20 00:59:36,458 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-12-20 00:59:36,494 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-12-20 00:59:36,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.Web.Host.Startup.ColegioWebHostModule, Colegio.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,520 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.ColegioWebCoreModule, Colegio.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,520 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.ColegioApplicationModule, Colegio.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,521 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.ColegioCoreModule, Colegio.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,522 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,522 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,522 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.EntityFrameworkCore.ColegioEntityFrameworkModule, Colegio.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,525 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,525 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,525 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,525 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:36,529 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-12-20 00:59:36,606 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-12-20 00:59:36,606 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-12-20 00:59:36,606 [1    ] o.Configuration.LanguageManagementConfig - Converted Colegio-es (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-12-20 00:59:36,606 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-12-20 00:59:37,132 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Colegio.EntityFrameworkCore.ColegioDbContext, Colegio.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 00:59:37,993 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-12-20 00:59:38,070 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-12-20 00:59:38,086 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-12-20 00:59:38,114 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Colegio-es
+DEBUG 2019-12-20 00:59:38,120 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-12-20 00:59:38,181 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-12-20 00:59:38,248 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 46 classes define auto mapping attributes
+DEBUG 2019-12-20 00:59:38,248 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-12-20 00:59:38,258 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Users.Dto.CreateUserDto
+DEBUG 2019-12-20 00:59:38,258 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Users.Dto.UserDto
+DEBUG 2019-12-20 00:59:38,259 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-12-20 00:59:38,259 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-12-20 00:59:38,259 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Roles.Dto.CreateRoleDto
+DEBUG 2019-12-20 00:59:38,259 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Roles.Dto.PermissionDto
+DEBUG 2019-12-20 00:59:38,259 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Roles.Dto.RoleDto
+DEBUG 2019-12-20 00:59:38,260 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Notas.MetodoEvaluacionNs.MetodoEvaluacionDto
+DEBUG 2019-12-20 00:59:38,260 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Notas.DetalleMetodoEvaluacionNs.DetalleMetodoEvaluacionDto
+DEBUG 2019-12-20 00:59:38,260 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Notas.CalificacionNs.CalificacionDto
+DEBUG 2019-12-20 00:59:38,261 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Nomina.ProfesorNs.ProfesorDto
+DEBUG 2019-12-20 00:59:38,261 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-12-20 00:59:38,261 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.MultiTenancy.Dto.TenantDto
+DEBUG 2019-12-20 00:59:38,261 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.PagoNs.PagoDto
+DEBUG 2019-12-20 00:59:38,261 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.PagoDetalleNs.PagoDetalleDto
+DEBUG 2019-12-20 00:59:38,261 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.InscripcionNs.InscripcionDto
+DEBUG 2019-12-20 00:59:38,262 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.PeriodoNs.PeriodoDto
+DEBUG 2019-12-20 00:59:38,262 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.ParentescoNs.ParentescoDto
+DEBUG 2019-12-20 00:59:38,262 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.PadecimientoNs.PadecimientoDto
+DEBUG 2019-12-20 00:59:38,262 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.MateriaNs.MateriaDto
+DEBUG 2019-12-20 00:59:38,263 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.GrupoNs.GrupoDto
+DEBUG 2019-12-20 00:59:38,263 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.FamiliarEstudianteNs.FamiliarEstudianteDto
+DEBUG 2019-12-20 00:59:38,263 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.EstudianteNs.EstudianteDto
+DEBUG 2019-12-20 00:59:38,264 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.CuotaNs.CuotaDto
+DEBUG 2019-12-20 00:59:38,264 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoTelefonoNs.TipoTelefonoDto
+DEBUG 2019-12-20 00:59:38,264 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoPadecimientoNs.TipoPadecimientoDto
+DEBUG 2019-12-20 00:59:38,264 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoIncidenciaNs.TipoIncidenciaDto
+DEBUG 2019-12-20 00:59:38,264 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoIdentificacionNs.TipoIdentificacionDto
+DEBUG 2019-12-20 00:59:38,264 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoEmailNs.TipoEmailDto
+DEBUG 2019-12-20 00:59:38,264 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoDireccionNs.TipoDireccionDto
+DEBUG 2019-12-20 00:59:38,264 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TelefonoFamiliarEstudianteNs.TelefonoFamiliarEstudianteDto
+DEBUG 2019-12-20 00:59:38,265 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TelefonoEstudianteNs.TelefonoEstudianteDto
+DEBUG 2019-12-20 00:59:38,265 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.SectorNs.SectorDto
+DEBUG 2019-12-20 00:59:38,265 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.ProvinciaNs.ProvinciaDto
+DEBUG 2019-12-20 00:59:38,265 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.ProfesionNs.ProfesionDto
+DEBUG 2019-12-20 00:59:38,265 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.NacionalidadNs.NacionalidadDto
+DEBUG 2019-12-20 00:59:38,265 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.MunicipioNs.MunicipioDto
+DEBUG 2019-12-20 00:59:38,265 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.IncidenciaEstudianteNs.IncidenciaEstudianteDto
+DEBUG 2019-12-20 00:59:38,266 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.EstadoIdenciaNs.EstadoIncidenciaDto
+DEBUG 2019-12-20 00:59:38,266 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.EmailFamiliarEstudianteNs.EmailFamiliarEstudianteDto
+DEBUG 2019-12-20 00:59:38,266 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.EmailEstudianteNs.EmailEstudianteDto
+DEBUG 2019-12-20 00:59:38,266 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.PaisNs.PaisDto
+DEBUG 2019-12-20 00:59:38,266 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.DireccionFamiliarEstudianteNs.DireccionFamiliarEstudianteDto
+DEBUG 2019-12-20 00:59:38,266 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.DireccionEstudianteNs.DireccionEstudianteDto
+DEBUG 2019-12-20 00:59:38,266 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.AulaNs.AulaDto
+FATAL 2019-12-20 00:59:42,258 [1    ] Abp.AbpBootstrapper                      - MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpeditions' doesn't exist ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpeditions' doesn't exist
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 252
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Colegio.EntityFrameworkCore.Seed.Host.DefaultEditionCreator.CreateEditions() in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\DefaultEditionCreator.cs:line 25
+   at Colegio.EntityFrameworkCore.Seed.Host.DefaultEditionCreator.Create() in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\DefaultEditionCreator.cs:line 20
+   at Colegio.EntityFrameworkCore.Seed.Host.InitialHostDbBuilder.Create() in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\InitialHostDbBuilder.cs:line 14
+   at Colegio.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(ColegioDbContext context) in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 25
+   at Colegio.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 41
+   at Colegio.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at Colegio.EntityFrameworkCore.ColegioEntityFrameworkModule.PostInitialize() in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\ColegioEntityFrameworkModule.cs:line 46
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpeditions' doesn't exist ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpeditions' doesn't exist
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 252
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Colegio.EntityFrameworkCore.Seed.Host.DefaultEditionCreator.CreateEditions() in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\DefaultEditionCreator.cs:line 25
+   at Colegio.EntityFrameworkCore.Seed.Host.DefaultEditionCreator.Create() in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\DefaultEditionCreator.cs:line 20
+   at Colegio.EntityFrameworkCore.Seed.Host.InitialHostDbBuilder.Create() in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\InitialHostDbBuilder.cs:line 14
+   at Colegio.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(ColegioDbContext context) in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 25
+   at Colegio.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 41
+   at Colegio.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at Colegio.EntityFrameworkCore.ColegioEntityFrameworkModule.PostInitialize() in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\ColegioEntityFrameworkModule.cs:line 46
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+FATAL 2019-12-20 00:59:42,293 [1    ] soft.AspNetCore.Hosting.Internal.WebHost - Application startup exception
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpeditions' doesn't exist ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpeditions' doesn't exist
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 252
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Colegio.EntityFrameworkCore.Seed.Host.DefaultEditionCreator.CreateEditions() in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\DefaultEditionCreator.cs:line 25
+   at Colegio.EntityFrameworkCore.Seed.Host.DefaultEditionCreator.Create() in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\DefaultEditionCreator.cs:line 20
+   at Colegio.EntityFrameworkCore.Seed.Host.InitialHostDbBuilder.Create() in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\InitialHostDbBuilder.cs:line 14
+   at Colegio.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(ColegioDbContext context) in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 25
+   at Colegio.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 41
+   at Colegio.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at Colegio.EntityFrameworkCore.ColegioEntityFrameworkModule.PostInitialize() in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.EntityFrameworkCore\EntityFrameworkCore\ColegioEntityFrameworkModule.cs:line 46
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.InitializeAbp(IApplicationBuilder app) in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\AbpApplicationBuilderExtensions.cs:line 67
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.UseAbp(IApplicationBuilder app, Action`1 optionsAction) in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\AbpApplicationBuilderExtensions.cs:line 38
+   at Colegio.Web.Host.Startup.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) in C:\Users\dioni\Source\Repos\Colegio.Api\src\Colegio.Web.Host\Startup\Startup.cs:line 90
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+INFO  2019-12-20 00:59:42,877 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-12-20 00:59:43,099 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 219.6885ms 500 text/html; charset=utf-8
+WARN  2019-12-20 00:59:43,456 [7    ] Abp.BackgroundJobs.BackgroundJobManager  - MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpbackgroundjobs' doesn't exist ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpbackgroundjobs' doesn't exist
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 252
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount) in D:\Github\aspnetboilerplate\src\Abp.Zero.Common\BackgroundJobs\BackgroundJobStore.cs:line 36
+   at Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 78
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   at Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork() in D:\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:line 93
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e) in D:\Github\aspnetboilerplate\src\Abp\Threading\BackgroundWorkers\PeriodicBackgroundWorkerBase.cs:line 48
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpbackgroundjobs' doesn't exist ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpbackgroundjobs' doesn't exist
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 252
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount) in D:\Github\aspnetboilerplate\src\Abp.Zero.Common\BackgroundJobs\BackgroundJobStore.cs:line 36
+   at Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 78
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   at Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork() in D:\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:line 93
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e) in D:\Github\aspnetboilerplate\src\Abp\Threading\BackgroundWorkers\PeriodicBackgroundWorkerBase.cs:line 48
+WARN  2019-12-20 00:59:48,524 [7    ] Abp.BackgroundJobs.BackgroundJobManager  - MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpbackgroundjobs' doesn't exist ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpbackgroundjobs' doesn't exist
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 252
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount) in D:\Github\aspnetboilerplate\src\Abp.Zero.Common\BackgroundJobs\BackgroundJobStore.cs:line 36
+   at Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 78
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   at Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork() in D:\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:line 93
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e) in D:\Github\aspnetboilerplate\src\Abp\Threading\BackgroundWorkers\PeriodicBackgroundWorkerBase.cs:line 48
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpbackgroundjobs' doesn't exist ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'colegiodb.abpbackgroundjobs' doesn't exist
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 252
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount) in D:\Github\aspnetboilerplate\src\Abp.Zero.Common\BackgroundJobs\BackgroundJobStore.cs:line 36
+   at Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 78
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   at Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork() in D:\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:line 93
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e) in D:\Github\aspnetboilerplate\src\Abp\Threading\BackgroundWorkers\PeriodicBackgroundWorkerBase.cs:line 48
+DEBUG 2019-12-20 01:01:27,649 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-12-20 01:01:27,863 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-12-20 01:01:27,908 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.Web.Host.Startup.ColegioWebHostModule, Colegio.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,916 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.ColegioWebCoreModule, Colegio.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,916 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.ColegioApplicationModule, Colegio.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,917 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.ColegioCoreModule, Colegio.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,917 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,918 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,918 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,919 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,920 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Colegio.EntityFrameworkCore.ColegioEntityFrameworkModule, Colegio.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,920 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,920 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,921 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,921 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,922 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,923 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:27,928 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-12-20 01:01:28,183 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-12-20 01:01:28,183 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-12-20 01:01:28,183 [1    ] o.Configuration.LanguageManagementConfig - Converted Colegio-es (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-12-20 01:01:28,183 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-12-20 01:01:29,131 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Colegio.EntityFrameworkCore.ColegioDbContext, Colegio.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-12-20 01:01:31,753 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-12-20 01:01:31,830 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-12-20 01:01:31,889 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-12-20 01:01:31,908 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Colegio-es
+DEBUG 2019-12-20 01:01:31,917 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-12-20 01:01:32,358 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-12-20 01:01:32,437 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 46 classes define auto mapping attributes
+DEBUG 2019-12-20 01:01:32,437 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-12-20 01:01:32,454 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Users.Dto.CreateUserDto
+DEBUG 2019-12-20 01:01:32,458 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Users.Dto.UserDto
+DEBUG 2019-12-20 01:01:32,460 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-12-20 01:01:32,460 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-12-20 01:01:32,461 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Roles.Dto.CreateRoleDto
+DEBUG 2019-12-20 01:01:32,461 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Roles.Dto.PermissionDto
+DEBUG 2019-12-20 01:01:32,461 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Roles.Dto.RoleDto
+DEBUG 2019-12-20 01:01:32,463 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Notas.MetodoEvaluacionNs.MetodoEvaluacionDto
+DEBUG 2019-12-20 01:01:32,463 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Notas.DetalleMetodoEvaluacionNs.DetalleMetodoEvaluacionDto
+DEBUG 2019-12-20 01:01:32,464 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Notas.CalificacionNs.CalificacionDto
+DEBUG 2019-12-20 01:01:32,464 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Nomina.ProfesorNs.ProfesorDto
+DEBUG 2019-12-20 01:01:32,466 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-12-20 01:01:32,466 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.MultiTenancy.Dto.TenantDto
+DEBUG 2019-12-20 01:01:32,466 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.PagoNs.PagoDto
+DEBUG 2019-12-20 01:01:32,467 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.PagoDetalleNs.PagoDetalleDto
+DEBUG 2019-12-20 01:01:32,468 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.InscripcionNs.InscripcionDto
+DEBUG 2019-12-20 01:01:32,468 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.PeriodoNs.PeriodoDto
+DEBUG 2019-12-20 01:01:32,468 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.ParentescoNs.ParentescoDto
+DEBUG 2019-12-20 01:01:32,468 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.PadecimientoNs.PadecimientoDto
+DEBUG 2019-12-20 01:01:32,469 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.MateriaNs.MateriaDto
+DEBUG 2019-12-20 01:01:32,469 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.GrupoNs.GrupoDto
+DEBUG 2019-12-20 01:01:32,469 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.FamiliarEstudianteNs.FamiliarEstudianteDto
+DEBUG 2019-12-20 01:01:32,469 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.EstudianteNs.EstudianteDto
+DEBUG 2019-12-20 01:01:32,470 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Inscripcion.CuotaNs.CuotaDto
+DEBUG 2019-12-20 01:01:32,470 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoTelefonoNs.TipoTelefonoDto
+DEBUG 2019-12-20 01:01:32,470 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoPadecimientoNs.TipoPadecimientoDto
+DEBUG 2019-12-20 01:01:32,471 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoIncidenciaNs.TipoIncidenciaDto
+DEBUG 2019-12-20 01:01:32,471 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoIdentificacionNs.TipoIdentificacionDto
+DEBUG 2019-12-20 01:01:32,471 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoEmailNs.TipoEmailDto
+DEBUG 2019-12-20 01:01:32,472 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TipoDireccionNs.TipoDireccionDto
+DEBUG 2019-12-20 01:01:32,472 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TelefonoFamiliarEstudianteNs.TelefonoFamiliarEstudianteDto
+DEBUG 2019-12-20 01:01:32,472 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.TelefonoEstudianteNs.TelefonoEstudianteDto
+DEBUG 2019-12-20 01:01:32,473 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.SectorNs.SectorDto
+DEBUG 2019-12-20 01:01:32,473 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.ProvinciaNs.ProvinciaDto
+DEBUG 2019-12-20 01:01:32,473 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.ProfesionNs.ProfesionDto
+DEBUG 2019-12-20 01:01:32,473 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.NacionalidadNs.NacionalidadDto
+DEBUG 2019-12-20 01:01:32,474 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.MunicipioNs.MunicipioDto
+DEBUG 2019-12-20 01:01:32,474 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.IncidenciaEstudianteNs.IncidenciaEstudianteDto
+DEBUG 2019-12-20 01:01:32,475 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.EstadoIdenciaNs.EstadoIncidenciaDto
+DEBUG 2019-12-20 01:01:32,475 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.EmailFamiliarEstudianteNs.EmailFamiliarEstudianteDto
+DEBUG 2019-12-20 01:01:32,476 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.EmailEstudianteNs.EmailEstudianteDto
+DEBUG 2019-12-20 01:01:32,476 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.PaisNs.PaisDto
+DEBUG 2019-12-20 01:01:32,477 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.DireccionFamiliarEstudianteNs.DireccionFamiliarEstudianteDto
+DEBUG 2019-12-20 01:01:32,477 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.DireccionEstudianteNs.DireccionEstudianteDto
+DEBUG 2019-12-20 01:01:32,478 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Colegio.Generales.AulaNs.AulaDto
+INFO  2019-12-20 01:01:44,888 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-12-20 01:01:44,888 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2019-12-20 01:01:45,112 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 225.7151ms 200 
+INFO  2019-12-20 01:01:53,214 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action Colegio.Web.Host.Controllers.HomeController.Index (Colegio.Web.Host)
+INFO  2019-12-20 01:01:55,481 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Web.Host.Controllers.HomeController.Index (Colegio.Web.Host) - Validation state: Valid
+INFO  2019-12-20 01:01:55,491 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Web.Host.Controllers.HomeController.Index (Colegio.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 3.0205ms.
+INFO  2019-12-20 01:01:55,769 [7    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-12-20 01:01:55,796 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Web.Host.Controllers.HomeController.Index (Colegio.Web.Host) in 2573.281ms
+INFO  2019-12-20 01:01:55,841 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2019-12-20 01:01:55,854 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10977.8195ms 302 
+INFO  2019-12-20 01:01:55,880 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 36.1155ms 301 
+INFO  2019-12-20 01:01:55,893 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-12-20 01:01:55,956 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 64.6824ms 200 text/html
+INFO  2019-12-20 01:01:55,992 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2019-12-20 01:01:56,008 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2019-12-20 01:01:56,014 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2019-12-20 01:01:56,051 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2019-12-20 01:01:56,057 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2019-12-20 01:01:56,063 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2019-12-20 01:01:56,076 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 85.3662ms 304 application/javascript
+INFO  2019-12-20 01:01:56,108 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 75.9646ms 304 application/javascript
+INFO  2019-12-20 01:01:56,154 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 61.5007ms 304 text/css
+INFO  2019-12-20 01:01:58,676 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-12-20 01:01:58,899 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-12-20 01:02:00,212 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1532.487ms 200 application/json;charset=utf-8
+INFO  2019-12-20 01:02:04,776 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-12-20 01:02:04,962 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 131.2522ms 200 application/json;charset=utf-8
+INFO  2019-12-20 01:03:02,241 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  0
+INFO  2019-12-20 01:03:02,266 [16   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:03:02,290 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 47.0663ms 204 
+INFO  2019-12-20 01:03:02,320 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll application/json 
+INFO  2019-12-20 01:03:02,328 [17   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:03:02,336 [17   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2019-12-20 01:03:02,529 [17   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:03:02,548 [17   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:03:02,560 [17   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:03:02,603 [17   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:03:02,634 [16   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:03:02,640 [16   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:03:02,670 [16   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures 'en-US, en'.
+WARN  2019-12-20 01:03:02,683 [16   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported UI Cultures 'en-US, en'.
+INFO  2019-12-20 01:03:02,730 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2019-12-20 01:03:02,756 [16   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:03:02,770 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2019-12-20 01:03:05,256 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 2480.0389ms.
+INFO  2019-12-20 01:03:05,389 [15   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-12-20 01:03:05,535 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 2753.54ms
+INFO  2019-12-20 01:03:05,562 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3231.4079ms 200 application/json; charset=utf-8
+INFO  2019-12-20 01:03:05,570 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  0
+INFO  2019-12-20 01:03:05,574 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:03:05,579 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.2314ms 204 
+INFO  2019-12-20 01:03:05,587 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-12-20 01:03:05,591 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:03:05,599 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2019-12-20 01:03:05,604 [7    ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:03:05,610 [7    ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:03:05,614 [7    ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:03:05,618 [7    ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:03:05,622 [7    ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures 'en-US, en'.
+WARN  2019-12-20 01:03:05,626 [7    ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported UI Cultures 'en-US, en'.
+INFO  2019-12-20 01:03:05,659 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application)
+INFO  2019-12-20 01:03:05,663 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:03:05,825 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) - Validation state: Valid
+INFO  2019-12-20 01:03:05,965 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 122.6796ms.
+INFO  2019-12-20 01:03:06,027 [7    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-12-20 01:03:06,073 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) in 408.0203ms
+INFO  2019-12-20 01:03:06,146 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 490.6256ms 200 application/json; charset=utf-8
+INFO  2019-12-20 01:03:17,364 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Estudiante/GetAllForSelect  0
+INFO  2019-12-20 01:03:17,372 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:03:17,384 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.2572ms 204 
+INFO  2019-12-20 01:03:17,442 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Estudiante/GetAllForSelect  
+INFO  2019-12-20 01:03:17,454 [16   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:03:17,462 [16   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2019-12-20 01:03:17,485 [16   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:03:17,501 [16   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:03:17,509 [16   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:03:17,533 [16   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:03:17,544 [16   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures 'en-US, en'.
+WARN  2019-12-20 01:03:17,572 [16   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported UI Cultures 'en-US, en'.
+INFO  2019-12-20 01:03:17,607 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllForSelect", controller = "Estudiante"}. Executing action Colegio.Inscripcion.EstudianteNs.EstudianteAppService.GetAllForSelect (Colegio.Application)
+INFO  2019-12-20 01:03:17,666 [16   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:03:22,482 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Inscripcion.EstudianteNs.EstudianteAppService.GetAllForSelect (Colegio.Application) - Validation state: Valid
+INFO  2019-12-20 01:03:22,652 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Inscripcion.EstudianteNs.EstudianteAppService.GetAllForSelect (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 161.6298ms.
+INFO  2019-12-20 01:03:22,718 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-12-20 01:03:22,723 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Inscripcion.EstudianteNs.EstudianteAppService.GetAllForSelect (Colegio.Application) in 5111.4342ms
+INFO  2019-12-20 01:03:22,731 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5319.7077ms 200 application/json; charset=utf-8
+INFO  2019-12-20 01:05:10,845 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  0
+INFO  2019-12-20 01:05:10,859 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  0
+INFO  2019-12-20 01:05:10,862 [14   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:10,872 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:10,899 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 28.952ms 204 
+INFO  2019-12-20 01:05:10,947 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 58.5043ms 204 
+INFO  2019-12-20 01:05:11,092 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll application/json 
+INFO  2019-12-20 01:05:11,342 [23   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:11,376 [23   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-12-20 01:05:11,382 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll application/json 
+WARN  2019-12-20 01:05:11,397 [23   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+INFO  2019-12-20 01:05:11,426 [24   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+WARN  2019-12-20 01:05:11,554 [23   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2019-12-20 01:05:11,674 [24   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2019-12-20 01:05:11,776 [23   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:11,781 [24   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:11,793 [23   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:11,799 [24   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:11,809 [23   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:11,824 [24   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:11,840 [23   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:11,938 [24   ] calization.RequestLocalizationMiddleware - AbpLocalizationHeaderRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:12,227 [23   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures 'en-US, en'.
+WARN  2019-12-20 01:05:12,364 [24   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:12,394 [23   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported UI Cultures 'en-US, en'.
+WARN  2019-12-20 01:05:12,420 [24   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2019-12-20 01:05:12,425 [23   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+WARN  2019-12-20 01:05:12,447 [24   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures 'en-US, en'.
+INFO  2019-12-20 01:05:12,530 [23   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+WARN  2019-12-20 01:05:12,547 [24   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported UI Cultures 'en-US, en'.
+INFO  2019-12-20 01:05:12,562 [23   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2019-12-20 01:05:12,591 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2019-12-20 01:05:12,612 [23   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 21.7844ms.
+INFO  2019-12-20 01:05:12,690 [24   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:12,823 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2019-12-20 01:05:12,832 [23   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-12-20 01:05:12,854 [23   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 407.0319ms
+INFO  2019-12-20 01:05:12,888 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1948.8782ms 200 application/json; charset=utf-8
+INFO  2019-12-20 01:05:12,998 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 35.4351ms.
+INFO  2019-12-20 01:05:13,281 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  0
+INFO  2019-12-20 01:05:13,365 [24   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-12-20 01:05:13,399 [31   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:13,481 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 778.8751ms
+INFO  2019-12-20 01:05:13,563 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 399.9801ms 204 
+INFO  2019-12-20 01:05:13,574 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2111.6455ms 200 application/json; charset=utf-8
+INFO  2019-12-20 01:05:13,600 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-12-20 01:05:13,607 [31   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:13,614 [31   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-12-20 01:05:13,622 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  0
+WARN  2019-12-20 01:05:13,629 [31   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:13,642 [31   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2019-12-20 01:05:13,644 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+WARN  2019-12-20 01:05:13,657 [31   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+INFO  2019-12-20 01:05:13,707 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 43.608ms 204 
+WARN  2019-12-20 01:05:13,716 [31   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:13,735 [31   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures 'en-US, en'.
+WARN  2019-12-20 01:05:13,775 [31   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported UI Cultures 'en-US, en'.
+INFO  2019-12-20 01:05:13,778 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-12-20 01:05:13,791 [14   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:13,806 [14   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-12-20 01:05:13,810 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application)
+WARN  2019-12-20 01:05:13,821 [14   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+INFO  2019-12-20 01:05:13,823 [31   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+WARN  2019-12-20 01:05:13,853 [14   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:13,889 [14   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+INFO  2019-12-20 01:05:13,893 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) - Validation state: Valid
+WARN  2019-12-20 01:05:13,920 [14   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:13,936 [14   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures 'en-US, en'.
+WARN  2019-12-20 01:05:13,956 [14   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported UI Cultures 'en-US, en'.
+INFO  2019-12-20 01:05:14,012 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 98.2743ms.
+INFO  2019-12-20 01:05:14,020 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application)
+INFO  2019-12-20 01:05:14,030 [29   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-12-20 01:05:14,045 [14   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:14,064 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) in 223.7324ms
+INFO  2019-12-20 01:05:14,079 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) - Validation state: Valid
+INFO  2019-12-20 01:05:14,144 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 504.5045ms 200 application/json; charset=utf-8
+INFO  2019-12-20 01:05:14,393 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 223.0713ms.
+INFO  2019-12-20 01:05:14,614 [29   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-12-20 01:05:14,628 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Sessions.SessionAppService.GetCurrentLoginInformations (Colegio.Application) in 591.1332ms
+INFO  2019-12-20 01:05:14,875 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 886.1489ms 200 application/json; charset=utf-8
+INFO  2019-12-20 01:05:32,930 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Estudiante/GetAllForSelect  0
+INFO  2019-12-20 01:05:32,941 [29   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:32,998 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 24.7989ms 204 
+INFO  2019-12-20 01:05:33,018 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Estudiante/GetAllForSelect  
+INFO  2019-12-20 01:05:33,135 [31   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:33,144 [31   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2019-12-20 01:05:33,152 [31   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:33,168 [31   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:33,280 [31   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:33,369 [31   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:33,384 [31   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures 'en-US, en'.
+WARN  2019-12-20 01:05:33,480 [31   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported UI Cultures 'en-US, en'.
+INFO  2019-12-20 01:05:33,518 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllForSelect", controller = "Estudiante"}. Executing action Colegio.Inscripcion.EstudianteNs.EstudianteAppService.GetAllForSelect (Colegio.Application)
+INFO  2019-12-20 01:05:33,566 [31   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:33,579 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Inscripcion.EstudianteNs.EstudianteAppService.GetAllForSelect (Colegio.Application) - Validation state: Valid
+INFO  2019-12-20 01:05:33,593 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Inscripcion.EstudianteNs.EstudianteAppService.GetAllForSelect (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5.1523ms.
+INFO  2019-12-20 01:05:33,702 [20   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-12-20 01:05:33,711 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Inscripcion.EstudianteNs.EstudianteAppService.GetAllForSelect (Colegio.Application) in 184.5516ms
+INFO  2019-12-20 01:05:33,776 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 728.976ms 200 application/json; charset=utf-8
+INFO  2019-12-20 01:05:42,410 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Estudiante/GetAllForSelect  0
+INFO  2019-12-20 01:05:42,415 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Materia/GetAllForSelect  0
+INFO  2019-12-20 01:05:42,421 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Periodo/GetAllForSelect  0
+INFO  2019-12-20 01:05:42,429 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:42,446 [29   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:42,533 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 31.1286ms 204 
+INFO  2019-12-20 01:05:42,594 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 53.265ms 204 
+INFO  2019-12-20 01:05:42,604 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Materia/GetAllForSelect  
+INFO  2019-12-20 01:05:42,609 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Periodo/GetAllForSelect  
+INFO  2019-12-20 01:05:42,614 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:42,620 [29   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:42,626 [30   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-12-20 01:05:42,632 [29   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+WARN  2019-12-20 01:05:42,638 [30   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:42,642 [29   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:42,647 [30   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:42,652 [29   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+INFO  2019-12-20 01:05:42,656 [31   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+WARN  2019-12-20 01:05:42,661 [30   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:42,668 [29   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:42,671 [30   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:42,673 [29   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:42,681 [30   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures 'en-US, en'.
+WARN  2019-12-20 01:05:42,688 [29   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures 'en-US, en'.
+WARN  2019-12-20 01:05:42,693 [30   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported UI Cultures 'en-US, en'.
+WARN  2019-12-20 01:05:42,704 [29   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported UI Cultures 'en-US, en'.
+INFO  2019-12-20 01:05:42,720 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 261.1949ms 204 
+INFO  2019-12-20 01:05:42,723 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllForSelect", controller = "Periodo"}. Executing action Colegio.Inscripcion.PeriodoNs.PeriodoAppService.GetAllForSelect (Colegio.Application)
+INFO  2019-12-20 01:05:42,729 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Estudiante/GetAllForSelect  
+INFO  2019-12-20 01:05:42,738 [29   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:42,741 [31   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:42,748 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllForSelect", controller = "Materia"}. Executing action Colegio.Inscripcion.MateriaNs.MateriaAppService.GetAllForSelect (Colegio.Application)
+INFO  2019-12-20 01:05:42,757 [31   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-12-20 01:05:42,761 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+WARN  2019-12-20 01:05:42,775 [31   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:42,787 [31   ] calization.RequestLocalizationMiddleware - AbpUserRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:42,801 [31   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported cultures 'null'.
+WARN  2019-12-20 01:05:42,823 [31   ] calization.RequestLocalizationMiddleware - AbpDefaultRequestCultureProvider returned the following unsupported UI Cultures 'null'.
+WARN  2019-12-20 01:05:42,833 [31   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures 'en-US, en'.
+WARN  2019-12-20 01:05:42,838 [31   ] calization.RequestLocalizationMiddleware - AcceptLanguageHeaderRequestCultureProvider returned the following unsupported UI Cultures 'en-US, en'.
+INFO  2019-12-20 01:05:44,183 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Inscripcion.PeriodoNs.PeriodoAppService.GetAllForSelect (Colegio.Application) - Validation state: Valid
+INFO  2019-12-20 01:05:44,208 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllForSelect", controller = "Estudiante"}. Executing action Colegio.Inscripcion.EstudianteNs.EstudianteAppService.GetAllForSelect (Colegio.Application)
+INFO  2019-12-20 01:05:44,219 [31   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-12-20 01:05:44,918 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Inscripcion.MateriaNs.MateriaAppService.GetAllForSelect (Colegio.Application) - Validation state: Valid
+INFO  2019-12-20 01:05:44,923 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Colegio.Inscripcion.EstudianteNs.EstudianteAppService.GetAllForSelect (Colegio.Application) - Validation state: Valid
+INFO  2019-12-20 01:05:44,941 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Inscripcion.EstudianteNs.EstudianteAppService.GetAllForSelect (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 12.9262ms.
+INFO  2019-12-20 01:05:44,987 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Inscripcion.PeriodoNs.PeriodoAppService.GetAllForSelect (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 794.2344ms.
+INFO  2019-12-20 01:05:45,032 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-12-20 01:05:45,036 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Colegio.Inscripcion.MateriaNs.MateriaAppService.GetAllForSelect (Colegio.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 111.5073ms.
+INFO  2019-12-20 01:05:45,042 [20   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-12-20 01:05:45,062 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Inscripcion.EstudianteNs.EstudianteAppService.GetAllForSelect (Colegio.Application) in 831.4083ms
+INFO  2019-12-20 01:05:45,071 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Inscripcion.PeriodoNs.PeriodoAppService.GetAllForSelect (Colegio.Application) in 2320.6242ms
+INFO  2019-12-20 01:05:45,104 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2341.209ms 200 application/json; charset=utf-8
+INFO  2019-12-20 01:05:45,111 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2476.7762ms 200 application/json; charset=utf-8
+INFO  2019-12-20 01:05:45,135 [27   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-12-20 01:05:45,140 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Colegio.Inscripcion.MateriaNs.MateriaAppService.GetAllForSelect (Colegio.Application) in 2387.1396ms
+INFO  2019-12-20 01:05:45,149 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2607.3716ms 200 application/json; charset=utf-8
